@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Moon } from "lucide-react";
+import { useNavigate } from "react-router-dom"; // Import useNavigate
 import logo from "../assets/logo.svg";
 import clsx from "clsx";
 
@@ -21,7 +22,7 @@ const Navbar = () => {
   return (
     <nav
   className={clsx(
-    "fixed top-0 left-0 right-0 z-50 mx-8 mt-6 flex items-center justify-between px-8 py-4 rounded-b-[3rem] shadow-md text-white"
+    "fixed top-0 left-0 right-0 z-50 mx-8 mt-6 flex items-center justify-between px-8 py-4 rounded-b-[3rem] text-white"
   )}
   style={{
     borderTopLeftRadius: "2rem",
@@ -68,7 +69,7 @@ const Navbar = () => {
             ? "text-white bg-[#646464] rounded-b-3xl"
             : "text-orange-500 bg-white rounded-b-3xl"
           : darkMode
-          ? "text-white hover:text-yellow-300"
+          ? "text-white hover:text-orange-300"
           : "text-orange hover:text-orange-500"
       )}
     >

@@ -2,6 +2,16 @@ body.dark {
   background-color: #1a202c; /* Dark background */
   color: white; /* Light text */
 }
+/* Hide scrollbar for Chrome, Safari, and Edge */
+.custom-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for Firefox */
+.custom-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none; /* IE and Edge */
+}
 
 .App {
   text-align: center;
