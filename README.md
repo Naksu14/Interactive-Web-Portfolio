@@ -37,3 +37,10 @@ Project Description
 * **git push origin main**
     * (Upload the file to GIT repository ).
 <br/>
+
+## Authors
+
+Contributors
+* [Naksu] (https://github.com/Naksu14)
+* [Ivans](https://github.com/L-iVANS)
+* [Seigh](https://github.com)
