@@ -12,10 +12,11 @@ Project Description
   *
   *
 
-# Helps and Guides
-  ## Git Commands
+## Help And Guide ( Git Commands )
 
-  * **git init**
+### Initialize repository
+
+* **git init**
     * (one time only | Pag naka pag init kana di mo na kilangan pa ulit mag init pa).
 * **git branch -m main**
     * (Change from master to main)
@@ -36,4 +37,3 @@ Project Description
 * **git push origin main**
     * (Upload the file to GIT repository ).
 <br/>
-
