@@ -42,5 +42,5 @@ Project Description
 
 Contributors
 * [Naksu] (https://github.com/Naksu14)
-* [Ivans](https://github.com/L-iVANS)
-* [Seigh](https://github.com)
+* [Ivans] (https://github.com/L-iVANS)
+* [Seigh] (https://github.com)
