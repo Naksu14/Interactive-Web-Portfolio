@@ -38,6 +38,12 @@ Project Description
     * (Upload the file to GIT repository ).
 <br/>
 
+## How to run react
+
+* **npm start**
+    *(cd the directory inside the folder of portfolio in the terminal and enter npm start)*
+
+<br/>
 ## Authors
 
 Contributors
