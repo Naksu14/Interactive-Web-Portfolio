@@ -1,203 +1,146 @@
-import React from "react";
+import React, { useState } from "react";
+import { useInView } from 'react-intersection-observer';  // Intersection Observer hook
 import Navbar from '../components/Navbar';
 import GroupsBackground from "../components/GroupsBackground";
 
-
 const Homepage = () => {
+  const [darkMode, setDarkMode] = useState(false);
+
+  // Intersection observer hook for detecting visibility
+  const { ref, inView } = useInView({
+    triggerOnce: true,  // Trigger animation only once when element is in view
+    threshold: 0.5,     // Trigger when at least 50% of the element is visible
+  });
+
   return (
-    <div className="z-5 relative mx-8 mt-[104px] h-[calc(100vh-130px)] overflow-hidden rounded-b-[2rem] ">
+    <div className={`z-5 relative mx-8 mt-[104px] h-[calc(100vh-130px)] overflow-hidden rounded-b-[2rem] ${darkMode ? 'bg-[#D74925]/60' : 'bg-[#f0b6a2]/60'}`}>
       {/* Background Image Component */}
       <GroupsBackground />
 
       {/* Background Wrapper */}
-      <div className="absolute inset-0 bg-orange-500/60"></div>
-      
+      <div className={`absolute ${darkMode ? "bg-[#D74925]/60" : "bg-[#f0b6a2]/60"}`}></div>
+
       {/* Content Wrapper (Scrollable) */}
-      <div className="relative p-6 overflow-auto h-full custom-scrollbar" >
-        <Navbar />
-        <h1 className="text-white text-3xl font-bold">
-          <p>Welcome tp Homepage</p>
-          PLUSSPACESGET CERTIFIEDFOR TEACHERSFOR BUSINESSCONTACT US
-Top Tutorials
-HTML Tutorial
-CSS Tutorial
-JavaScript Tutorial
-How To Tutorial
-SQL Tutorial
-Python Tutorial
-W3.CSS Tutorial
-Bootstrap Tutorial
-PHP Tutorial
-Java Tutorial
-C++ Tutorial
-jQuery Tutorial
-Top References
-HTML Reference
-CSS Reference
-JavaScript Reference
-SQL Reference
-Python Reference
-W3.CSS Reference
-Bootstrap Reference
-PHP Reference
-HTML Colors
-Java Reference
-Angular Reference
-jQuery Reference
-Top Examples
-HTML Examples
-CSS Examples
-JavaScript Examples
-How To Examples
-SQL Examples
-Python Examples
-W3.CSS Examples
-Bootstrap Examples
-PHP Examples
-Java Examples
-XML Examples
-jQuery Examples
-Get Certified
-HTML Certificate
-CSS Certificate
-JavaScript Certificate
-Front End Certificate
-SQL Certificate
-Python Certificate
-PHP Certificate
-jQuery Certificate
-Java Certificate
-C++ Certificate
-C# Certificate
-XML Certificate
-     FORUM ABOUT ACADEMY
-W3Schools is optimized for learning and training. Examples might be simplified to improve reading and learning.
-Tutorials, references, and examples are constantly reviewed to avoid errors, but we cannot warrant full correctness
-of all content. While using W3Schools, you agree to have read and accepted our terms of use, cookie and privacy policy.
+      <div className={`relative p-6 overflow-auto h-full custom-scrollbar ${darkMode ? "text-[#ffffff]" : "text-[#59453F]"}`}>
 
-Copyright 1999-2025 by Refsnes Data. All Rights Reserved. W3Schools is Powered by W3.CSS.
-PLUSSPACESGET CERTIFIEDFOR TEACHERSFOR BUSINESSCONTACT US
-Top Tutorials
-HTML Tutorial
-CSS Tutorial
-JavaScript Tutorial
-How To Tutorial
-SQL Tutorial
-Python Tutorial
-W3.CSS Tutorial
-Bootstrap Tutorial
-PHP Tutorial
-Java Tutorial
-C++ Tutorial
-jQuery Tutorial
-Top References
-HTML Reference
-CSS Reference
-JavaScript Reference
-SQL Reference
-Python Reference
-W3.CSS Reference
-Bootstrap Reference
-PHP Reference
-HTML Colors
-Java Reference
-Angular Reference
-jQuery Reference
-Top Examples
-HTML Examples
-CSS Examples
-JavaScript Examples
-How To Examples
-SQL Examples
-Python Examples
-W3.CSS Examples
-Bootstrap Examples
-PHP Examples
-Java Examples
-XML Examples
-jQuery Examples
-Get Certified
-HTML Certificate
-CSS Certificate
-JavaScript Certificate
-Front End Certificate
-SQL Certificate
-Python Certificate
-PHP Certificate
-jQuery Certificate
-Java Certificate
-C++ Certificate
-C# Certificate
-XML Certificate
-     FORUM ABOUT ACADEMY
-W3Schools is optimized for learning and training. Examples might be simplified to improve reading and learning.
-Tutorials, references, and examples are constantly reviewed to avoid errors, but we cannot warrant full correctness
-of all content. While using W3Schools, you agree to have read and accepted our terms of use, cookie and privacy policy.
+        {/* Navigation bar */}
+        <Navbar setDarkMode={setDarkMode} darkMode={darkMode} />
 
-Copyright 1999-2025 by Refsnes Data. All Rights Reserved. W3Schools is Powered by W3.CSS.
-PLUSSPACESGET CERTIFIEDFOR TEACHERSFOR BUSINESSCONTACT US
-Top Tutorials
-HTML Tutorial
-CSS Tutorial
-JavaScript Tutorial
-How To Tutorial
-SQL Tutorial
-Python Tutorial
-W3.CSS Tutorial
-Bootstrap Tutorial
-PHP Tutorial
-Java Tutorial
-C++ Tutorial
-jQuery Tutorial
-Top References
-HTML Reference
-CSS Reference
-JavaScript Reference
-SQL Reference
-Python Reference
-W3.CSS Reference
-Bootstrap Reference
-PHP Reference
-HTML Colors
-Java Reference
-Angular Reference
-jQuery Reference
-Top Examples
-HTML Examples
-CSS Examples
-JavaScript Examples
-How To Examples
-SQL Examples
-Python Examples
-W3.CSS Examples
-Bootstrap Examples
-PHP Examples
-Java Examples
-XML Examples
-jQuery Examples
-Get Certified
-HTML Certificate
-CSS Certificate
-JavaScript Certificate
-Front End Certificate
-SQL Certificate
-Python Certificate
-PHP Certificate
-jQuery Certificate
-Java Certificate
-C++ Certificate
-C# Certificate
-XML Certificate
-     FORUM ABOUT ACADEMY
-W3Schools is optimized for learning and training. Examples might be simplified to improve reading and learning.
-Tutorials, references, and examples are constantly reviewed to avoid errors, but we cannot warrant full correctness
-of all content. While using W3Schools, you agree to have read and accepted our terms of use, cookie and privacy policy.
+        {/* Team name and logo Brief introduction of the team */}
+        <div className="flex flex-col lg:flex-row justify-between items-center space-y-6 md:space-y-0 h-[680px]">
+          {/* Team name and logo Section */}
+          <div className="w-full lg:w-[680px] h-auto lg:order-1 mb-8 md:mb-10 mx-6 md:mx-12 mt-6 md:mt-0 flex-1">
+            <img 
+              src={darkMode ? require("../assets/Whomelogo.png") : require("../assets/bhomelogo.png")} 
+              alt="InnoVate Logo" 
+              className="w-[680px] h-[469px] mx-auto"
+            />
+          </div>
 
-Copyright 1999-2025 by Refsnes Data. All Rights Reserved. W3Schools is Powered by W3.CSS.</h1>
+          {/* Text Section of Brief introduction of the team */}
+          <div className="w-full lg:w-[800px] bg-white bg-opacity-20 border border-gray p-6 rounded-[15px] text-left tracking-wide backdrop-blur-lg mx-6 md:mx-12 mb-12 md:mb-0 mt-6 md:mt-0 flex-1">
+            <p className="text-3xl">
+              <b>We are InnoVate</b>, a team of five passionate developers and designers committed to creating seamless and innovative digital experiences. Our goal is to build functional, user-friendly, and visually engaging websites that bring ideas to life.
+            </p>
+          </div>
+        </div>
+
+        <br />
+
+        {/* Mission Section */}
+        <div className="flex flex-col lg:flex-row items-center justify-center w-full h-[800px]">
+          {/* Mission Statement Title and Text Section */}
+          <div className="flex flex-col items-center justify-center w-full lg:w-[85%] p-6">
+            {/* Mission Statement Title */}
+            <div className="text-3xl text-left w-full max-w-[800px] mx-auto">
+              <b>
+                MISSION <br />
+                STATEMENT
+              </b>
+              <div className={`h-[2px] w-[170px] ${darkMode ? "bg-[#ffffff]" : "bg-[#59453F]"}`}></div>
+            </div>
+            <br />
+
+            {/* Text Section of Mission */}
+            <div className="w-full flex justify-center">
+              <div className="w-full md:w-[800px] bg-white bg-opacity-20 border border-gray p-10 rounded-[15px] tracking-wide backdrop-blur-lg mx-auto mb-8 md:mb-0 mt-6 md:mt-0">
+                <p className="text-3xl text-center">
+                  We develop innovative and promising projects that solve real-world problems by constructing efficient programs with enhanced user experiences.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Mission Image Section */}
+          <div 
+            ref={ref} 
+            className={`w-full lg:w-[15%] flex flex-col justify-center items-center lg:order-1 mb-8 md:mb-10 mx-6 md:mx-12 mt-6 md:mt-0 
+              ${inView ? 'animate-rslide-in' : 'animate-rslide-out'}`} 
+            style={{ transition: 'transform 1s ease-out' }} // Apply animation based on visibility
+          >
+            <img 
+              src={darkMode ? require("../assets/arrowwhite.png") : require("../assets/arrow 1.png")} 
+              alt="Mission Arrow" 
+              className="w-[80px] h-[100px] mb-4"
+            />
+            <img 
+              src={darkMode ? require("../assets/missionwhite.png") : require("../assets/mission.png")} 
+              alt="Mission Image" 
+              className="w-[200px] h-[400px]"
+            />
+          </div>
+        </div>
+        <br />
+
+       {/* Vision Section */}
+        <div className="flex flex-col lg:flex-row items-center justify-center w-full h-[800px]">
+          {/* Vision Image Section (Now on the left) */}
+          <div 
+            ref={ref} 
+            className={`w-full lg:w-[15%] flex flex-col justify-center items-center mb-8 md:mb-10 mx-6 md:mx-12 mt-6 md:mt-0 
+              ${inView ? 'animate-lslide-in' : 'animate-lslide-out'}`} 
+            style={{ transition: 'transform 1s ease-out' }} 
+          >
+            <img 
+              src={darkMode ? require("../assets/arrowwhite.png") : require("../assets/arrow 1.png")} 
+              alt="Vision Arrow" 
+              className="w-[80px] h-[100px] mb-4"
+            />
+            <img 
+              src={darkMode ? require("../assets/missionwhite.png") : require("../assets/mission.png")} 
+              alt="Vision Image" 
+              className="w-[200px] h-[400px]"
+            />
+          </div>
+
+          {/* Vision Statement Title and Text Section (Now on the right) */}
+          <div className="flex flex-col items-center justify-center w-full lg:w-[85%] p-6">
+            {/* Vision Statement Title */}
+            <div className="text-3xl text-right w-full max-w-[800px] mx-auto">
+              <b>
+                VISION <br />
+                STATEMENT
+              </b>
+              <div className={`h-[2px] w-[170px] ${darkMode ? "bg-[#ffffff]" : "bg-[#59453F]"} ml-auto`}></div>
+
+            </div>
+            <br />
+
+            {/* Text Section of Vision */}
+            <div className="w-full flex justify-center">
+              <div className="w-full md:w-[800px] bg-white bg-opacity-20 border border-gray p-10 rounded-[15px] tracking-wide backdrop-blur-lg mx-auto mb-8 md:mb-0 mt-6 md:mt-0">
+                <p className="text-3xl text-left">
+                  To alter our technology by developing progressive solutions that simplify real-world challenges and set new standards for user experience.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
       </div>
     </div>
   );
 };
 
 export default Homepage;
-
