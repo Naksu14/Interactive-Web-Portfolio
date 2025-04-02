@@ -1,15 +1,36 @@
 import './App.css';
+import React, { useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Homepage from './pages/Homepage';
-import CustomCursor from "./components/CustomCursor"; // Import Custom Cursor
+import AboutUs from './pages/AboutUs';
+import TeamMembers from './pages/TeamMembers';
+import Projects from './pages/Projects';
+import Contact from './pages/Contact';
+import Navbar from './components/Navbar';
+import CustomCursor from "./components/CustomCursor";
 
 function App() {
+  const [darkMode, setDarkMode] = useState(false);
+
   return (
-    <div className="App">
-      <CustomCursor /> {/* Include Custom Cursor */}
-      <Homepage />
-     
-    </div>
+    <Router>
+      <div className="App">
+        {/* Navigation bar */}
+        <Navbar setDarkMode={setDarkMode} darkMode={darkMode} />
+
+        <CustomCursor /> {/* Include Custom Cursor */}
+
+        {/* Routes */}
+        <Routes>
+          <Route path="/" element={<Homepage darkMode={darkMode} />} />
+          <Route path="/about" element={<AboutUs darkMode={darkMode} />} />
+          <Route path="/team" element={<TeamMembers darkMode={darkMode} />} />
+          <Route path="/projects" element={<Projects darkMode={darkMode} />} />
+          <Route path="/contact" element={<Contact darkMode={darkMode} />} />
+        </Routes>
+      </div>
+    </Router>
   );
-};
+}
 
 export default App;

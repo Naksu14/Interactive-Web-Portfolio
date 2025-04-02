@@ -11,9 +11,14 @@ module.exports = {
         "tile-fade": "fade 0.5s ease-out",               // Tile fade animation
         'lslide-in': 'slideInLeft 2s ease-out forwards', // Slide in from the left
         'lslide-out': 'slideOutLeft 2s ease-in forwards', // Slide out to the left
+        'slide-up': 'slideUp 0.5s ease-in forwards',
       },
       keyframes: {
         // Slide in from right to left (for rslide-in)
+        slideUp: {
+          '0%': { transform: 'translateY(100%)' },  
+          '100%': { transform: 'translateY(0)' },  
+        },
         slideIn: {
           '0%': { transform: 'translateX(100%)' },  // Start off-screen to the right
           '100%': { transform: 'translateX(0)' },   // End at the original position

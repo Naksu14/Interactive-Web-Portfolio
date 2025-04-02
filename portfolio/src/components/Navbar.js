@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { Moon, Sun, Menu, X } from "lucide-react";  // Import Sun icon
 import clsx from "clsx";
+import { Link } from 'react-router-dom';
+
 
 const Navbar = ({ setDarkMode, darkMode }) => {
   const [activeTab, setActiveTab] = useState("HOME");
@@ -54,17 +56,23 @@ const Navbar = ({ setDarkMode, darkMode }) => {
 
       {/* Navigation Links (Desktop & Mobile) */}
       <div
-          className={clsx(
-            "lg:flex gap-16 transition-all duration-300 ease-in-out",
-            menuOpen
-              ? clsx(
-                  "flex flex-col absolute top-20 left-0 right-0 p-6",
-                  darkMode ? "bg-[#D74925]/60" : "bg-[#f0b6a2]/60"
-                ) // Conditional background based on dark mode when menu is open
-              : "hidden lg:flex" // Apply when the menu is closed
-          )}
-        >
-        {["HOME", "ABOUT US", "TEAM MEMBERS", "PROJECTS", "CONTACT"].map((tab) => (
+        className={clsx(
+          "lg:flex gap-16 transition-all duration-300 ease-in-out",
+          menuOpen
+            ? clsx(
+                "flex flex-col absolute top-20 left-0 right-0 p-6",
+                darkMode ? "bg-[#D74925]/60" : "bg-[#f0b6a2]/60"
+              )
+            : "hidden lg:flex"
+        )}
+      >
+        {[
+          { tab: "HOME", path: "/" },
+          { tab: "ABOUT US", path: "/about" },
+          { tab: "TEAM MEMBERS", path: "/team" },
+          { tab: "PROJECTS", path: "/projects" },
+          { tab: "CONTACT", path: "/contact" }
+        ].map(({ tab, path }) => (
           <div key={tab} className="relative flex items-center transition-all duration-300 ease-in-out">
             
             {/* FULL WIDTH BACKGROUND (COVER CURVES) */}
@@ -79,15 +87,15 @@ const Navbar = ({ setDarkMode, darkMode }) => {
                 className="absolute -top-4 -left-6 w-6 h-6 z-10 rounded-tr-[5rem]"
                 style={{
                   backgroundColor: darkMode
-                    ? "rgba(215, 73, 37, 0.6)" // Dark mode background color
-                    : "rgba(240, 182, 162, 0.6)", // Light mode background color
+                    ? "rgba(215, 73, 37, 0.6)"
+                    : "rgba(240, 182, 162, 0.6)",
                 }}
               />
             )}
 
-
-            {/* MAIN BUTTON */}
-            <button
+            {/* MAIN LINK (replaced button with Link) */}
+            <Link
+              to={path}
               onClick={() => { setActiveTab(tab); setMenuOpen(false); }}
               className={clsx(
                 "relative z-15 font-bold px-6 py-3 transition-all duration-200 ease-in-out",
@@ -101,15 +109,15 @@ const Navbar = ({ setDarkMode, darkMode }) => {
               )}
             >
               {tab}
-            </button>
+            </Link>
 
             {/* RIGHT CURVED DIV */}
             {activeTab === tab && (
               <div className="absolute -top-4 -right-6 w-6 h-6 z-10 rounded-tl-[5rem]"
               style={{
                 backgroundColor: darkMode
-                ? "rgba(215, 73, 37, 0.6)" // Dark mode background color
-                : "rgba(240, 182, 162, 0.6)", // Light mode background color
+                ? "rgba(215, 73, 37, 0.6)"
+                : "rgba(240, 182, 162, 0.6)",
               }} />
             )}
           </div>

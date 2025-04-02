@@ -1,10 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import { useInView } from 'react-intersection-observer';  // Intersection Observer hook
-import Navbar from '../components/Navbar';
 import GroupsBackground from "../components/GroupsBackground";
 
-const Homepage = () => {
-  const [darkMode, setDarkMode] = useState(false);
+const Homepage = ({ darkMode }) => {
 
   // Intersection observer hook for detecting visibility
   const { ref, inView } = useInView({
@@ -22,9 +20,6 @@ const Homepage = () => {
 
       {/* Content Wrapper (Scrollable) */}
       <div className={`relative p-6 overflow-auto h-full custom-scrollbar ${darkMode ? "text-[#ffffff]" : "text-[#59453F]"}`}>
-
-        {/* Navigation bar */}
-        <Navbar setDarkMode={setDarkMode} darkMode={darkMode} />
 
         {/* Team name and logo Brief introduction of the team */}
         <div className="flex flex-col lg:flex-row justify-between items-center space-y-6 md:space-y-0 h-[680px]">
@@ -52,12 +47,12 @@ const Homepage = () => {
           {/* Mission Statement Title and Text Section */}
           <div className="flex flex-col items-center justify-center w-full lg:w-[85%] p-6">
             {/* Mission Statement Title */}
-            <div className="text-3xl text-left w-full max-w-[800px] mx-auto">
+            <div className="text-5xl text-left w-full max-w-[800px] mx-auto">
               <b>
                 MISSION <br />
                 STATEMENT
               </b>
-              <div className={`h-[2px] w-[170px] ${darkMode ? "bg-[#ffffff]" : "bg-[#59453F]"}`}></div>
+              <div className={`h-[2px] w-[270px] ${darkMode ? "bg-[#ffffff]" : "bg-[#59453F]"}`}></div>
             </div>
             <br />
 
@@ -74,9 +69,9 @@ const Homepage = () => {
           {/* Mission Image Section */}
           <div 
             ref={ref} 
-            className={`w-full lg:w-[15%] flex flex-col justify-center items-center lg:order-1 mb-8 md:mb-10 mx-6 md:mx-12 mt-6 md:mt-0 
+            className={`hidden lg:flex flex-col justify-center items-center lg:order-1 mb-8 md:mb-10 mx-6 md:mx-12 mt-6 md:mt-0 
               ${inView ? 'animate-rslide-in' : 'animate-rslide-out'}`} 
-            style={{ transition: 'transform 1s ease-out' }} // Apply animation based on visibility
+            style={{ transition: 'transform 1s ease-out' }} 
           >
             <img 
               src={darkMode ? require("../assets/arrowwhite.png") : require("../assets/arrow 1.png")} 
@@ -89,6 +84,7 @@ const Homepage = () => {
               className="w-[200px] h-[400px]"
             />
           </div>
+
         </div>
         <br />
 
@@ -97,7 +93,7 @@ const Homepage = () => {
           {/* Vision Image Section (Now on the left) */}
           <div 
             ref={ref} 
-            className={`w-full lg:w-[15%] flex flex-col justify-center items-center mb-8 md:mb-10 mx-6 md:mx-12 mt-6 md:mt-0 
+            className={`hidden lg:flex flex-col justify-center items-center mb-8 md:mb-10 mx-6 md:mx-12 mt-6 md:mt-0 animate-lslide-in
               ${inView ? 'animate-lslide-in' : 'animate-lslide-out'}`} 
             style={{ transition: 'transform 1s ease-out' }} 
           >
@@ -113,15 +109,16 @@ const Homepage = () => {
             />
           </div>
 
+
           {/* Vision Statement Title and Text Section (Now on the right) */}
           <div className="flex flex-col items-center justify-center w-full lg:w-[85%] p-6">
             {/* Vision Statement Title */}
-            <div className="text-3xl text-right w-full max-w-[800px] mx-auto">
+            <div className="text-5xl text-right w-full max-w-[800px] mx-auto">
               <b>
                 VISION <br />
                 STATEMENT
               </b>
-              <div className={`h-[2px] w-[170px] ${darkMode ? "bg-[#ffffff]" : "bg-[#59453F]"} ml-auto`}></div>
+              <div className={`h-[2px] w-[270px] ${darkMode ? "bg-[#ffffff]" : "bg-[#59453F]"} ml-auto`}></div>
 
             </div>
             <br />
@@ -137,6 +134,13 @@ const Homepage = () => {
           </div>
         </div>
 
+        <div className="w-full flex justify-center">
+            <img 
+              src={darkMode ? require("../assets/Whomelogo2.png") : require("../assets/bhomelogo2.png")} 
+              alt="logo2 Image" 
+              className="w-[120px] h-[80]"
+            />
+        </div>
 
       </div>
     </div>

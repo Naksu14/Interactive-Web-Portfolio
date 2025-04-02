@@ -1,12 +1,12 @@
 import React from "react";
-import backgroundImage from "../assets/Anime_Groups.png"; // Import the image
+import backgroundImage from "../assets/Anime_Loel.png"; // Import the image
 
 const GroupsBackground = () => {
   return (
     <div className="fixed inset-0 -z-10">
       {/* Background Image */}
       <div
-        className="absolute inset-0 bg-cover bg-center "
+        className="absolute inset-0 bg-cover bg-center animate-slide-up"
         style={{ backgroundImage: `url(${backgroundImage})` }}
       ></div>
 
