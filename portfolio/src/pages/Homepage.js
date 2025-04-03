@@ -33,7 +33,7 @@ const Homepage = ({ darkMode }) => {
           </div>
 
           {/* Text Section of Brief introduction of the team */}
-          <div className="w-full lg:w-[800px] bg-white bg-opacity-20 border border-gray p-6 rounded-[15px] text-left tracking-wide backdrop-blur-lg mx-6 md:mx-12 mb-12 md:mb-0 mt-6 md:mt-0 flex-1">
+          <div className="w-full lg:w-[800px] bg-white bg-opacity-20 border border-[#ffffff]/20 p-6 rounded-[15px] text-left tracking-wide backdrop-blur-lg mx-6 md:mx-12 mb-12 md:mb-0 mt-6 md:mt-0 flex-1">
             <p className="text-3xl">
               <b>We are InnoVate</b>, a team of five passionate developers and designers committed to creating seamless and innovative digital experiences. Our goal is to build functional, user-friendly, and visually engaging websites that bring ideas to life.
             </p>
@@ -58,7 +58,7 @@ const Homepage = ({ darkMode }) => {
 
             {/* Text Section of Mission */}
             <div className="w-full flex justify-center">
-              <div className="w-full md:w-[800px] bg-white bg-opacity-20 border border-gray p-10 rounded-[15px] tracking-wide backdrop-blur-lg mx-auto mb-8 md:mb-0 mt-6 md:mt-0">
+              <div className="w-full md:w-[800px] bg-white bg-opacity-20 border border-[#ffffff]/20 p-10 rounded-[15px] tracking-wide backdrop-blur-lg mx-auto mb-8 md:mb-0 mt-6 md:mt-0">
                 <p className="text-3xl text-center">
                   We develop innovative and promising projects that solve real-world problems by constructing efficient programs with enhanced user experiences.
                 </p>
@@ -125,7 +125,7 @@ const Homepage = ({ darkMode }) => {
 
             {/* Text Section of Vision */}
             <div className="w-full flex justify-center">
-              <div className="w-full md:w-[800px] bg-white bg-opacity-20 border border-gray p-10 rounded-[15px] tracking-wide backdrop-blur-lg mx-auto mb-8 md:mb-0 mt-6 md:mt-0">
+              <div className="w-full md:w-[800px] bg-white bg-opacity-20 border border-[#ffffff]/20 p-10 rounded-[15px] tracking-wide backdrop-blur-lg mx-auto mb-8 md:mb-0 mt-6 md:mt-0">
                 <p className="text-3xl text-left">
                   To alter our technology by developing progressive solutions that simplify real-world challenges and set new standards for user experience.
                 </p>
