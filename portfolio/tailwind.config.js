@@ -5,6 +5,11 @@ module.exports = {
   ],
   theme: {
     extend: {
+      spacing: {
+        '14': '3.5rem',  // Custom margin (example)
+        '16': '4rem',    // Add custom margin of 4rem
+        '20': '5rem',    // Add custom margin of 5rem
+      },
       animation: {
         'rslide-in': 'slideIn 2s ease-out forwards',      // Slide in from the right
         'rslide-out': 'slideOut 2s ease-in forwards',    // Slide out to the right
@@ -45,6 +50,7 @@ module.exports = {
         },
       },
     },
+
   },
   plugins: [],
 };
