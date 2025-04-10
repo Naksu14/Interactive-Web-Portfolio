@@ -22,7 +22,7 @@ const Homepage = ({ darkMode }) => {
       <div className={`relative p-6 overflow-auto h-full custom-scrollbar ${darkMode ? "text-[#ffffff]" : "text-[#59453F]"}`}>
 
         {/* Team name and logo Brief introduction of the team */}
-        <div className="flex flex-col lg:flex-row justify-between items-center space-y-6 md:space-y-0 h-[680px]">
+        <div className="flex flex-col lg:flex-row justify-between items-center space-y-6 md:space-y-0 mt-10">
           
           {/* Team name and logo Section */}
           <div className="w-full lg:w-[680px] h-auto lg:order-1 mb-8 md:mb-10 mx-6 md:mx-12 mt-6 md:mt-0 flex-1">
@@ -111,17 +111,10 @@ const Homepage = ({ darkMode }) => {
               className="lg:w-[80px] lg:h-[100px] mb-4"
             />
             <img 
-                src={darkMode ? require("../assets/missionwhite.png") : require("../assets/mission.png")} 
-                alt="Vision Image" 
-                style={{
-                  width: "200px",
-                  height: "400px",
-                  "@media (max-width: 1200px)": {
-                    width: "200px",
-                    height: "400px"
-                  }
-                }}
-              />
+              src={darkMode ? require("../assets/missionwhite.png") : require("../assets/mission.png")} 
+              alt="Vision Image" 
+              className="lg:w-[200px] lg:h-[400px] custom-img-size"
+            />
 
           </div>
 

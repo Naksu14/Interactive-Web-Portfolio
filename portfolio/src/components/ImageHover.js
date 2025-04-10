@@ -258,7 +258,7 @@ function ImageGallery({ onSelect, darkMode, selectedMember }) {
   ];
 
   return (
-    <div className="flex flex-row gap-4 p-4 ">
+    <div className="flex flex-wrap gap-4 p-4">
       {teamMembers.map((member) => (
         <ImageHover 
           key={member.id}

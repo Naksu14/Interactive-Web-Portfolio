@@ -114,17 +114,17 @@ const TeamMembers = ({ darkMode }) => {
         </div>
     
         {/* Member Info */}
-        <div className="relative z-10 w-full lg:w-[500px] bg-white bg-opacity-10 border border-[#ffffff]/30 p-6 rounded-[15px] text-left tracking-wide backdrop-blur-lg mr-auto mb-24 ml-0 lg:ml-12">          
-          <p className="text-2xl">
-            <b className="text-3xl">{selectedMember.name}</b> 
+        <div className="relative z-10 w-full max-w-[500px] bg-white bg-opacity-10 border border-white/30 p-6 rounded-xl text-left tracking-wide backdrop-blur-lg ml-4 lg:ml-12 mb-10">          
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl">
+            <b className="text-base sm:text-xl md:text-2xl lg:text-3xl">{selectedMember.name}</b> 
             <br />
             {selectedMember.title}
           </p>
         </div>
 
         {/* Skills */}
-        <div className="relative z-10 w-full lg:w-[400px] bg-white bg-opacity-10 border border-[#ffffff]/30 p-6 rounded-[15px] text-left tracking-wide backdrop-blur-lg mt-40 ml-0 lg:ml-12 mb-12 lg:mb-12"> 
-          <p className="text-xl">
+        <div className="relative z-10 w-full max-w-[400px] bg-white bg-opacity-10 border border-white/30 p-6 rounded-xl text-left tracking-wide backdrop-blur-lg mt-12 ml-4 lg:ml-12 mb-12">
+          <p className="sm:text-base md:text-lg lg:text-xl">
             <b>Skills </b>
             <ul>
               {selectedMember.skills.map((skill, index) => (
