@@ -17,9 +17,15 @@ module.exports = {
         'lslide-in': 'slideInLeft 2s ease-out forwards', // Slide in from the left
         'lslide-out': 'slideOutLeft 2s ease-in forwards', // Slide out to the left
         'slide-up': 'slideUp 0.5s ease-in forwards',
+        'spin-slow': 'spin 3s linear infinite',
+        'float': 'float 3s ease-in-out infinite',
       },
       keyframes: {
         // Slide in from right to left (for rslide-in)
+        float: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-10px)' },
+        },
         slideUp: {
           '0%': { transform: 'translateY(100%)' },  
           '100%': { transform: 'translateY(0)' },  
