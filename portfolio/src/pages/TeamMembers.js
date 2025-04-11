@@ -9,7 +9,7 @@ import ImageGallery from '../components/ImageHover'; // Updated import
 
 const TeamMembers = ({ darkMode }) => {
   const [selectedMember, setSelectedMember] = useState({
-    image: require("../assets/Anime_Loel.png"),
+    image: require("../assets/Anime_Members/Anime_Loel.png"),
     name: "LOEL CAMPAÑA",
     title: "Project Manager, Frontend Developer, Designer",
     skills: [

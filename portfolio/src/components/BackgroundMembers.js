@@ -106,7 +106,7 @@ const GroupsBackground = () => {
       <div className="fixed inset-0 -z-10">
         {/* Default Background Image when no member is selected */}
         <div className="absolute inset-0 bg-cover bg-center animate-slide-up"
-             style={{ backgroundImage: `url(${require("../assets/Anime_Loel.png")})` }}>
+             style={{ backgroundImage: `url(${require("../assets/Anime_Members/Anime_Loel.png")})` }}>
         </div>
         <div className="absolute inset-0 backdrop-blur-lg"></div>
       </div>
@@ -115,11 +115,11 @@ const GroupsBackground = () => {
 
   // Define background images for each member
   const backgroundImages = {
-    1: require("../assets/Anime_Daniela.png"),
-    2: require("../assets/Anime_Loel.png"),
-    3: require("../assets/Anime_Lance.png"),
-    4: require("../assets/Anime_Rhanel.png"),
-    5: require("../assets/Anime_Fred.png")
+    1: require("../assets/Anime_Members/Anime_Daniela.png"),
+    2: require("../assets/Anime_Members/Anime_Loel.png"),
+    3: require("../assets/Anime_Members/Anime_Lance.png"),
+    4: require("../assets/Anime_Members/Anime_Rhanel.png"),
+    5: require("../assets/Anime_Members/Anime_Fred.png")
   };
 
   // Check if selectedMember.id exists and use it to get the appropriate background image

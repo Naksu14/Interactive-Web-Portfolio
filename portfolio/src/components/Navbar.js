@@ -1,12 +1,33 @@
 import { useState, useEffect } from "react";
 import { Moon, Sun, Menu, X } from "lucide-react";  // Import Sun icon
 import clsx from "clsx";
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom'; // Import useLocation
 
 
 const Navbar = ({ setDarkMode, darkMode }) => {
-  const [activeTab, setActiveTab] = useState("HOME");
   const [menuOpen, setMenuOpen] = useState(false);
+
+  // Get the current location (URL)
+  const location = useLocation();
+
+  // Set active tab based on current URL
+  const getActiveTab = () => {
+    const path = location.pathname;
+    if (path === "/") return "HOME";
+    if (path === "/about") return "ABOUT US";
+    if (path === "/team") return "TEAM MEMBERS";
+    if (path === "/projects") return "PROJECTS";
+    if (path === "/contact") return "CONTACT";
+    return "HOME"; // Default
+  };
+
+  // Track active tab state based on URL changes
+  const [activeTab, setActiveTab] = useState(getActiveTab());
+
+  // Update activeTab when the URL changes
+  useEffect(() => {
+    setActiveTab(getActiveTab());
+  }, [location]);
 
   useEffect(() => {
     document.body.style.transition = "background-color 0.3s ease-in-out, color 0.3s ease-in-out";
@@ -22,15 +43,14 @@ const Navbar = ({ setDarkMode, darkMode }) => {
       )}
     >
       
-     {/* Logo */}
-    <div className="flex items-center gap-8">
-      <img 
-        src={darkMode ? require("../assets/logo_white.png") : require("../assets/brown-logo.png")} 
-        alt="Logo" 
-        className="w-12 h-12" 
-      />
-    </div>
-
+      {/* Logo */}
+      <div className="flex items-center gap-8">
+        <img 
+          src={darkMode ? require("../assets/logo_white.png") : require("../assets/brown-logo.png")} 
+          alt="Logo" 
+          className="w-12 h-12" 
+        />
+      </div>
 
       {/* Mobile Menu Button & Dark Mode Toggle */}
       <div className="flex lg:hidden items-center gap-4">
@@ -42,31 +62,39 @@ const Navbar = ({ setDarkMode, darkMode }) => {
           )}
         </button>
         <button
-            className={`text-${darkMode ? 'white' : 'brown-600'}`} // Adjust button text color based on dark mode
-            onClick={() => setMenuOpen(!menuOpen)}
-          >
-            {menuOpen ? (
-              <X size={30} className={darkMode ? 'text-white' : 'text-[#59453F]'} /> // Adjust X icon color
-            ) : (
-              <Menu size={30} className={darkMode ? 'text-white' : 'text-[#59453F]'} /> // Adjust Menu icon color
-            )}
+          className={`text-${darkMode ? 'white' : 'brown-600'}`} // Adjust button text color based on dark mode
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          {menuOpen ? (
+            <X size={30} className={darkMode ? 'text-white' : 'text-[#59453F]'} /> // Adjust X icon color
+          ) : (
+            <Menu size={30} className={darkMode ? 'text-white' : 'text-[#59453F]'} /> // Adjust Menu icon color
+          )}
         </button>
-
       </div>
+
+      
+      {/* Overlay */}
+      {menuOpen && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-30 z-9 lg:hidden"
+          onClick={() => setMenuOpen(false)}
+        />
+      )}
 
       {/* Navigation Links (Desktop & Mobile) */}
       <div
         className={clsx(
-          "lg:flex gap-16 transition-all duration-300 ease-in-out",
+          "lg:flex gap-16 transition-all duration-300 ease-in-out z-10",
           menuOpen
             ? clsx(
                 "flex flex-col absolute top-20 left-0 right-0 p-6",
-                darkMode ? "bg-[#D74925]/60" : "bg-[#f0b6a2]/60"
+                darkMode ? "bg-[#D74925]/80" : "bg-[#f0b6a2]/80"
               )
             : "hidden lg:flex"
         )}
       >
-        {[
+        {[ 
           { tab: "HOME", path: "/" },
           { tab: "ABOUT US", path: "/about" },
           { tab: "TEAM MEMBERS", path: "/team" },
@@ -93,7 +121,7 @@ const Navbar = ({ setDarkMode, darkMode }) => {
               />
             )}
 
-            {/* MAIN LINK (replaced button with Link) */}
+            {/* MAIN LINK */}
             <Link
               to={path}
               onClick={() => { setActiveTab(tab); setMenuOpen(false); }}
@@ -137,6 +165,7 @@ const Navbar = ({ setDarkMode, darkMode }) => {
 };
 
 export default Navbar;
+
 
 
 

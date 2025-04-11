@@ -5,7 +5,7 @@ import { IconButton } from '@mui/material';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import EmailIcon from '@mui/icons-material/Email';
-import backgroundImage from "../assets/Anime_Groups.png"; // Import the image
+import backgroundImage from "../assets/Anime_Members/Anime_Groups.png"; // Import the image
 
 
 const Contact = ({ darkMode }) => {
