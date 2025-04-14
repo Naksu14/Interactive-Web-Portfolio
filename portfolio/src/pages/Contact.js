@@ -1,15 +1,19 @@
 import React, { useState } from "react";
 import GroupsBackground from "../components/GroupsBackground";
 
-import github from "../assets/gitpng.png";
-import teamlogo from "../assets/bhomelogo2.png";
-import mail from "../assets/mail-circle.png";
 import bmail from "../assets/black-mail.png";
-import facebook from "../assets/facebook-circle.png";
 import location from "../assets/location.png";
 import twitter from "../assets/twitter.png";
 import telephone from "../assets/telephone.png";
 import send from "../assets/sendm.png";
+import logo from "../assets/logo_black.png";
+import pin from "../assets/pinlocreal.png";
+
+import { IconButton } from '@mui/material';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import EmailIcon from '@mui/icons-material/Email';
+
 
 
 import loel from "../assets/Anime_Members/loel.png";
@@ -19,11 +23,30 @@ import rhanel from "../assets/Anime_Members/eyer.png";
 import lance from "../assets/Anime_Members/eyel.png";
 
 
-
 const images = [loel, fred, daniela, rhanel, lance];
 
+
 const Contact = ({ darkMode }) => {
+
   const [hovered, setHovered] = useState(null);
+  const [showMap, setShowMap] = useState(false);
+  const [isMapVisible, setIsMapVisible] = useState(true); // State to track map visibility
+  const buttonStyles = {
+    backgroundColor: darkMode ? 'rgba(255, 255, 255, 0.1)' : 'rgba(109, 109, 109, 0.1)',
+    '&:hover': { backgroundColor: darkMode ? 'rgba(255, 255, 255, 0.3)' : 'rgba(255, 255, 255, 0.3)', transform: 'scale(1.1)' },
+    borderRadius: '50%',
+    width: 56,
+    height: 56,
+    transition: 'all 0.3s ease'
+  };
+
+  const icondarkmode = {
+    color: darkMode ? '#ffffff' : '#59453F', fontSize: '2rem'
+  };
+
+  const toggleMapVisibility = () => {
+    setIsMapVisible(!isMapVisible); // Toggle map visibility
+  };
 
   return (
     <div className={`z-5 relative mx-8 mt-[104px] h-[calc(100vh-130px)] overflow-hidden rounded-b-[2rem] ${darkMode ? 'bg-[#D74925]/60' : 'bg-[#f0b6a2]/60'}`}>
@@ -42,6 +65,7 @@ const Contact = ({ darkMode }) => {
             <h1 className="text-6xl font-bold">CONTACT US</h1>
 
             <p className="text-2xl mt-[10px]">Let's connect and make things happen!</p>
+
 
 
 
@@ -86,76 +110,128 @@ const Contact = ({ darkMode }) => {
                 <div className="grid grid-cols-2 gap-4">
                   <input
                     type="text"
-                    placeholder="First Name"
-                    className={`p-3 rounded-[3px] w-full bg-transparent border-[0.5px] 
-                 ${darkMode ? 'border-white text-white placeholder-white' : 'border-[#59453F] text-[#59453F] placeholder-[#59453F]'}`}
+                    placeholder="First Name :"
+                    className={`p-3 rounded-[3px] w-full bg-white bg-opacity-30 text-sm
+                    ${darkMode
+                        ? 'text-white placeholder-white'
+                        : 'text-[#59453F] placeholder-[#59453F]'}`}
+                    style={{
+                      boxShadow: darkMode
+                        ? '0 0 0 1px rgba(255, 255, 255, 0.5)'
+                        : '0 0 0 1px rgba(255, 255, 255, 0.5)'
+                    }}
                   />
+
 
 
                   <input
                     type="text"
-                    placeholder="Last Name"
-                    className={`p-3 rounded-[3px] w-full bg-transparent border-[0.5px] 
-                 ${darkMode ? 'border-white text-white placeholder-white' : 'border-[#59453F] text-[#59453F] placeholder-[#59453F]'}`}
+                    placeholder="Last Name :"
+                    className={`p-3 rounded-[3px] w-full bg-white bg-opacity-30 text-sm
+                    ${darkMode
+                        ? 'text-white placeholder-white'
+                        : 'text-[#59453F] placeholder-[#59453F]'}`}
+                    style={{
+                      boxShadow: darkMode
+                        ? '0 0 0 1px rgba(255, 255, 255, 0.5)'
+                        : '0 0 0 1px rgba(255, 255, 255, 0.5)'
+                    }}
                   />
                 </div>
 
                 <input
-                  type="email"
-                  placeholder="Email"
-                  className={`p-3 rounded-[3px] w-full bg-transparent border-[0.5px] 
-               ${darkMode ? 'border-white text-white placeholder-white' : 'border-[#59453F] text-[#59453F] placeholder-[#59453F]'}`}
+                  type="text"
+                  placeholder="Email :"
+                  className={`p-3 rounded-[3px] w-full bg-white bg-opacity-30 text-sm
+                    ${darkMode
+                      ? 'text-white placeholder-white'
+                      : 'text-[#59453F] placeholder-[#59453F]'}`}
+                  style={{
+                    boxShadow: darkMode
+                      ? '0 0 0 1px rgba(255, 255, 255, 0.5)'
+                      : '0 0 0 1px rgba(255, 255, 255, 0.5)'
+                  }}
                 />
 
                 <textarea
                   rows="4"
                   placeholder="Message"
-                  className={`p-3 rounded-[3px] w-full bg-transparent border-[0.5px] 
-               ${darkMode ? 'border-white text-white placeholder-white' : 'border-[#59453F] text-[#59453F] placeholder-[#59453F]'} h-[300px]`}
+                  className={`p-3 rounded-[3px] w-full bg-white bg-opacity-30 text-sm h-[300px]
+    ${darkMode
+                      ? 'text-white placeholder-white'
+                      : 'text-[#59453F] placeholder-[#59453F]'}`}
+                  style={{
+                    boxShadow: darkMode
+                      ? '0 0 0 1px rgba(255, 255, 255, 0.2)'
+                      : '0 0 0 1px rgba(89, 69, 63, 0.2)'
+                  }}
                 ></textarea>
+
 
                 <button
                   type="submit"
-                  className={`px-6 py-3 rounded-md bg-transparent font-semibold 
-     ${darkMode ? 'text-white border-white hover:bg-white hover:text-[#59453F]' : 'text-[#59453F] border-[#59453F] hover:bg-[#59453F] hover:text-white'} 
-     border w-full transition`}
+                  className={`group px-6 py-3 rounded-md font-semibold w-full flex items-center justify-center gap-2 transition
+    ${darkMode
+                      ? 'text-white bg-white bg-opacity-5 hover:bg-white hover:text-[#59453F]'
+                      : 'text-[#59453F] bg-white bg-opacity-30 hover:bg-[#59453F] hover:text-white'}`}
+                  style={{
+                    boxShadow: darkMode
+                      ? '0 0 0 1px rgba(255, 255, 255, 0.2)'
+                      : '0 0 0 1px rgba(89, 69, 63, 0.2)'
+                  }}
                 >
                   Send Message
                   <img
                     src={send}
                     alt="Send"
-                    className={`mr-2 w-5 h-5 ml-2 inline-block 
-      ${darkMode ? 'filter invert' : ''}`}
+                    className={`w-5 h-5 transition 
+      ${darkMode
+                        ? 'filter invert group-hover:invert-0'
+                        : 'group-hover:invert'}`}
                   />
                 </button>
+
 
 
               </form>
             </div>
 
             {/* Info Section */}
-            <div className={`space-y-6 min-h-[400px] 
-                ${darkMode ? 'text-white border-white' : 'text-[#59453F] border-[#59453F]'} 
-                border rounded-md text-left p-10 w-1/4`}>
+            <div
+              className={`space-y-6 min-h-[400px] text-left p-10 w-1/4 rounded-md
+                ${darkMode
+                  ? 'text-white bg-white bg-opacity-5'
+                  : 'text-[#59453F] bg-white bg-opacity-30'
+                }`}
+              style={{
+                boxShadow: darkMode
+                  ? '0 0 0 1px rgba(255, 255, 255, 0.5)'
+                  : '0 0 0 1px rgba(255, 255, 255, 0.5)'
+              }}
+            >
+
+
+
+
               {/* Address Section */}
               <div>
                 <h3 className="text-2xl font-bold mb-4">Address</h3>
-                <p className="text-xl mb-2"><strong>Site:</strong> 123 Main Street, Bacoor, Cavite</p>
+                <p className="text-xl mb-2">Site: 123 Main Street, Bacoor, Cavite</p>
               </div>
 
               {/* Contact Section */}
               <div>
                 <h3 className="text-2xl font-bold mb-4">Contact</h3>
-                <p className="text-xl mb-2"><strong>Address:</strong> 123 Main Street, Bacoor, Cavite</p>
-                <p className="text-xl mb-2"><strong>Phone:</strong> +63 912 345 6789</p>
-                <p className="text-xl mb-2"><strong>Email:</strong> info@example.com</p>
+                <p className="text-xl mb-2"> Address: 123 Main Street, Bacoor, Cavite</p>
+                <p className="text-xl mb-2">Phone: +63 912 345 6789</p>
+                <p className="text-xl mb-2">Email: info@example.com</p>
               </div>
 
               {/* Links Section */}
               <div>
                 <h3 className="text-2xl font-bold mb-4">Links</h3>
-                <p className="text-xl mb-2"><strong>Facebook:</strong> +63 912 345 6789</p>
-                <p className="text-xl mb-2"><strong>Twitter:</strong> info@example.com</p>
+                <p className="text-xl mb-2">Facebook: +63 912 345 6789</p>
+                <p className="text-xl mb-2">Twitter: info@example.com</p>
 
                 {/* Social Icons */}
                 <div className="flex gap-6 mt-10">
@@ -177,89 +253,93 @@ const Contact = ({ darkMode }) => {
           </div>
         </div>
 
+
         {/* Google Map Section */}
-        <div className="flex justify-center mt-20 h-[360px]">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30922.216701008873!2d120.96333722978045!3d14.443805191751115!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397ce4e2a0a4823%3A0x64071c34efc65ff9!2sBacoor%2C%20Cavite!5e0!3m2!1sen!2sph!4v1713085415327!5m2!1sen!2sph"
-            width="80%"
-            height="100%"
-            allowFullScreen=""
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            className="rounded-md border border-[#59453F]"
-          ></iframe>
-        </div>
 
-        <footer className={`mt-10 py-6 text-left ${darkMode ? "text-white" : "text-[#59453F]"}`}>
-          <div className="w-[80%] mx-auto flex justify-between items-center mb-6">
-            <div className="flex flex-col items-start gap-2">
-              <img
-                src={teamlogo} alt="Logo" className={`w-29 h-20 ${darkMode ? "invert brightness-0" : ""}`} />
 
-              <p className="text-md ">Innovating Digital Experience.</p>
-            </div>
+        {isMapVisible && (
+          <div
+            className={`mt-10 overflow-hidden transition-all duration-500 ease-in-out ${showMap ? "max-h-[600px] opacity-100" : "max-h-0 opacity-0"
+              }`}
+          >
+            <div className="w-[80%] mx-auto relative"> {/* Controls the width */}
+              <iframe
+                title="Google Map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3863.9773641771453!2d120.94455757367999!3d14.428468081270656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397d25e0e88d16b%3A0xc2f8607cd4512597!2sCavite%20State%20University%20-%20Imus%20Campus!5e0!3m2!1sen!2sph!4v1744643741400!5m2!1sen!2sph"
+                height="400"
+                allowFullScreen=""
+                loading="lazy"
+                className="w-full rounded-xl mt-4"
+              ></iframe>
 
-            <div className="flex gap-[200px]">
-              <div>
-                <h4 className="font-semibold text-2xl relative">
-                  Quick Links
-                  <span
-                    className={`absolute bottom-[-4px] left-0 w-full h-[3px] mt-5 ${darkMode ? "bg-white" : "bg-[#59453F]"
-                      }`}
-                  />
-                </h4>
-                <ul className="mt-4">
-                  <li><a href="/homepage" className="text-lg">Homepage</a></li>
-                  <li><a href="/about-us" className="text-lg">About Us</a></li>
-                  <li><a href="/team-members" className="text-lg">Team Members</a></li>
-                </ul>
-              </div>
+              {/* Pinned label and photo */}
+              <div className="absolute top-[50%] left-[53%] transform -translate-x-1/2 -translate-y-full text-center">
+                <div className="text-white text-sm bg-black bg-opacity-100 mr-20 px-5 py-2 mb-1 shadow-lg rounded-lg relative">
 
-              <div>
-                <h4 className="font-semibold text-2xl relative">
-                  Services
-                  <span
-                    className={`absolute bottom-[-4px] left-0 w-full h-[3px] mt-5 ${darkMode ? "bg-white" : "bg-[#59453F]"
-                      }`}
-                  />
-                </h4>
-                <ul className="mt-4">
-                  <li><a href="/our-services" className="text-lg">Our Services</a></li>
-                  <li><a href="/case-studies" className="text-lg">Case Studies</a></li>
-                </ul>
-              </div>
-
-              <div>
-                <h4 className="font-semibold text-2xl relative">
-                  Support
-                  <span
-                    className={`absolute bottom-[-4px] left-0 w-full h-[3px] mt-5 ${darkMode ? "bg-white" : "bg-[#59453F]"
-                      }`}
-                  />
-                </h4>
-                <ul className="mt-4">
-                  <li><a href="/faq" className="text-lg">FAQ</a></li>
-                </ul>
+                  We are here!
+                  {/* Tail of the speech bubble */}
+                  <div className="absolute bottom-[-8px] left-1/2 transform -translate-x-1/2 w-4 h-4 bg-black rotate-45"></div>
+                </div>
+                <img
+                  src={logo}
+                  alt="We're here!"
+                  className="w-12 h-12 rounded-full border-2 border-black shadow-lg"
+                />
               </div>
             </div>
           </div>
+
+
+        )}
+        <button
+          onClick={() => setShowMap(prev => !prev)}
+          className="px-10 py-2 mt-10  rounded-sm border border-[#59453F] text-[#59453F] bg-transparent 
+             hover:bg-[#59453F] hover:text-white transition duration-300"
+        >
+          {showMap ? "Hide" : "Show Map"}
+        </button>
+
+
+        <footer className={`mt-10 py-6 text-left ${darkMode ? "text-white" : "text-[#59453F]"}`}>
+          <div className="w-[80%] mx-auto flex justify-between items-center mb-6">
+
+          </div>
+
 
           {/* Border and social icons */}
           <div
             className={`w-[80%] mx-auto border-t-[2px] ${darkMode ? "border-white" : "border-[#59453F]"} mt-20`} />
 
+
           <div className="w-[80%] mx-auto flex justify-between items-center mt-4">
             <p className="text-sm">&copy; {new Date().getFullYear()} INNOVATE, All rights reserved.</p>
             <div className="flex gap-7">
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer">
-                <img src={github} alt="GitHub" className={`w-7 h-7 ${darkMode ? "invert brightness-0" : ""}`} />
-              </a>
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer">
-                <img src={facebook} alt="Facebook" className={`w-7 h-7 ${darkMode ? "invert brightness-0" : ""}`} />
-              </a>
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer">
-                <img src={mail} alt="Email" className={`w-7 h-7 ${darkMode ? "invert brightness-0" : ""}`} />
-              </a>
+              <IconButton
+                href="https://github.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                sx={buttonStyles}
+              >
+                <GitHubIcon sx={icondarkmode} />
+              </IconButton>
+
+              <IconButton
+                href="https://facebook.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                sx={buttonStyles}
+              >
+                <FacebookIcon sx={icondarkmode} />
+              </IconButton>
+
+              <IconButton
+                href="mailto:example@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                sx={buttonStyles}
+              >
+                <EmailIcon sx={icondarkmode} />
+              </IconButton>
             </div>
           </div>
         </footer>
