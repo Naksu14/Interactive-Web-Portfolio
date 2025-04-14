@@ -27,8 +27,8 @@ module.exports = {
           '50%': { transform: 'translateY(-10px)' },
         },
         slideUp: {
-          '0%': { transform: 'translateY(100%)' },  
-          '100%': { transform: 'translateY(0)' },  
+          '0%': { transform: 'translateY(100%)' },
+          '100%': { transform: 'translateY(0)' },
         },
         slideIn: {
           '0%': { transform: 'translateX(100%)' },  // Start off-screen to the right
@@ -55,8 +55,10 @@ module.exports = {
           '100%': { opacity: 0, transform: 'scale(0.8)' }, // Fade out and scale down
         },
       },
+      colors: {
+        'custom-placeholder': '#59453F'
+      },
     },
-
   },
   plugins: [],
 };
