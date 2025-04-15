@@ -11,7 +11,7 @@ const GroupsBackground = () => {
       ></div>
 
       {/* Blur Layer */}
-      <div className="absolute inset-0  backdrop-blur-lg"></div>
+      <div className="absolute inset-0  backdrop-blur-xl"></div>
     </div>
   );
 };

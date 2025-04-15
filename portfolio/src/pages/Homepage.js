@@ -1,6 +1,7 @@
 import React from "react";
 import { useInView } from 'react-intersection-observer';  // Intersection Observer hook
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import teamlogo from "../assets/bhomelogo2.png";
 import GroupsBackground from "../components/GroupsBackground";
 import CarouselCard from "../components/CarouselMembers";
 import CarouselCardFrameworkds from "../components/CarouselUseFrameworks";
@@ -29,6 +30,10 @@ const Homepage = ({ darkMode }) => {
 
       {/* Content Wrapper (Scrollable) */}
       <div className={`relative p-6 overflow-auto h-full custom-scrollbar ${darkMode ? "text-[#ffffff]" : "text-[#59453F]"}`}>
+
+        {/*  team higlights */}
+
+
 
         {/* Team name and logo Brief introduction of the team */}
         <div className="flex flex-col lg:flex-row justify-between items-center space-y-6 md:space-y-0 mt-10 px-6">
@@ -258,14 +263,36 @@ const Homepage = ({ darkMode }) => {
 
         
 
-        {/* logo in bottom */}      
-        <div className="w-full flex justify-center">
-            <img 
-              src={darkMode ? require("../assets/Whomelogo2.png") : require("../assets/bhomelogo2.png")} 
-              alt="logo2 Image" 
-              className="w-[120px] h-[80]"
-            />
-        </div>
+        
+
+        <footer className={`mt-10 py-6 text-left ${darkMode ? "text-white" : "text-[#59453F]"}`}>
+          <div className="w-[80%] mx-auto flex md:justify-between items-center  justify-center mb-6">
+            <div className="flex flex-col items-start gap-2">
+              {/* logo in bottom */}      
+              <div className="w-full flex justify-center">
+                  <img 
+                    src={darkMode ? require("../assets/Whomelogo2.png") : require("../assets/bhomelogo2.png")} 
+                    alt="logo2 Image" 
+                    className="w-[120px] h-[80]"
+                  />
+              </div>
+
+              <p className="text-sm ">Innovating Digital Experience.</p>
+            </div>
+          </div>
+
+          {/* Border and social icons */}
+          <div
+            className={`w-[80%] mx-auto border-t-[2px] ${darkMode ? "border-white" : "border-[#59453F]"} mt-20`} />
+
+          <div className="w-[80%] mx-auto flex md:justify-between items-center justify-center mt-4">
+            <p className="text-sm">&copy; {new Date().getFullYear()} INNOVATE, All rights reserved.</p>
+            <div className="flex gap-7">
+              
+
+            </div>
+          </div>
+        </footer>
 
       </div>
     </div>
