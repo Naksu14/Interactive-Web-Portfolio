@@ -19,6 +19,7 @@ module.exports = {
         'slide-up': 'slideUp 0.5s ease-in forwards',
         'spin-slow': 'spin 3s linear infinite',
         'float': 'float 3s ease-in-out infinite',
+        'scroll': 'scrollWheel 1.5s infinite',
       },
       keyframes: {
         // Slide in from right to left (for rslide-in)
@@ -53,6 +54,10 @@ module.exports = {
         fade: {
           '0%': { opacity: 1, transform: 'scale(1.2)' },  // Start with opacity 1 and a slight scale up
           '100%': { opacity: 0, transform: 'scale(0.8)' }, // Fade out and scale down
+        },
+        scrollWheel: {
+          '0%, 100%': { transform: 'translateY(0)', opacity: '1' },
+          '50%': { transform: 'translateY(6px)', opacity: '0.5' },
         },
       },
       colors: {

@@ -7,7 +7,8 @@ import twitter from "../assets/twitter.png";
 import telephone from "../assets/telephone.png";
 import send from "../assets/sendm.png";
 import logo from "../assets/logo_black.png";
-import pin from "../assets/pinlocreal.png";
+
+
 
 import { IconButton } from '@mui/material';
 import GitHubIcon from '@mui/icons-material/GitHub';
@@ -21,6 +22,9 @@ import fred from "../assets/Anime_Members/eyef.png";
 import daniela from "../assets/Anime_Members/eyed.png";
 import rhanel from "../assets/Anime_Members/eyer.png";
 import lance from "../assets/Anime_Members/eyel.png";
+
+
+
 
 
 const images = [loel, fred, daniela, rhanel, lance];
@@ -61,40 +65,79 @@ const Contact = ({ darkMode }) => {
 
         <div className="h-full flex items-center justify-center">
           {/* Header */}
-          <div className="flex flex-col items-center justify-center text-center mt-[-200px]">
+          <div className="flex flex-col items-center justify-center text-center mt-[10px]">
             <h1 className="text-6xl font-bold">CONTACT US</h1>
 
-            <p className="text-2xl mt-[10px]">Let's connect and make things happen!</p>
+            <p className="text-2xl mt-[10px]">Let's &nbsp;connect&nbsp; and &nbsp;make &nbsp;things &nbsp;happen!</p>
 
 
 
 
             {/* Shapes Row */}
-            <div className="mt-6 flex gap-10 mt-[100px]">
+            <div className={`mt-6 flex gap-4 mt-[60px] flex-wrap justify-center ${darkMode ? 'text-white' : 'text-[#59453F]'}`}>
               {[...Array(5)].map((_, i) => (
                 <div
                   key={i}
-                  className="w-50 h-10 border-[0.5px] border-[#59453F] transform -skew-x-[40deg] bg-transparent relative overflow-hidden"
+                  className={`w-[100px] sm:w-[120px] md:w-[150px] h-[30px] border-[0.5px] 
+                 ${darkMode ? 'border-white' : 'border-[#59453F]'} transform -skew-x-[50deg] bg-transparent 
+                 relative overflow-hidden group`}
                 >
                   <img
                     src={images[i]}
                     alt={`Shape Image ${i}`}
-                    className="w-full h-full object-cover transform skew-x-[40deg]"
+                    className={`w-full h-full object-cover transform skew-x-[50deg] filter grayscale opacity-50 
+                   ${darkMode ? 'group-hover:grayscale-0 group-hover:opacity-100' : 'group-hover:grayscale-0 group-hover:opacity-100'} 
+                   transition-all duration-300 glitch-effect`}
                   />
                 </div>
               ))}
             </div>
 
+
+
+
+
+
+
+
+
+            <div className="flex justify-center mt-40">
+              <div className={`flex flex-col items-center ${darkMode ? 'text-white' : 'text-[#59453F]'}`}>
+                {/* Mouse body */}
+                <div className={`w-8 h-12 border-2 ${darkMode ? 'border-white' : 'border-[#59453F]'} rounded-full flex justify-center items-start relative animate-float`}>
+                  {/* Scrolling wheel */}
+                  <div className={`w-1 h-2 ${darkMode ? 'bg-white' : 'bg-[#59453F]'} rounded-full mt-2 animate-scroll`} />
+                </div>
+                <span className={`text-sm mt-2 ${darkMode ? 'text-white' : 'text-[#59453F]'}`}>Scroll down</span>
+
+                {/* Chevron icon */}
+                <span className={`mt-2 w-4 h-4 ${darkMode ? 'text-white' : 'text-[#59453F]'} animate-bounce`}>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    className="w-full h-full"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </span>
+              </div>
+            </div>
+
+
+
           </div>
 
         </div>
         {/* Form and Info Section */}
-        <div className="space-y-6 mx-auto max-w-10xl mt-10">
-          {/* Form and Info Section with Flexbox */}
-          <div className="flex justify-center gap-20 items-start">
+        <div className="space-y-6 mx-auto px-4 sm:px-6 lg:px-40 max-w-none">
 
-            {/* Left Section with Header and Form */}
-            <div className="w-1/2 space-y-6">
+
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+
+            {/* Form Section (larger on big screens) */}
+            <div className="space-y-6 lg:col-span-7 w-full">
               {/* Header */}
               <div className="text-left">
                 <h2 className={`text-4xl font-bold ${darkMode ? 'text-white' : 'text-[#59453F]'}`}>
@@ -107,59 +150,46 @@ const Contact = ({ darkMode }) => {
 
               {/* Contact Form */}
               <form className="space-y-4">
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {/* First Name */}
                   <input
                     type="text"
                     placeholder="First Name :"
                     className={`p-3 rounded-[3px] w-full bg-white bg-opacity-30 text-sm
-                    ${darkMode
-                        ? 'text-white placeholder-white'
-                        : 'text-[#59453F] placeholder-[#59453F]'}`}
+              ${darkMode ? 'text-white placeholder-white' : 'text-[#59453F] placeholder-[#59453F]'}`}
                     style={{
-                      boxShadow: darkMode
-                        ? '0 0 0 1px rgba(255, 255, 255, 0.5)'
-                        : '0 0 0 1px rgba(255, 255, 255, 0.5)'
+                      boxShadow: '0 0 0 1px rgba(255, 255, 255, 0.5)'
                     }}
                   />
-
-
-
+                  {/* Last Name */}
                   <input
                     type="text"
                     placeholder="Last Name :"
                     className={`p-3 rounded-[3px] w-full bg-white bg-opacity-30 text-sm
-                    ${darkMode
-                        ? 'text-white placeholder-white'
-                        : 'text-[#59453F] placeholder-[#59453F]'}`}
+              ${darkMode ? 'text-white placeholder-white' : 'text-[#59453F] placeholder-[#59453F]'}`}
                     style={{
-                      boxShadow: darkMode
-                        ? '0 0 0 1px rgba(255, 255, 255, 0.5)'
-                        : '0 0 0 1px rgba(255, 255, 255, 0.5)'
+                      boxShadow: '0 0 0 1px rgba(255, 255, 255, 0.5)'
                     }}
                   />
                 </div>
 
+                {/* Email */}
                 <input
                   type="text"
                   placeholder="Email :"
                   className={`p-3 rounded-[3px] w-full bg-white bg-opacity-30 text-sm
-                    ${darkMode
-                      ? 'text-white placeholder-white'
-                      : 'text-[#59453F] placeholder-[#59453F]'}`}
+            ${darkMode ? 'text-white placeholder-white' : 'text-[#59453F] placeholder-[#59453F]'}`}
                   style={{
-                    boxShadow: darkMode
-                      ? '0 0 0 1px rgba(255, 255, 255, 0.5)'
-                      : '0 0 0 1px rgba(255, 255, 255, 0.5)'
+                    boxShadow: '0 0 0 1px rgba(255, 255, 255, 0.5)'
                   }}
                 />
 
+                {/* Message */}
                 <textarea
                   rows="4"
                   placeholder="Message"
                   className={`p-3 rounded-[3px] w-full bg-white bg-opacity-30 text-sm h-[300px]
-    ${darkMode
-                      ? 'text-white placeholder-white'
-                      : 'text-[#59453F] placeholder-[#59453F]'}`}
+            ${darkMode ? 'text-white placeholder-white' : 'text-[#59453F] placeholder-[#59453F]'}`}
                   style={{
                     boxShadow: darkMode
                       ? '0 0 0 1px rgba(255, 255, 255, 0.2)'
@@ -167,13 +197,11 @@ const Contact = ({ darkMode }) => {
                   }}
                 ></textarea>
 
-
+                {/* Submit Button */}
                 <button
                   type="submit"
                   className={`group px-6 py-3 rounded-md font-semibold w-full flex items-center justify-center gap-2 transition
-    ${darkMode
-                      ? 'text-white bg-white bg-opacity-5 hover:bg-white hover:text-[#59453F]'
-                      : 'text-[#59453F] bg-white bg-opacity-30 hover:bg-[#59453F] hover:text-white'}`}
+            ${darkMode ? 'text-white bg-white bg-opacity-5 hover:bg-white hover:text-[#59453F]' : 'text-[#59453F] bg-white bg-opacity-30 hover:bg-[#59453F] hover:text-white'}`}
                   style={{
                     boxShadow: darkMode
                       ? '0 0 0 1px rgba(255, 255, 255, 0.2)'
@@ -185,33 +213,23 @@ const Contact = ({ darkMode }) => {
                     src={send}
                     alt="Send"
                     className={`w-5 h-5 transition 
-      ${darkMode
-                        ? 'filter invert group-hover:invert-0'
-                        : 'group-hover:invert'}`}
+              ${darkMode ? 'filter invert group-hover:invert-0' : 'group-hover:invert'}`}
                   />
                 </button>
-
-
-
               </form>
             </div>
 
             {/* Info Section */}
             <div
-              className={`space-y-6 min-h-[400px] text-left p-10 w-1/4 rounded-md
-                ${darkMode
-                  ? 'text-white bg-white bg-opacity-5'
-                  : 'text-[#59453F] bg-white bg-opacity-30'
-                }`}
+              className={`space-y-6 min-h-[400px] p-10 rounded-md mt-5
+    ${darkMode ? 'text-white bg-white bg-opacity-5' : 'text-[#59453F] bg-white bg-opacity-30'}
+    w-full sm:w-full md:w-[90%] lg:w-[75%] xl:w-[545%] text-center lg:text-left flex flex-col items-center lg:items-start`}
               style={{
                 boxShadow: darkMode
                   ? '0 0 0 1px rgba(255, 255, 255, 0.5)'
                   : '0 0 0 1px rgba(255, 255, 255, 0.5)'
               }}
             >
-
-
-
 
               {/* Address Section */}
               <div>
@@ -222,7 +240,7 @@ const Contact = ({ darkMode }) => {
               {/* Contact Section */}
               <div>
                 <h3 className="text-2xl font-bold mb-4">Contact</h3>
-                <p className="text-xl mb-2"> Address: 123 Main Street, Bacoor, Cavite</p>
+                <p className="text-xl mb-2">Address: 123 Main Street, Bacoor, Cavite</p>
                 <p className="text-xl mb-2">Phone: +63 912 345 6789</p>
                 <p className="text-xl mb-2">Email: info@example.com</p>
               </div>
@@ -234,24 +252,27 @@ const Contact = ({ darkMode }) => {
                 <p className="text-xl mb-2">Twitter: info@example.com</p>
 
                 {/* Social Icons */}
-                <div className="flex gap-6 mt-10">
-                  <div className={`w-20 h-10 rounded-full border flex items-center justify-center ${darkMode ? 'border-white bg-transparent' : 'border-[#59453F] bg-transparent'}`}>
-                    <img src={telephone} alt="telephone" className={`w-7 h-7 ${darkMode ? "invert brightness-0" : ""}`} />
-                  </div>
-                  <div className={`w-20 h-10 rounded-full border flex items-center justify-center ${darkMode ? 'border-white bg-transparent' : 'border-[#59453F] bg-transparent'}`}>
-                    <img src={bmail} alt="mail" className={`w-7 h-7 ${darkMode ? "invert brightness-0" : ""}`} />
-                  </div>
-                  <div className={`w-20 h-10 rounded-full border flex items-center justify-center ${darkMode ? 'border-white bg-transparent' : 'border-[#59453F] bg-transparent'}`}>
-                    <img src={twitter} alt="twitter" className={`w-7 h-7 ${darkMode ? "invert brightness-0" : ""}`} />
-                  </div>
-                  <div className={`w-20 h-10 rounded-full border flex items-center justify-center ${darkMode ? 'border-white bg-transparent' : 'border-[#59453F] bg-transparent'}`}>
-                    <img src={location} alt="location" className={`w-7 h-7 ${darkMode ? "invert brightness-0" : ""}`} />
-                  </div>
+                <div className="flex gap-6 mt-10 flex-wrap justify-center lg:justify-start">
+                  {[telephone, bmail, twitter, location].map((icon, idx) => (
+                    <div
+                      key={idx}
+                      className={`w-16 h-10 rounded-full border flex items-center justify-center 
+                ${darkMode ? 'border-white bg-transparent' : 'border-[#59453F] bg-transparent'}`}
+                    >
+                      <img
+                        src={icon}
+                        alt="icon"
+                        className={`w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 
+                  ${darkMode ? "invert brightness-0" : ""}`}
+                      />
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
           </div>
         </div>
+
 
 
         {/* Google Map Section */}
@@ -293,11 +314,12 @@ const Contact = ({ darkMode }) => {
         )}
         <button
           onClick={() => setShowMap(prev => !prev)}
-          className="px-10 py-2 mt-10  rounded-sm border border-[#59453F] text-[#59453F] bg-transparent 
-             hover:bg-[#59453F] hover:text-white transition duration-300"
+          className={`px-10 py-2 mt-10 rounded-sm border transition duration-300 
+    ${darkMode ? 'border-white text-white hover:bg-white hover:text-[#59453F]' : 'border-[#59453F] text-[#59453F] hover:bg-[#59453F] hover:text-white'}`}
         >
           {showMap ? "Hide" : "Show Map"}
         </button>
+
 
 
         <footer className={`mt-10 py-6 text-left ${darkMode ? "text-white" : "text-[#59453F]"}`}>
