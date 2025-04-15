@@ -14,18 +14,18 @@ const AboutUs = ({ darkMode }) => {
       {/* Content Wrapper (Scrollable) */}
       <div className={`relative p-6 overflow-auto h-full custom-scrollbar ${darkMode ? "text-[#ffffff]" : "text-[#59453F]"}`}>
 
-          {/* Top Section: Text + Mission Image */}
-        <div className="flex flex-col md:flex-row justify-between items-center gap-8 mt-4">
+          {/* Top Section: Text +  Image */}
+        <div className="flex flex-col md:flex-row justify-between items-center gap-8 mt-4  px-6">
          
           {/* Intro Text bg-white bg-opacity-30 border border-white/20 rounded-[15px] backdrop-blur-lg*/}
-          <div className="w-full md:w-1/2  p-10 text-left tracking-wide ">
+          <div className="w-full md:w-3/5 p-10 text-left tracking-wide ">
             <p className="text-base sm:text-xl md:text-2xl lg:text-3xl">
               <b>We are InnoVate</b>, a team of five passionate developers and designers committed to creating seamless and innovative digital experiences. Our goal is to build functional, user-friendly, and visually engaging websites that bring ideas to life.
             </p>
           </div>
 
           {/* Fixed Vertical Logo on Right */}
-          <div className="fixed top-[130px] right-20 z-0 hidden md:block">
+          <div className="fixed top-[130px] right-20 z-0 hidden lg:block">
             <img
               src={require("../assets/verticalLogo.png")}
               alt="Innovate Logo"
@@ -36,7 +36,7 @@ const AboutUs = ({ darkMode }) => {
         </div>
         <br />
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-10 max-w-[1500px] p-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mt-10 max-w-[1400px] px-16">
           {[
             {
               title: "Web Development",
