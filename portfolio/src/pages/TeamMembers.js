@@ -5,6 +5,8 @@ import { IconButton } from '@mui/material';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import EmailIcon from '@mui/icons-material/Email';
+import DescriptionIcon from '@mui/icons-material/Description';
+import Tooltip from '@mui/material/Tooltip';
 import ImageGallery from '../components/ImageHover'; // Updated import
 
 const TeamMembers = ({ darkMode }) => {
@@ -89,7 +91,7 @@ const TeamMembers = ({ darkMode }) => {
               selectedMember.name === "LANCE LISTANA" ? 'max-w-[95%] max-h-[800px]' : 
               selectedMember.name === "RHANEL SEIGHMONE BUCLARES" ? 'max-w-[92%] max-h-[980px]' : 
               selectedMember.name === "FREDDRICK TROPICO" ? 'max-w-[92%] max-h-[800px]' : 
-              'max-w-[100%] max-h-[1050px]'
+              'max-w-[100%] max-h-[1050px]' 
             }`}
             style={{ 
               transform: selectedMember.name === "DANIELA ROMANA CASTAÑEDA" ? 'translate(-8%, -16%)' : 
@@ -137,7 +139,7 @@ const TeamMembers = ({ darkMode }) => {
         {/* Fixed Social Icons Container */}
         <div className="fixed z-10 left-20 bottom-10 w-auto max-w-[400px] px-4">
           <div className="flex justify-center gap-4">
-
+          <Tooltip title="View Github">
             {/* GitHub Icon */}
             <IconButton 
               href={selectedMember?.github || "https://github.com/"} // Default GitHub
@@ -147,7 +149,9 @@ const TeamMembers = ({ darkMode }) => {
             >
               <GitHubIcon sx={icondarkmode} />
             </IconButton>
+          </Tooltip>
 
+          <Tooltip title="View Facebook">
             <IconButton 
               href={selectedMember?.facebook || "https://facebook.com/"} // Default GitHub
               target="_blank"
@@ -156,7 +160,8 @@ const TeamMembers = ({ darkMode }) => {
             >
               <FacebookIcon sx={icondarkmode} />
             </IconButton>
-
+          </Tooltip>
+          <Tooltip title="Contact on Email">  
             <IconButton 
               href={`mailto:${selectedMember?.email || "example@gmail.com"}`}// Default GitHub
               target="_blank"
@@ -165,6 +170,20 @@ const TeamMembers = ({ darkMode }) => {
             >
               <EmailIcon sx={icondarkmode} />
             </IconButton>
+          </Tooltip>
+          
+            {/* Resume/CV Icon */}
+            <Tooltip title="View Resume">
+              <IconButton 
+                href="/cv/CV_Campaña-Loel.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                sx={buttonStyles}
+              >
+                <DescriptionIcon sx={icondarkmode} />
+              </IconButton>
+            </Tooltip>
+
             
           </div>
         </div>

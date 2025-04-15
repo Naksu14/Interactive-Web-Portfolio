@@ -87,8 +87,7 @@ const Homepage = ({ darkMode }) => {
           {/* Mission Image Section */}
           <div 
             ref={ref} 
-            className={`hidden lg:flex flex-col justify-center items-center lg:order-1 mb-8 md:mb-10 mx-6 md:mx-12 mt-6 md:mt-0 
-              ${inView ? 'animate-rslide-in' : 'animate-rslide-out'}`} 
+            className={`hidden lg:flex flex-col justify-center items-center lg:order-1 mb-8 md:mb-10 mx-6 md:mx-12 mt-6 md:mt-0 animate-rslide-in`} 
             style={{ transition: 'transform 1s ease-out' }} 
           >
             <img 
@@ -111,8 +110,7 @@ const Homepage = ({ darkMode }) => {
           {/* Vision Image Section (Now on the left) */}
           <div 
             ref={ref} 
-            className={`hidden lg:flex flex-col justify-center items-center mb-8 md:mb-10 mx-6 md:mx-12 mt-6 md:mt-0 animate-lslide-in
-              ${inView ? 'animate-lslide-in' : 'animate-lslide-out'}`} 
+            className={`hidden lg:flex flex-col justify-center items-center mb-8 md:mb-10 mx-6 md:mx-12 mt-6 md:mt-0 animate-lslide-in`} 
             style={{ transition: 'transform 1s ease-out' }} 
           >
             <img 

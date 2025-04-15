@@ -9,7 +9,6 @@ const AboutsBackground = ({ darkMode }) => {
     <div className="fixed inset-0 -z-10">
       {/* Background Image */}
       <img
-        key={darkMode ? "dark" : "light"}
         src={darkMode ? logoDark : logoLight}
         alt="Background"
         className="w-full h-full object-cover absolute inset-0"

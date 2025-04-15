@@ -215,7 +215,7 @@ const Contact = ({ darkMode }) => {
 
               {/* Address Section */}
               <div>
-                <h3 className="text-2xl font-bold mb-4">Address</h3>
+                <h3 className="text-base sm:text-lg  md:text-xl  text-2xl font-bold mb-4">Address</h3>
                 <p className="text-xl mb-2">Site: 123 Main Street, Bacoor, Cavite</p>
               </div>
 
