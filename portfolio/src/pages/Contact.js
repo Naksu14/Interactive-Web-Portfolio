@@ -101,24 +101,17 @@ const Contact = ({ darkMode }) => {
 
 
 
-            <div className="flex justify-center mt-40">
+            <div className="flex justify-center mt-40 cursor-pointer" onClick={() => {
+              document.getElementById('contact-section')?.scrollIntoView({ behavior: 'smooth' });
+            }}>
               <div className={`flex flex-col items-center ${darkMode ? 'text-white' : 'text-[#59453F]'}`}>
                 {/* Mouse body */}
                 <div className={`w-8 h-12 border-2 ${darkMode ? 'border-white' : 'border-[#59453F]'} rounded-full flex justify-center items-start relative animate-float`}>
-                  {/* Scrolling wheel */}
                   <div className={`w-1 h-2 ${darkMode ? 'bg-white' : 'bg-[#59453F]'} rounded-full mt-2 animate-scroll`} />
                 </div>
                 <span className={`text-sm mt-2 ${darkMode ? 'text-white' : 'text-[#59453F]'}`}>Scroll down</span>
-
-                {/* Chevron icon */}
                 <span className={`mt-2 w-4 h-4 ${darkMode ? 'text-white' : 'text-[#59453F]'} animate-bounce`}>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    className="w-full h-full"
-                  >
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-full h-full">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M19 9l-7 7-7-7" />
                   </svg>
                 </span>
@@ -126,12 +119,11 @@ const Contact = ({ darkMode }) => {
             </div>
 
 
-
           </div>
 
         </div>
         {/* Form and Info Section */}
-        <div className="space-y-6 mx-auto px-4 sm:px-6 lg:px-40 max-w-none">
+        <div id="contact-section" className="space-y-6 mx-auto px-4 sm:px-6 lg:px-40 max-w-none">
 
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
@@ -233,7 +225,7 @@ const Contact = ({ darkMode }) => {
 
               {/* Address Section */}
               <div>
-                <h3 className="text-base sm:text-lg  md:text-xl  text-2xl font-bold mb-4">Address</h3>
+                <h3 className="text-2xl font-bold mb-4">Address</h3>
                 <p className="text-xl mb-2">Site: 123 Main Street, Bacoor, Cavite</p>
               </div>
 
@@ -365,16 +357,6 @@ const Contact = ({ darkMode }) => {
             </div>
           </div>
         </footer>
-
-
-
-
-
-
-
-
-
-
       </div>
     </div>
   );
