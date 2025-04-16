@@ -47,7 +47,7 @@ const Projects = ({ darkMode }) => {
         {/* Second Project with reversed layout */}
         <ProjectCard
           darkMode={darkMode}
-          title="sCHOLARSHIP SYSTEM"
+          title="SCHOLARSHIP SYSTEM"
           description="A school campus navigation system that helps new students find buildings, services, and events with ease."
           features={[
             "Interactive map integration",
@@ -62,7 +62,7 @@ const Projects = ({ darkMode }) => {
         {/* Second Project with reversed layout */}
         <ProjectCard
           darkMode={darkMode}
-          title="CAMPUS NAVI"
+          title="CVSU ALUMNI"
           description="A school campus navigation system that helps new students find buildings, services, and events with ease."
           features={[
             "Interactive map integration",

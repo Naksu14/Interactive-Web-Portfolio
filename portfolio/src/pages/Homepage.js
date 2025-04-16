@@ -168,7 +168,7 @@ const Homepage = ({ darkMode }) => {
         <br />
 
         {/* Team name and logo Brief introduction of the team */}
-        <div className="flex flex-col lg:flex-row justify-between items-center space-y-6 md:space-y-0 mt-10 px-6">
+        <div className="h-full flex flex-col lg:flex-row justify-between items-center space-y-6 md:space-y-0 mt-10 px-6">
 
           <div className="w-full max-w-[680px] lg:order-1 mb-8 md:mb-10 mx-6 md:mx-12 mt-6 md:mt-0 flex-1">
             <img
