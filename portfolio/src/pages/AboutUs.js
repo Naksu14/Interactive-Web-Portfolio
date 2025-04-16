@@ -19,20 +19,20 @@ const AboutUs = ({ darkMode }) => {
          
           {/* Intro Text bg-white bg-opacity-30 border border-white/20 rounded-[15px] backdrop-blur-lg*/}
           <div className="w-full lg:w-3/5 w-4/5 p-10 text-left tracking-wide ">
-            <p className="text-base sm:text-xl md:text-2xl lg:text-3xl">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl">
               <b>We are InnoVate</b>, a team of five passionate developers and designers committed to creating seamless and innovative digital experiences. Our goal is to build functional, user-friendly, and visually engaging websites that bring ideas to life.
             </p>
           </div>
 
           {/* Fixed Vertical Logo on Right */}
-          <div className="fixed top-[100px] right-20 z-0">
+          <div className="fixed top-[150px] right-20 z-0">
             <img
-              src={require("../assets/verticalLogo.png")}
+              src={darkMode ? require("../assets/verticallighlogo.png") : require("../assets/verticaldarklogo.png")} 
               alt="Innovate Logo"
-              className="w-[150px] hidden xl:block"
+              className="w-[50px] hidden xl:block"
             />
             <div className="absolute right-10 mt-10 flex flex-row ">
-              <b className="text-xl w-[100px]">ABOUT US</b>
+              <b className="text-xl w-[120px]">ABOUT US</b>
               <div className={`h-[2px] w-[200px] ml-5 mt-4 ${darkMode ? "bg-[#ffffff]" : "bg-[#59453F]"}`}></div>
             </div>
           </div>
@@ -66,7 +66,7 @@ const AboutUs = ({ darkMode }) => {
           ].map((card, index) => (
             <div
               key={index}
-              className="bg-white bg-opacity-30 backdrop-blur-md rounded-xl shadow-md border border-white/20 overflow-hidden flex flex-col transition-all duration-300 hover:scale-[1.09] p-1"
+              className="bg-white bg-opacity-30 backdrop-blur-md rounded-xl shadow-md border border-white/30 overflow-hidden flex flex-col transition-all duration-300 hover:scale-[1.09] p-1"
             >
               {/* Video Container */}
               <div className="relative h-[140px] md:h-[160px] lg:h-[180px] overflow-hidden rounded-t-xl">

@@ -70,50 +70,41 @@
 // };
 
 // export default GroupsBackground;
-
 import React, { useEffect, useState } from 'react';
 
 const GroupsBackground = () => {
-  const [selectedMember, setSelectedMember] = useState(null);
+  const defaultMember = { id: 2, name: "Loel" };
+  const [selectedMember, setSelectedMember] = useState(defaultMember);
 
-  // Function to update the selected member from sessionStorage
   const updateMemberFromSessionStorage = () => {
     const storedMember = sessionStorage.getItem('selectedMember');
     if (storedMember) {
       const member = JSON.parse(storedMember);
-      setSelectedMember(member);
+      // Always setSelectedMember, even if the same ID
+      setSelectedMember(prev => {
+        // If same ID, return a new object to force re-render
+        if (prev?.id === member?.id) {
+          return { ...member };
+        }
+        return member;
+      });
     } else {
-      console.log("No member selected");
+      // Fallback to default (Loel)
+      setSelectedMember({ ...defaultMember });
     }
   };
+  
 
   useEffect(() => {
-    // Initial update when the component mounts
-    updateMemberFromSessionStorage();
+    // On initial mount, reset sessionStorage to default
+    sessionStorage.setItem('selectedMember', JSON.stringify(defaultMember));
 
-    // Poll for changes in sessionStorage every 500ms
+    // Then watch for any changes in sessionStorage (optional)
     const interval = setInterval(updateMemberFromSessionStorage, 100);
 
-    // Cleanup interval on component unmount
-    return () => {
-      clearInterval(interval);
-    };
+    return () => clearInterval(interval);
   }, []);
 
-  // If no selected member, return a default background
-  if (!selectedMember) {
-    return (
-      <div className="fixed inset-0 -z-10">
-        {/* Default Background Image when no member is selected */}
-        <div className="absolute inset-0 bg-cover bg-center animate-slide-up"
-             style={{ backgroundImage: `url(${require("../assets/Anime_Members/Anime_Loel.png")})` }}>
-        </div>
-        <div className="absolute inset-0 backdrop-blur-lg"></div>
-      </div>
-    );
-  }
-
-  // Define background images for each member
   const backgroundImages = {
     1: require("../assets/Anime_Members/Anime_Daniela.png"),
     2: require("../assets/Anime_Members/Anime_Loel.png"),
@@ -122,24 +113,23 @@ const GroupsBackground = () => {
     5: require("../assets/Anime_Members/Anime_Fred.png")
   };
 
-  // Check if selectedMember.id exists and use it to get the appropriate background image
-  const memberKey = selectedMember.id || 2; // Fallback to "LOEL" if no id is found
-  const backgroundImage = backgroundImages[memberKey] || backgroundImages[2]; // Default to "LOEL"
+  const memberKey = selectedMember?.id || 2;
+  const backgroundImage = backgroundImages[memberKey] || backgroundImages[2];
 
   return (
     <div className="fixed inset-0 -z-10">
-      {/* Background Image - dynamically changes based on selected member */}
       <div
+        key={memberKey}
         className="absolute inset-0 bg-cover bg-center animate-slide-up"
         style={{ backgroundImage: `url(${backgroundImage})` }}
-      >
-      </div>
+      ></div>
 
-      {/* Blur Layer */}
       <div className="absolute inset-0 backdrop-blur-lg"></div>
     </div>
   );
 };
 
 export default GroupsBackground;
+
+
 

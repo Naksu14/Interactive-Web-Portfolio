@@ -17,7 +17,7 @@ const Homepage = ({ darkMode }) => {
   });
 
   const ContainerBg =
-    'bg-white bg-opacity-30 border border-[#ffffff]/20 p-10 rounded-[15px] tracking-wide backdrop-blur-lg'
+    'bg-white bg-opacity-30 border border-[#ffffff]/30 p-10 rounded-[15px] tracking-wide backdrop-blur-lg'
   ;
 
   return (
@@ -47,9 +47,12 @@ const Homepage = ({ darkMode }) => {
             />
           </div>
 
-          <div className="w-full lg:w-[800px] bg-white bg-opacity-30 border border-[#ffffff]/20 p-10 rounded-[15px] text-left tracking-wide backdrop-blur-lg mx-4 sm:mx-6 md:mx-12 mb-4 sm:mb-6 md:mb-0 mt-4 sm:mt-6 md:mt-0 flex-1">
-            <p className="text-base sm:text-xl md:text-2xl lg:text-3xl">
-              <b>We are InnoVate</b>, a team of five passionate developers and designers committed to creating seamless and innovative digital experiences. Our goal is to build functional, user-friendly, and visually engaging websites that bring ideas to life.
+          <div className="w-full lg:w-[800px] bg-white bg-opacity-20 border border-[#ffffff]/30 p-10 rounded-[15px] text-left tracking-wide backdrop-blur-lg mx-4 sm:mx-6 md:mx-12 mb-4 sm:mb-6 md:mb-0 mt-4 sm:mt-6 md:mt-0 flex-1">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl">
+              <span>What We think - <b className={`${darkMode ? "hover:text-[#f0b6a2]" : "hover:text-[#D74925]"}`}>is What You click</b></span>
+              <br />
+              <br />
+              <b>InnoVate</b> crafts clean, intuitive, and engaging digital solutions that bring ideas to life.
             </p>
           </div>
 
@@ -65,7 +68,7 @@ const Homepage = ({ darkMode }) => {
           {/* Mission Statement Title and Text Section */}
           <div className="flex flex-col items-center justify-center w-full lg:w-[85%] p-6">
             {/* Mission Statement Title */}
-            <div className="sm:text-3xl md:text-4xl lg:text-5xl text-left w-full max-w-[800px] mx-auto">
+            <div className="sm:text-2xl md:text-3xl lg:text-4xl text-left w-full max-w-[800px] mx-auto">
               <b>
                 MISSION <br />
                 STATEMENT
@@ -77,7 +80,7 @@ const Homepage = ({ darkMode }) => {
             {/* Text Section of Mission */}
             <div className="w-full flex justify-center">
               <div className="w-full md:w-[800px] bg-white bg-opacity-30 border border-[#ffffff]/20 p-10 rounded-[15px] tracking-wide backdrop-blur-lg mx-auto mb-8 md:mb-0 mt-6 md:mt-0">
-                <p className="text-base sm:text-xl md:text-2xl lg:text-3xl text-center">
+                <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-center">
                   We develop innovative and promising projects that solve real-world problems by constructing efficient programs with enhanced user experiences.
                 </p>
               </div>
@@ -130,7 +133,7 @@ const Homepage = ({ darkMode }) => {
           {/* Vision Statement Title and Text Section (Now on the right) */}
           <div className="flex flex-col items-center justify-center w-full lg:w-[85%] p-6">
             {/* Vision Statement Title */}
-            <div className="sm:text-3xl md:text-4xl lg:text-5xl text-right w-full max-w-[800px] mx-auto">
+            <div className="sm:text-2xl md:text-3xl lg:text-4xl text-right w-full max-w-[800px] mx-auto">
               <b>
                 VISION <br />
                 STATEMENT
@@ -143,7 +146,7 @@ const Homepage = ({ darkMode }) => {
             {/* Text Section of Vision */}
             <div className="w-full flex justify-center">
               <div className="w-full md:w-[800px] bg-white bg-opacity-30 border border-[#ffffff]/20 p-10 rounded-[15px] tracking-wide backdrop-blur-lg mx-auto mb-8 md:mb-0 mt-6 md:mt-0">
-                <p className="text-base sm:text-xl md:text-2xl lg:text-3xl text-center">
+                <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-center">
                   To alter our technology by developing progressive solutions that simplify real-world challenges and set new standards for user experience.
                 </p>
               </div>
@@ -158,12 +161,12 @@ const Homepage = ({ darkMode }) => {
           {/* Mission Statement */}
           <div className={`md:col-span-2 md:row-span-1 ${ContainerBg} p-6 rounded-xl`}>
             <div className="text-left">
-              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold">
+              <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold">
                 MISSION <br /> STATEMENT
               </h2>
               <div className={`h-[2px] mt-1 sm:w-[170px] md:w-[200px] lg:w-[270px] ${darkMode ? "bg-white" : "bg-[#59453F]"}`}></div>
             </div>
-            <p className="mt-4 text-base sm:text-lg md:text-xl lg:text-2xl text-left">
+            <p className="mt-4 text-base sm:text-md md:text-lg lg:text-xl text-left">
               Our mission is to develop innovative and promising projects that address real-world challenges by building efficient, reliable, and scalable programs with enhanced user experiences. We are committed to delivering practical solutions that improve lives, empower communities, and make technology more intuitive and accessible for everyone.
             </p>
           </div>
@@ -208,7 +211,7 @@ const Homepage = ({ darkMode }) => {
           <div className={`md:col-span-1 md:row-span-1 ${ContainerBg} flex flex-col justify-center items-center p-4 rounded-xl`}>
             <img className="w-16 md:w-32 lg:w-48 mb-2" src={require("../assets/gitpng.png")} alt="GitHub" />
             <div className="mt-6 flex items-center justify-between">
-              <p className="text-lg font-medium mx-auto px-8">Repository</p>
+              <p className="text-md font-medium mx-auto px-8">Repository</p>
               <a href="https://github.com/Naksu14/Interactive-Web-Portfolio" target="_blank" rel="noopener noreferrer">
                 <button
                   className="w-10 h-10 rounded-full bg-white/40 shadow-md flex items-center justify-center hover:bg-gray-200 transition"
@@ -224,11 +227,11 @@ const Homepage = ({ darkMode }) => {
           {/* Vision Statement */}
           <div className={`md:col-span-2 md:row-span-1 ${ContainerBg} p-6 rounded-xl`}>
             <div className="text-right">
-              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold">
+              <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold">
                 VISION <br /> STATEMENT
               </h2>
               <div className={`h-[2px] mt-1 sm:w-[170px] md:w-[200px] lg:w-[270px] ${darkMode ? "bg-white" : "bg-[#59453F]"} ml-auto`}></div>
-              <p className="mt-4 text-base sm:text-lg md:text-xl lg:text-2xl text-right">
+              <p className="mt-4 text-base sm:text-md md:text-lg lg:text-xl text-right">
                 To transform technology into a force for good by crafting progressive, user-centered solutions that not only simplify real-world challenges but also elevate everyday experiences. We aim to set new benchmarks in innovation and usability, empowering individuals and organizations through intuitive, impactful, and forward-thinking design.
               </p>
             </div>
