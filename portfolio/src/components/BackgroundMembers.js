@@ -120,7 +120,7 @@ const GroupsBackground = () => {
     <div className="fixed inset-0 -z-10">
       <div
         key={memberKey}
-        className="absolute inset-0 bg-cover bg-center animate-slide-up"
+        className="absolute inset-20 bg-cover bg-center animate-slide-up"
         style={{ backgroundImage: `url(${backgroundImage})` }}
       ></div>
 

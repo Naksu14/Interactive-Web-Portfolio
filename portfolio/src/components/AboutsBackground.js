@@ -11,7 +11,7 @@ const AboutsBackground = ({ darkMode }) => {
       <img
         src={darkMode ? logoDark : logoLight}
         alt="Background"
-        className="w-full h-full object-cover absolute inset-0"
+        className="w-full h-[130%] object-cover absolute inset-0"
       />
 
       {/* Blur Layer */}

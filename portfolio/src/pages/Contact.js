@@ -176,7 +176,7 @@ const Contact = ({ darkMode }) => {
                   }}
                 />
 
-                {/* Message */}z
+                {/* Message */}
                 <textarea
                   rows="4"
                   placeholder="Message"
