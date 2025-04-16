@@ -172,6 +172,7 @@ function ImageGallery({ onSelect, darkMode, selectedMember }) {
         "DEVOPS: GIT",
         "WIREFRAME: FIGMA"
       ],
+      cv: "/cv/",
       position: '48% 20%',
       zoom: 1.4
     },
@@ -193,6 +194,7 @@ function ImageGallery({ onSelect, darkMode, selectedMember }) {
         "DEVOPS: GIT",
         "WIREFRAME: FIGMA"
       ],
+      cv: "/cv/CV_Campaña-Loel.pdf",
       position: '50% 20%',
       zoom: 1.4
     },
@@ -214,6 +216,7 @@ function ImageGallery({ onSelect, darkMode, selectedMember }) {
         "DEVOPS: GIT",
         "WIREFRAME: FIGMA"
         ],
+        cv: "/cv/",
         position: '15% 10%',
         zoom: 1.0
       },
@@ -235,6 +238,7 @@ function ImageGallery({ onSelect, darkMode, selectedMember }) {
             "DEVOPS: GIT",
             "WIREFRAME: FIGMA"
         ],
+        cv: "/cv/CV_Campaña-Loel.pdf",
         position: '45% 20%',
         zoom: 1.0
       },
@@ -256,6 +260,7 @@ function ImageGallery({ onSelect, darkMode, selectedMember }) {
             "DEVOPS: GIT",
             "WIREFRAME: FIGMA"
         ],
+        cv: "/cv/",
         position: '30% 20%',
         zoom: 1.0
       },

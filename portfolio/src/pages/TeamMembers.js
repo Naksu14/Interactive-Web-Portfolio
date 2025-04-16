@@ -24,7 +24,8 @@ const TeamMembers = ({ darkMode }) => {
     ],
     github: "https://github.com/Naksu14",
     facebook:"https://www.facebook.com/loelcamp14",
-    email:"mailto:ic.loel.campana@cvsu.edu.ph"
+    email:"mailto:ic.loel.campana@cvsu.edu.ph",
+    cv: "/cv/CV_Campaña-Loel.pdf",
   });
 
   const handleMemberSelect = (member) => {
@@ -45,6 +46,7 @@ const TeamMembers = ({ darkMode }) => {
       github: member.github,
       facebook: member.facebook,
       email: member.email,
+      cv: member.cv,
     });
   };
   
@@ -175,7 +177,7 @@ const TeamMembers = ({ darkMode }) => {
             {/* Resume/CV Icon */}
             <Tooltip title="View Resume">
               <IconButton 
-                href="/cv/CV_Campaña-Loel.pdf"
+                href={selectedMember?.cv}
                 target="_blank"
                 rel="noopener noreferrer"
                 sx={buttonStyles}
