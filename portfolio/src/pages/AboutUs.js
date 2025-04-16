@@ -18,23 +18,28 @@ const AboutUs = ({ darkMode }) => {
         <div className="flex flex-col md:flex-row justify-between items-center gap-8 mt-4  px-6">
          
           {/* Intro Text bg-white bg-opacity-30 border border-white/20 rounded-[15px] backdrop-blur-lg*/}
-          <div className="w-full md:w-3/5 p-10 text-left tracking-wide ">
+          <div className="w-full lg:w-3/5 w-4/5 p-10 text-left tracking-wide ">
             <p className="text-base sm:text-xl md:text-2xl lg:text-3xl">
               <b>We are InnoVate</b>, a team of five passionate developers and designers committed to creating seamless and innovative digital experiences. Our goal is to build functional, user-friendly, and visually engaging websites that bring ideas to life.
             </p>
           </div>
 
           {/* Fixed Vertical Logo on Right */}
-          <div className="fixed top-[130px] right-20 z-0 hidden lg:block">
+          <div className="fixed top-[100px] right-20 z-0">
             <img
               src={require("../assets/verticalLogo.png")}
               alt="Innovate Logo"
-              className="w-[180px] opacity-70"
+              className="w-[150px] hidden xl:block"
             />
+            <div className="absolute right-10 mt-10 flex flex-row ">
+              <b className="text-xl w-[100px]">ABOUT US</b>
+              <div className={`h-[2px] w-[200px] ml-5 mt-4 ${darkMode ? "bg-[#ffffff]" : "bg-[#59453F]"}`}></div>
+            </div>
           </div>
 
+          
+
         </div>
-        <br />
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mt-10 max-w-[1400px] px-16">
           {[
@@ -46,17 +51,17 @@ const AboutUs = ({ darkMode }) => {
             {
               title: "UI/UX Design",
               desc: "Crafting intuitive and modern user experiences.",
-              video: require("../assets/videos/webdev-loop.mp4"),
+              video: require("../assets/videos/uiux-loop.mp4"),
             },
             {
               title: "E-commerce & CMS",
               desc: "Developing scalable online platforms.",
-              video: require("../assets/videos/webdev-loop.mp4"),
+              video: require("../assets/videos/cms-loop.mp4"),
             },
             {
               title: "SEO & Optimization",
               desc: "Enhancing your online presence and visibility.",
-              video: require("../assets/videos/webdev-loop.mp4"),
+              video: require("../assets/videos/seo-loop.mp4"),
             },
           ].map((card, index) => (
             <div
