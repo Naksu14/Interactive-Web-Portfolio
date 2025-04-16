@@ -6,7 +6,7 @@ const ViewContactButton = () => {
 
   return (
     <div className="mt-6 flex items-center justify-between">
-      <p className="text-lg font-medium mx-auto px-8">View Contact</p>
+      <p className="text-md font-medium mx-auto px-8">View Contact</p>
       <button
         className="w-10 h-10 rounded-full bg-white/40 shadow-md flex items-center justify-center hover:bg-gray-200 transition"
         aria-label="Next"

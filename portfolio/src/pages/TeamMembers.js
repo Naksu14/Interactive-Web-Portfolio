@@ -13,7 +13,7 @@ const TeamMembers = ({ darkMode }) => {
   const [selectedMember, setSelectedMember] = useState({
     image: require("../assets/Anime_Members/Anime_Loel.png"),
     name: "LOEL CAMPAÑA",
-    title: "Project Manager, Frontend Developer, Designer",
+    title: "Full-Stack Developers",
     skills: [
       "LANGUAGE: JS, Java, Python, C++, PHP",
       "FRONTEND: CSS, HTML",
@@ -109,7 +109,7 @@ const TeamMembers = ({ darkMode }) => {
           <ImageGallery onSelect={handleMemberSelect} darkMode={darkMode} />
 
           <div className="absolute right-20 mt-10 flex flex-row ">
-            <b className="text-2xl">MEMBERS </b>
+            <b className="text-xl">MEMBERS </b>
             <div className={`h-[2px] w-[270px] ml-5 mt-4 ${darkMode ? "bg-[#ffffff]" : "bg-[#59453F]"}`}></div>
           </div>
 

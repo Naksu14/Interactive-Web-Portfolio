@@ -158,12 +158,12 @@ function ImageGallery({ onSelect, darkMode, selectedMember }) {
       alt: "Daniela",
       name: "DANIELA ROMANA CASTAÑEDA",
       nn: "DANIELA",
-      github: "",
-      facebook:"",
-      email:"",
+      github: "https://github.com/dnlrmn09",
+      facebook:"https://www.facebook.com/kumarii14",
+      email:"ic.danielaromana.castaneda@cvsu.edu.ph",
       title: "UI/UX Designer",
       skills: [
-       "LANGUAGE: JS, Java, Python, C++, PHP",
+       "LANGUAGE: JS, Python, C++, PHP",
         "FRONTEND: CSS, HTML",
         "FRAMEWORK: React",
         "DATABASE: MYSQL",
@@ -182,7 +182,7 @@ function ImageGallery({ onSelect, darkMode, selectedMember }) {
       github: "https://github.com/Naksu14",
       facebook:"https://www.facebook.com/loelcamp14",
       email:"mailto:ic.loel.campana@cvsu.edu.ph",
-      title: "Project Manager, Frontend Developer, Designer",
+      title: "Full-Stack Developer",
       skills: [
         "LANGUAGE: JS, Java, Python, C++, PHP",
         "FRONTEND: CSS, HTML",
@@ -203,7 +203,7 @@ function ImageGallery({ onSelect, darkMode, selectedMember }) {
         github: "",
         facebook:"",
         email:"",
-        title: "Project Manager, Frontend Developer",
+        title: "QA Tester",
         skills: [
           "LANGUAGE: JS, Java, Python, C++, PHP",
         "FRONTEND: CSS, HTML",
@@ -224,7 +224,7 @@ function ImageGallery({ onSelect, darkMode, selectedMember }) {
         facebook:"",
         email:"",
         name: "RHANEL SEIGHMONE BUCLARES",
-        title: "Project Manager, Frontend Developer",
+        title: "QA Tester",
         skills: [
           "LANGUAGE: JS, Java, Python, C++, PHP",
             "FRONTEND: CSS, HTML",
@@ -243,7 +243,7 @@ function ImageGallery({ onSelect, darkMode, selectedMember }) {
         github: "",
         facebook:"",
         email:"",
-        title: "Project Manager, Frontend Developer",
+        title: "Frontend Developer",
         skills: [
           "LANGUAGE: Python, C++, PHP",
             "FRONTEND: CSS, HTML",

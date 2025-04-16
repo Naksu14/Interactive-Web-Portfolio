@@ -60,7 +60,7 @@ const CarouselCard = () => {
           <ChevronLeft />
         </button>
 
-        <p className="text-lg font-medium text-center">{current.name}</p>
+        <p className="text-md font-medium text-center">{current.name}</p>
 
         <button
           className="w-10 h-10 rounded-full bg-white/40 shadow-md flex items-center justify-center hover:bg-gray-200 transition"
@@ -76,7 +76,7 @@ const CarouselCard = () => {
         className="mt-4 text-sm underline  hover:text-blue-800 transition"
         onClick={() => navigate(current.link)}
       >
-        <p className="text-lg font-medium mx-auto px-8">Check Us OUt</p>
+        <p className="text-md font-medium mx-auto px-8">Check Us OUt</p>
       </button>
     </div>
   );

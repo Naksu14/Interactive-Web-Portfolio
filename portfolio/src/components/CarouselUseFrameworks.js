@@ -57,7 +57,7 @@ const CarouselCardFrameworkds = () => {
           <ChevronLeft />
         </button>
 
-        <p className="text-lg font-semibold text-center">{current.name}</p>
+        <p className="text-md font-semibold text-center">{current.name}</p>
 
         <button
           className="w-10 h-10 rounded-full bg-white/40 shadow-md flex items-center justify-center hover:bg-gray-200 transition"

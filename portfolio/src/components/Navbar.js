@@ -3,7 +3,6 @@ import { Moon, Sun, Menu, X } from "lucide-react";  // Import Sun icon
 import clsx from "clsx";
 import { Link, useLocation } from 'react-router-dom'; // Import useLocation
 
-
 const Navbar = ({ setDarkMode, darkMode }) => {
   const [menuOpen, setMenuOpen] = useState(false);
 
