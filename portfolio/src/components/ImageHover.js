@@ -129,7 +129,8 @@ function ImageHover({ imageSrc, altText, position = '50% 20%', zoom = 1, name, o
       <img 
         src={imageSrc} 
         alt={altText} 
-        className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-500 hover:scale-110"
+        className={`absolute inset-0 w-full h-full object-cover object-center transition-transform transform skew-x-[50deg] duration-500 hover:scale-110 
+          ${isHovered ? 'grayscale-0' : 'grayscale opacity-80'}`}
         style={{ 
           objectPosition: position,
           transform: `scale(${zoom})`,
@@ -137,6 +138,7 @@ function ImageHover({ imageSrc, altText, position = '50% 20%', zoom = 1, name, o
           borderBottomRightRadius: '50px'
         }}
       />
+
 
       {/* Name overlay - appears on hover/selection */}
       <div className={`absolute bottom-0 left-0 right-0 z-20 p-2 text-left text-white  ${
