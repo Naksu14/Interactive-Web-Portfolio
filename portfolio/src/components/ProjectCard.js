@@ -51,8 +51,8 @@ const ProjectBlock = ({
         </h1>
         <br />
         <p className={`text-sm md:text-base ${textColor}`}>
-          <span>Project description</span>
-          <br />
+          
+          
           {description}
         </p>
         <br />

@@ -5,12 +5,51 @@ import ProjectCard from "../components/ProjectCard";
 
 
 const Projects = ({ darkMode }) => {
-  const techStack = [
+  const techStackProj1 = [
     { name: "FIGMA", icon: "figma-icon.png" },
     { name: "HTML", icon: "html-icon.png" },
     { name: "CSS", icon: "css-icon.png" },
     { name: "BOOTSTRAP", icon: "bootstrap-icon.png" },
     { name: "REACT", icon: "react-icon.png" },
+    { name: "PHP", icon: "php-icon.png" },
+    { name: "MYSQL", icon: "mysql-icon.png" },
+  ];
+
+  const techStackProj2 = [
+    { name: "FIGMA", icon: "figma-icon.png" },
+    { name: "HTML", icon: "html-icon.png" },
+    { name: "CSS", icon: "css-icon.png" },
+    { name: "BOOTSTRAP", icon: "bootstrap-icon.png" },
+    { name: "REACT", icon: "react-icon.png" },
+    { name: "PHP", icon: "php-icon.png" },
+    { name: "MYSQL", icon: "mysql-icon.png" },
+  ];
+
+  const techStackProj3 = [
+    { name: "FIGMA", icon: "figma-icon.png" },
+    { name: "HTML", icon: "html-icon.png" },
+    { name: "CSS", icon: "css-icon.png" },
+    { name: "BOOTSTRAP", icon: "bootstrap-icon.png" },
+    { name: "REACT", icon: "react-icon.png" },
+    { name: "PHP", icon: "php-icon.png" },
+    { name: "MYSQL", icon: "mysql-icon.png" },
+    { name: "FIREBASE", icon: "firebase-icon.png" },
+  ];
+
+  const techStackProj4 = [
+    { name: "FIGMA", icon: "figma-icon.png" },
+    { name: "HTML", icon: "html-icon.png" },
+    { name: "CSS", icon: "css-icon.png" },
+    { name: "BOOTSTRAP", icon: "bootstrap-icon.png" },
+    { name: "PHP", icon: "php-icon.png" },
+    { name: "MYSQL", icon: "mysql-icon.png" },
+  ];
+
+  const techStackProj5 = [
+    { name: "FIGMA", icon: "figma-icon.png" },
+    { name: "HTML", icon: "html-icon.png" },
+    { name: "CSS", icon: "css-icon.png" },
+    { name: "BOOTSTRAP", icon: "bootstrap-icon.png" },
     { name: "PHP", icon: "php-icon.png" },
     { name: "MYSQL", icon: "mysql-icon.png" },
   ];
@@ -41,21 +80,65 @@ const Projects = ({ darkMode }) => {
             "Website notable feature",
           ]}
           image="projimg3.png"
-          techStack={techStack}
+          techStack={techStackProj1}
+        />
+
+        {/* Second Project with reversed layout */}
+        <ProjectCard
+          darkMode={darkMode}
+          title="QUEUING SYSTEM"
+          description="The Queueing Management System for School Uniform Purchasing and Fitting at Cavite State University – Imus Campus, it is an Arduino and website-based system. It lets students choose between buying uniforms or lining up for fitting. Arduino handles
+          ticketing and queue assignments, while the website displays real-time queue numbers and stock updates, ensuring a smoother and more organized process."
+          features={[
+            "Website notable feature",
+            "Website notable feature",
+            "Website notable feature",
+            
+          ]}
+          image="projimg4.png"
+          techStack={techStackProj2}
+          reverse
+        />
+
+        {/* Second Project with reversed layout */}
+        <ProjectCard
+          darkMode={darkMode}
+          title="EMPOWER FITNESS APP"
+          description="Empower Fitness is a mobile application designed to support a healthier and more disciplined lifestyle by tracking and motivating users through structured workouts. The app offers a variety of activities focused on upper body, core, and lower body exercises, each with built-in timers and intensity levels. Workout performance is automatically recorded and stored in the database, 
+          allowing users to monitor their ongoing progress. The Empower Fitness app generates a personalized goal weight based on the user's current weight to help guide and motivate them toward their fitness goals."
+
+          features={[
+            "User Account Management",
+            "Mobile responsiveness",
+            "Goal Weight Recommendation",
+            "Workout Categories",
+            "Timed Workouts with Intensity Levels",
+            "Progress Tracking",
+            "History Log",
+            "Automatic Fitness Stats Update",
+
+          ]}
+          image="projimg5.png"
+          techStack={techStackProj3}
         />
 
         {/* Second Project with reversed layout */}
         <ProjectCard
           darkMode={darkMode}
           title="SCHOLARSHIP SYSTEM"
-          description="A school campus navigation system that helps new students find buildings, services, and events with ease."
+          description="The Scholarship Management System is a web-based platform for Cavite State University (CvSU) students to track available and upcoming scholarships, view requirements, receive updates, and submit documents online. It streamlines the application process and helps students stay informed, organized, and efficient in managing their scholarship opportunities."
           features={[
-            "Interactive map integration",
-            "Building search and details",
+            "Scholarship Listings",
+            "Requirements Overview",
             "Mobile responsiveness",
+            "Online Document Submission",
+            "Application Status Tracking",
+            "Real-Time Announcements and Updates",
+            "User-Friendly Interface",
+            
           ]}
           image="projimg.png"
-          techStack={techStack}
+          techStack={techStackProj4}
           reverse
         />
 
@@ -65,12 +148,12 @@ const Projects = ({ darkMode }) => {
           title="CVSU ALUMNI"
           description="A school campus navigation system that helps new students find buildings, services, and events with ease."
           features={[
-            "Interactive map integration",
-            "Building search and details",
-            "Mobile responsiveness",
+            "Website notable feature",
+            "Website notable feature",
+            "Website notable feature",
           ]}
           image="projimg2.png"
-          techStack={techStack}
+          techStack={techStackProj5}
         />
 
 
