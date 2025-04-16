@@ -9,7 +9,7 @@ import send from "../assets/sendm.png";
 import logo from "../assets/logo_black.png";
 
 
-
+import Tooltip from '@mui/material/Tooltip';
 import { IconButton } from '@mui/material';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import FacebookIcon from '@mui/icons-material/Facebook';
@@ -328,32 +328,38 @@ const Contact = ({ darkMode }) => {
           <div className="w-[80%] mx-auto flex justify-between items-center mt-4">
             <p className="text-sm">&copy; {new Date().getFullYear()} INNOVATE, All rights reserved.</p>
             <div className="flex gap-7">
+            <Tooltip title="View Github">
               <IconButton
-                href="https://github.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                sx={buttonStyles}
-              >
-                <GitHubIcon sx={icondarkmode} />
-              </IconButton>
-
+                  href="https://github.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  sx={buttonStyles}
+                >
+                  <GitHubIcon sx={icondarkmode} />
+              </IconButton>  
+            </Tooltip> 
+            <Tooltip title="View Facebook">
               <IconButton
-                href="https://facebook.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                sx={buttonStyles}
-              >
+                  href="https://facebook.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  sx={buttonStyles}
+                >
                 <FacebookIcon sx={icondarkmode} />
               </IconButton>
+            </Tooltip> 
 
+            <Tooltip title="Contact on Email">
               <IconButton
-                href="mailto:example@gmail.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                sx={buttonStyles}
-              >
+                  href="mailto:example@gmail.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  sx={buttonStyles}
+                >
                 <EmailIcon sx={icondarkmode} />
               </IconButton>
+            </Tooltip>
+              
             </div>
           </div>
         </footer>
