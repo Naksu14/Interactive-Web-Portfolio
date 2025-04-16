@@ -162,23 +162,21 @@ const Homepage = ({ darkMode }) => {
             </div>
           </div>
         </div>
-
-
-
-
-
+        
+        <br />
+        <br />
+        <br />
 
         {/* Team name and logo Brief introduction of the team */}
         <div className="flex flex-col lg:flex-row justify-between items-center space-y-6 md:space-y-0 mt-10 px-6">
 
-          {/* Team name and logo Section 
           <div className="w-full max-w-[680px] lg:order-1 mb-8 md:mb-10 mx-6 md:mx-12 mt-6 md:mt-0 flex-1">
             <img
               src={darkMode ? require("../assets/Whomelogo.png") : require("../assets/bhomelogo.png")}
               alt="InnoVate Logo"
               className="w-full h-auto object-contain mx-auto"
             />
-          </div> */}
+          </div>
 
           <div className="w-full lg:w-[800px] bg-white bg-opacity-20 border border-[#ffffff]/30 p-10 rounded-[15px] text-left tracking-wide backdrop-blur-lg mx-4 sm:mx-6 md:mx-12 mb-4 sm:mb-6 md:mb-0 mt-4 sm:mt-6 md:mt-0 flex-1">
             <p className="text-base sm:text-lg md:text-xl lg:text-2xl">
