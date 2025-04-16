@@ -3,7 +3,7 @@ import GroupsBackground from "../components/GroupsBackground";
 
 import bmail from "../assets/black-mail.png";
 import location from "../assets/location.png";
-import twitter from "../assets/twitter.png";
+import twitter1 from "../assets/twitter1.png";
 import telephone from "../assets/telephone.png";
 import send from "../assets/sendm.png";
 import logo from "../assets/logo_black.png";
@@ -245,7 +245,7 @@ const Contact = ({ darkMode }) => {
 
                 {/* Social Icons */}
                 <div className="flex gap-6 mt-10 flex-wrap justify-center lg:justify-start">
-                  {[telephone, bmail, twitter, location].map((icon, idx) => (
+                  {[telephone, bmail, twitter1, location].map((icon, idx) => (
                     <div
                       key={idx}
                       className={`w-16 h-10 rounded-full border flex items-center justify-center 
