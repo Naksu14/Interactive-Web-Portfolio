@@ -104,7 +104,7 @@ function ImageGallery({ onSelect, darkMode, selectedMember}) {
         github: "https://github.com/L-iVANS",
         facebook:"https://www.facebook.com/share/1KWs2goyk6/",
         email:"mailto: lanceivan.listana@cvsu.edu.ph",
-        title: "QA Tester",
+        title: "QA Tester, Designer",
         skills: [
           "LANGUAGE: C, C++, Java, PHP, JS",
         "FRONTEND: CSS, HTML",
