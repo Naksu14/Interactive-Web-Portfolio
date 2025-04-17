@@ -341,7 +341,7 @@ const Homepage = ({ darkMode }) => {
           </div> 
 
           <div className="w-full lg:w-[800px] bg-white bg-opacity-20 border border-[#ffffff]/30 p-10 rounded-[15px] text-left tracking-wide backdrop-blur-lg mx-4 sm:mx-6 md:mx-12 mb-4 sm:mb-6 md:mb-0 mt-4 sm:mt-6 md:mt-0 flex-1">
-            <p className="text-base sm:text-lg md:text-xl lg:text-2xl">
+            <p className="text-xl sm:text-2xl md:text3xl lg:text-4xl">
               <span>What We think - <b className={`${darkMode ? "hover:text-[#f0b6a2]" : "hover:text-[#D74925]"}`}>is What You click</b></span>
               <br />
               <br />
