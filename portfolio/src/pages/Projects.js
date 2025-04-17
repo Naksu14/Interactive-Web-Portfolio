@@ -74,11 +74,11 @@ const Projects = ({ darkMode }) => {
           darkMode={darkMode}
           agenda="Professional Networking Platform"
           title="JOBCONNEXT"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          description="Our platform focuses exclusively on the unique needs of the Philippines, empowering local blue-collar workers to find meaningful work and clients to locate skilled professionals within their community. This local approach means faster response times, more culturally attuned interactions, and a stronger support system for everyone involved."
           features={[
-            "Website notable feature",
-            "Website notable feature",
-            "Website notable feature",
+            "Exclusive for Blue-collar Workers",
+            "Create and Publish Job Opportunity",
+            "Can track previous jobs, employers, and worker's ratings ",
           ]}
           image="projimg3.png"
           techStack={techStackProj1}
@@ -87,14 +87,16 @@ const Projects = ({ darkMode }) => {
         {/* Second Project with reversed layout */}
         <ProjectCard
           darkMode={darkMode}
-          agenda="TEMPLATE FOR short AGENDA"
+          agenda="Stock-Integrated Queue Management"
           title="QUEUING SYSTEM"
           description="The Queueing Management System for School Uniform Purchasing and Fitting at Cavite State University – Imus Campus, it is an Arduino and website-based system. It lets students choose between buying uniforms or lining up for fitting. Arduino handles
           ticketing and queue assignments, while the website displays real-time queue numbers and stock updates, ensuring a smoother and more organized process."
           features={[
-            "Website notable feature",
-            "Website notable feature",
-            "Website notable feature",
+            "Real-Time Queue Display",
+            "Fitting & Purchasing Schedule Viewer",
+            "Live Stock Availability",
+            "Visual insights for admins",
+            "Printed Queue Number",
             
           ]}
           image="projimg4.png"
@@ -105,7 +107,7 @@ const Projects = ({ darkMode }) => {
         {/* Second Project with reversed layout */}
         <ProjectCard
           darkMode={darkMode}
-           agenda="TEMPLATE FOR short AGENDA"
+           agenda="Health & Fitness Application"
           title="EMPOWER FITNESS APP"
           description="Empower Fitness is a mobile application designed to support a healthier and more disciplined lifestyle by tracking and motivating users through structured workouts. The app offers a variety of activities focused on upper body, core, and lower body exercises, each with built-in timers and intensity levels. Workout performance is automatically recorded and stored in the database, 
           allowing users to monitor their ongoing progress. The Empower Fitness app generates a personalized goal weight based on the user's current weight to help guide and motivate them toward their fitness goals."
@@ -128,7 +130,7 @@ const Projects = ({ darkMode }) => {
         {/* Second Project with reversed layout */}
         <ProjectCard
           darkMode={darkMode}
-           agenda="TEMPLATE FOR short AGENDA"
+           agenda="Scholarship Tracking System Website"
           title="SCHOLARSHIP SYSTEM"
           description="The Scholarship Management System is a web-based platform for Cavite State University (CvSU) students to track available and upcoming scholarships, view requirements, receive updates, and submit documents online. It streamlines the application process and helps students stay informed, organized, and efficient in managing their scholarship opportunities."
           features={[
@@ -149,13 +151,16 @@ const Projects = ({ darkMode }) => {
         {/* Second Project with reversed layout */}
         <ProjectCard
           darkMode={darkMode}
-           agenda="TEMPLATE FOR short AGENDA"
-          title="CVSU ALUMNI"
-          description="A school campus navigation system that helps new students find buildings, services, and events with ease."
+           agenda="Alumni Engagement Portal"
+          title="Alumni Management System "
+          description="A school campus navigation system that helps new students find buildings, services, and events with ease. The system offers live viewing for the upcoming events of the campus"
           features={[
-            "Website notable feature",
-            "Website notable feature",
-            "Website notable feature",
+            "Event Calendar",
+            "Newsletters & Email Blasts",
+            "Resume & Interview Prep Resources",
+            "Campaign Pages",
+            "Dashboard Metrics for total alumni",
+            "Advanced Search & Filters",
           ]}
           image="projimg2.png"
           techStack={techStackProj5}
