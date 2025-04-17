@@ -226,22 +226,21 @@ const Contact = ({ darkMode }) => {
               {/* Address Section */}
               <div>
                 <h3 className="text-2xl font-bold mb-4">Address</h3>
-                <p className="text-xl mb-2">Site: 123 Main Street, Bacoor, Cavite</p>
+                <p className="text-xl mb-2">Site: Palico IV Imus City Cavite</p>
               </div>
 
               {/* Contact Section */}
               <div>
                 <h3 className="text-2xl font-bold mb-4">Contact</h3>
-                <p className="text-xl mb-2">Address: 123 Main Street, Bacoor, Cavite</p>
-                <p className="text-xl mb-2">Phone: +63 912 345 6789</p>
-                <p className="text-xl mb-2">Email: info@example.com</p>
+                <p className="text-xl mb-2">Phone: + 0951-525-4884</p>
+                <p className="text-xl mb-2">Email: teaminnovate@gmail.com</p>
               </div>
 
               {/* Links Section */}
               <div>
                 <h3 className="text-2xl font-bold mb-4">Links</h3>
-                <p className="text-xl mb-2">Facebook: +63 912 345 6789</p>
-                <p className="text-xl mb-2">Twitter: info@example.com</p>
+                <p className="text-xl mb-2">Facebook: Team Innovate Inc.</p>
+                <p className="text-xl mb-2">Twitter: @Teaminnovate</p>
 
                 {/* Social Icons */}
                 <div className="flex gap-6 mt-10 flex-wrap justify-center lg:justify-start">
