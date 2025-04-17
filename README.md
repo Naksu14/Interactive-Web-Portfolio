@@ -50,3 +50,5 @@ Contributors
 * [Naksu] (https://github.com/Naksu14)
 * [Ivans] (https://github.com/L-iVANS)
 * [Seigh] (https://github.com)
+* [iRengo] (https://github.com/iRengo)
+* [dnlrmn09] (https://github.com/dnlrmn09)
