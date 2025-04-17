@@ -66,12 +66,13 @@ const Projects = ({ darkMode }) => {
       <div className={`relative p-6 overflow-auto h-full custom-scrollbar ${darkMode ? "text-[#ffffff]" : "text-[#59453F]"}`}>
 
       <h1 className={`text-5xl sm:text-6xl md:text-6xl lg:text-7xl xl:text-8xl font-extrabold tracking-widest  bg-clip-text text-transparent ${darkMode ? "bg-gradient-to-b from-[#ffffff]/60 to-[#ffffff]/0" : "bg-gradient-to-b from-[#59453F]/60 to-[#DAB9AF]/0"}`}>
-        PROJECTS
+        OUR WORK
       </h1>
 
        {/* First Project */}
        <ProjectCard
           darkMode={darkMode}
+          agenda="Professional Networking Platform"
           title="JOBCONNEXT"
           description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
           features={[
@@ -86,6 +87,7 @@ const Projects = ({ darkMode }) => {
         {/* Second Project with reversed layout */}
         <ProjectCard
           darkMode={darkMode}
+          agenda="TEMPLATE FOR short AGENDA"
           title="QUEUING SYSTEM"
           description="The Queueing Management System for School Uniform Purchasing and Fitting at Cavite State University – Imus Campus, it is an Arduino and website-based system. It lets students choose between buying uniforms or lining up for fitting. Arduino handles
           ticketing and queue assignments, while the website displays real-time queue numbers and stock updates, ensuring a smoother and more organized process."
@@ -103,6 +105,7 @@ const Projects = ({ darkMode }) => {
         {/* Second Project with reversed layout */}
         <ProjectCard
           darkMode={darkMode}
+           agenda="TEMPLATE FOR short AGENDA"
           title="EMPOWER FITNESS APP"
           description="Empower Fitness is a mobile application designed to support a healthier and more disciplined lifestyle by tracking and motivating users through structured workouts. The app offers a variety of activities focused on upper body, core, and lower body exercises, each with built-in timers and intensity levels. Workout performance is automatically recorded and stored in the database, 
           allowing users to monitor their ongoing progress. The Empower Fitness app generates a personalized goal weight based on the user's current weight to help guide and motivate them toward their fitness goals."
@@ -125,6 +128,7 @@ const Projects = ({ darkMode }) => {
         {/* Second Project with reversed layout */}
         <ProjectCard
           darkMode={darkMode}
+           agenda="TEMPLATE FOR short AGENDA"
           title="SCHOLARSHIP SYSTEM"
           description="The Scholarship Management System is a web-based platform for Cavite State University (CvSU) students to track available and upcoming scholarships, view requirements, receive updates, and submit documents online. It streamlines the application process and helps students stay informed, organized, and efficient in managing their scholarship opportunities."
           features={[
@@ -145,6 +149,7 @@ const Projects = ({ darkMode }) => {
         {/* Second Project with reversed layout */}
         <ProjectCard
           darkMode={darkMode}
+           agenda="TEMPLATE FOR short AGENDA"
           title="CVSU ALUMNI"
           description="A school campus navigation system that helps new students find buildings, services, and events with ease."
           features={[

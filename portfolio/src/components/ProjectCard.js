@@ -7,6 +7,7 @@ const ProjectBlock = ({
   features,
   image,
   techStack,
+  agenda,
   reverse = false,
 }) => {
   const textColor = darkMode ? "text-[#ffffff]" : "text-[#59453F]";
@@ -27,8 +28,7 @@ const ProjectBlock = ({
         <div className="w-full h-[350px] sm:h-[400px] md:h-[450px] lg:h-[500px] xl:h-[550px] bg-[#18161F] rounded-lg p-4 border-t border-white border-b border-gray-400">
           <div className="w-full h-full relative rounded-lg p-4 bg-gradient-to-b from-[#FB6E6E] to-[#F1B4B4]">
             <div className="text-2xl md:text-3xl lg:text-4xl font-bold uppercase tracking-widest mb-4 text-white">
-              <span className="block">{title}</span>
-              <span className="block">{title}</span>
+              <span className="block">{agenda}</span>
             </div>
             <img
               src={require(`../assets/projectsImages/${image}`)}

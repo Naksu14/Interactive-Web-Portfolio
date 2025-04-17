@@ -1,0 +1,643 @@
+////////////////////////////////MISSION AND VISION///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// 
+        {/* Mission Section */}
+        <div className="flex flex-col lg:flex-row items-center justify-center w-full px-6">
+          {/* Mission Statement Title and Text Section */}
+          <div className="flex flex-col items-center justify-center w-full lg:w-[85%] p-6">
+            {/* Mission Statement Title */}
+            <div className="sm:text-2xl md:text-3xl lg:text-4xl text-left w-full max-w-[800px] mx-auto">
+              <b>
+                MISSION <br />
+                STATEMENT
+              </b>
+              <div className={`h-[2px] sm:w-[170px] md:w-[200px] lg:w-[270px] ${darkMode ? "bg-[#ffffff]" : "bg-[#59453F]"}`}></div>
+            </div>
+            <br />
+
+            {/* Text Section of Mission */}
+            <div className="w-full flex justify-center">
+              <div className="w-full md:w-[800px] bg-white bg-opacity-30 border border-[#ffffff]/20 p-10 rounded-[15px] tracking-wide backdrop-blur-lg mx-auto mb-8 md:mb-0 mt-6 md:mt-0">
+                <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-center">
+                  We develop innovative and promising projects that solve real-world problems by constructing efficient programs with enhanced user experiences.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Mission Image Section */}
+          <div
+            ref={ref}
+            className={`hidden lg:flex flex-col justify-center items-center lg:order-1 mb-8 md:mb-10 mx-6 md:mx-12 mt-6 md:mt-0 animate-rslide-in`}
+            style={{ transition: 'transform 1s ease-out' }}
+          >
+            <img
+              src={darkMode ? require("../assets/arrowwhite.png") : require("../assets/arrow 1.png")}
+              alt="Mission Arrow"
+              className="w-40% h-40%"
+            />
+            <img
+              src={darkMode ? require("../assets/missionwhite.png") : require("../assets/mission.png")}
+              alt="Mission Image"
+              className="w-60% h-60%"
+            />
+          </div>
+
+        </div>
+        <br />
+
+        {/* Vision Section */}
+        <div className="flex flex-col lg:flex-row items-center justify-center w-full px-6">
+          {/* Vision Image Section (Now on the left) */}
+          <div
+            ref={ref}
+            className={`hidden lg:flex flex-col justify-center items-center mb-8 md:mb-10 mx-6 md:mx-12 mt-6 md:mt-0 animate-lslide-in`}
+            style={{ transition: 'transform 1s ease-out' }}
+          >
+            <img
+              src={darkMode ? require("../assets/arrowwhite.png") : require("../assets/arrow 1.png")}
+              alt="Vision Arrow"
+              className="w-40% h-40%"
+            />
+            <img
+              src={darkMode ? require("../assets/missionwhite.png") : require("../assets/mission.png")}
+              alt="Vision Image"
+              className="w-60% h-60%"
+            />
+
+          </div>
+
+
+          {/* Vision Statement Title and Text Section (Now on the right) */}
+          <div className="flex flex-col items-center justify-center w-full lg:w-[85%] p-6">
+            {/* Vision Statement Title */}
+            <div className="sm:text-2xl md:text-3xl lg:text-4xl text-right w-full max-w-[800px] mx-auto">
+              <b>
+                VISION <br />
+                STATEMENT
+              </b>
+              <div className={`h-[2px] sm:w-[170px] md:w-[200px] lg:w-[270px] ${darkMode ? "bg-[#ffffff]" : "bg-[#59453F]"} ml-auto`}></div>
+
+            </div>
+            <br />
+
+            {/* Text Section of Vision */}
+            <div className="w-full flex justify-center">
+              <div className="w-full md:w-[800px] bg-white bg-opacity-30 border border-[#ffffff]/20 p-10 rounded-[15px] tracking-wide backdrop-blur-lg mx-auto mb-8 md:mb-0 mt-6 md:mt-0">
+                <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-center">
+                  To alter our technology by developing progressive solutions that simplify real-world challenges and set new standards for user experience.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <br />
+
+
+/////////////////////////////////////////DARK ICONS HOMEPAGE ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+        
+
+            {/* dark icons 
+            <img
+              src={gmail}
+              alt="Gmail"
+              className={`absolute top-[145px] left-[-200px] w-15 h-15 animate-float ${darkMode ? '' : 'filter invert'} transition-all duration-300 ease-in-out`}
+            />
+            <img
+              src={linkedin}
+              alt="LinkedIn"
+              className={`absolute bottom-[40px] right-[-200px] w-15 h-15 animate-float ${darkMode ? '' : 'filter invert'} transition-all duration-300 ease-in-out`}
+            />
+            <img
+              src={facebook}
+              alt="Facebook"
+              className={`absolute top-[130px] right-[40px] w-15 h-15 animate-float ${darkMode ? '' : 'filter invert'} transition-all duration-300 ease-in-out`}
+            />
+            <img
+              src={twitter}
+              alt="Twitter"
+              className={`absolute bottom-[20px] left-[-100px] bottom-[200px] w-15 h-15 animate-float ${darkMode ? '' : 'filter invert'} transition-all duration-300 ease-in-out`}
+            />
+            <img
+              src={github}
+              alt="GitHub"
+              className={`absolute top-[-40px] right-[530px] w-10 h-10 animate-float ${darkMode ? '' : 'filter invert'} transition-all duration-300 ease-in-out`}
+            />
+            */}
+
+//////////////////TEAM MEMBERS///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+// import React, { useState } from "react";
+// import GroupsBackground from "../components/BackgroundMembers";
+// import { IconButton } from '@mui/material';
+// import GitHubIcon from '@mui/icons-material/GitHub';
+// import FacebookIcon from '@mui/icons-material/Facebook';
+// import EmailIcon from '@mui/icons-material/Email';
+// import ImageHover from '../components/ImageHover'
+// const TeamMembers = ({ darkMode }) => {
+
+//   return (
+//     <div className={`z-5 relative mx-8 mt-[104px] h-[calc(100vh-130px)] overflow-hidden rounded-b-[2rem] ${darkMode ? 'bg-[#D74925]/60' : 'bg-[#f0b6a2]/60'}`}>
+//       {/* Background Image Component */}
+//       <GroupsBackground />
+
+//       {/* Background Wrapper */}
+//       <div className={`absolute ${darkMode ? "bg-[#D74925]/60" : "bg-[#f0b6a2]/60"}`}></div>
+
+//       {/* Content Wrapper (Scrollable) */}
+//       <div className={`relative p-6 overflow-auto h-full custom-scrollbar ${darkMode ? "text-[#ffffff]" : "text-[#59453F]"}`}>
+//         {/* Centered Image - now perfectly centered */}
+//       <div className="absolute inset-0 flex items-center justify-center pointer-events-none ">
+//         <img 
+//           src={require("../assets/Innovatebg.png")} 
+//           alt="Innovate bg" 
+//           className="w-[1300px] h-[100%] object-contain -z-9 opacity-50"
+//         />
+//       </div>
+
+//          {/* Centered Image - now perfectly centered */}
+//       <div className="absolute inset-0 flex items-center justify-center pointer-events-none" style={{ marginBottom: 0 }}>
+//         <img 
+//           src={require("../assets/Anime_Loel.png")} 
+//           alt="Loel Campaña" 
+//           className="max-w-[100%] max-h-[1050px] object-contain -z-9"
+//           style={{ 
+//             transform: 'translate(-10%, -13%)',
+//           }}
+//         />
+        
+//       </div>
+        
+//        {/* Members selection in the right side*/} 
+//       <div className="absolute right-20 top-20 flex flex-row">
+//           <ImageHover />
+//       </div>
+
+
+
+
+//       <div className="relative z-10 w-full lg:w-[500px] bg-white bg-opacity-10 border border-[#ffffff]/30 p-6 rounded-[15px] text-left tracking-wide backdrop-blur-lg mr-auto mb-24 ml-0 lg:ml-12">          
+//         <p className="text-2xl">
+//             <b>LOEL CAMPAÑA</b> 
+//             <br />
+//             Project Manager, Frontend Developer, Designer
+//           </p>
+//         </div>
+        
+
+//         <div className="relative z-10 w-full lg:w-[400px] bg-white bg-opacity-10 border border-[#ffffff]/30 p-6 rounded-[15px] text-left tracking-wide backdrop-blur-lg mt-40 ml-0 lg:ml-12 mb-12 lg:mb-12"> 
+//           <p className="text-xl">
+//             <b>Skills </b>
+//             <ul>
+//               <li><span className="font-semibold">LANGUAGE:</span> JS, Java, Python, C++, PHP</li>
+//               <li><span className="font-semibold">FRONTEND:</span> CSS, HTML</li>
+//               <li><span className="font-semibold">FRAMEWORK:</span> React</li>
+//               <li><span className="font-semibold">DATABASE:</span> MYSQL</li>
+//               <li><span className="font-semibold">DEVOPS:</span> GIT</li>
+//               <li><span className="font-semibold">WIREFRAME:</span> FIGMA</li>
+//             </ul>
+//           </p>
+//         </div>
+
+//         <div className=" relative z-10 w-full lg:w-[400px] text-left tracking-wide mt-20 ml-0 lg:ml-12 flex gap-4 ">
+//           {/* GitHub Logo */}
+//           <IconButton 
+//             href="https://github.com/Naksu14" 
+//             target="_blank"
+//             rel="noopener noreferrer"
+//             className="bg-gray-800 hover:bg-gray-700 text-white"
+//             sx={{
+//               backgroundColor: darkMode ? 'rgba(255, 255, 255, 0.1)' : 'rgba(255, 255, 255, 0.1)',
+//               '&:hover': { 
+//                 backgroundColor: darkMode ? 'rgba(0, 0, 0, 0.3)' : 'rgba(0, 0, 0, 0.3)' 
+//               },
+//               borderRadius: '50%',
+//               width: 56,
+//               height: 56,
+//               '&:hover': {
+//                 transform: 'scale(1.1)',
+//                 transition: 'transform 0.3s ease'
+//               }
+//             }}
+//           >
+//              <GitHubIcon sx={{ 
+//                           color: darkMode ? '#ffffff' : '#59453F',
+//                           fontSize: '2rem' 
+//                         }} />
+//           </IconButton>
+
+//           {/* Facebook Logo */}
+//           <IconButton 
+//             href="https://www.facebook.com/loelcamp14" 
+//             target="_blank"
+//             rel="noopener noreferrer"
+//             className="bg-blue-600 hover:bg-blue-500 text-white"
+//             sx={{
+//               backgroundColor: darkMode ? 'rgba(255, 255, 255, 0.1)' : 'rgba(255, 255, 255, 0.1)',
+//               '&:hover': { 
+//                 backgroundColor: darkMode ? 'rgba(0, 0, 0, 0.3)' : 'rgba(0, 0, 0, 0.3)' 
+//               },
+//               borderRadius: '50%',
+//               width: 56,
+//               height: 56,
+//               '&:hover': {
+//                 transform: 'scale(1.1)',
+//                 transition: 'transform 0.3s ease'
+//               }
+//             }}
+//           >
+//             <FacebookIcon sx={{ 
+//                           color: darkMode ? '#ffffff' : '#59453F',
+//                           fontSize: '2rem' 
+//                         }} />
+//           </IconButton>
+
+//           {/* Gmail Logo */}
+//           <IconButton 
+//             href="mailto:ic.loel.campana@cvsu.edu.ph"
+//             className="bg-red-500 hover:bg-red-400 text-white"
+//             sx={{
+//               backgroundColor: darkMode ? 'rgba(255, 255, 255, 0.1)' : 'rgba(255, 255, 255, 0.1)',
+//               '&:hover': { 
+//                 backgroundColor: darkMode ? 'rgba(0, 0, 0, 0.3)' : 'rgba(0, 0, 0, 0.3)' 
+//               },
+//               borderRadius: '50%',
+//               width: 56,
+//               height: 56,
+//               '&:hover': {
+//                 transform: 'scale(1.1)',
+//                 transition: 'transform 0.3s ease'
+//               }
+//             }}
+//           >
+//             <EmailIcon sx={{ 
+//                           color: darkMode ? '#ffffff' : '#59453F',
+//                           fontSize: '2rem' 
+//                         }} />
+//           </IconButton>
+//         </div>
+
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default TeamMembers;
+
+
+///////////////////////////////////// IMAGE HOVER ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// import React, { useState } from 'react';
+
+// function ImageHover({ imageSrc, altText, position = '50% 20%', zoom = 1, name }) {
+//   const [isHovered, setIsHovered] = useState(false);
+
+//   return (
+//     <div 
+//       className={`relative h-[500px] bg-white bg-opacity-20 border border-[#ffffff]/30 overflow-hidden mx-1 transition-all duration-300 ${
+//         isHovered ? 'w-[120px]' : 'w-[100px]'
+//       }`}
+//       style={{
+//         borderTopLeftRadius: '50px',
+//         borderBottomRightRadius: '50px'
+//       }}
+//       onMouseEnter={() => setIsHovered(true)}
+//       onMouseLeave={() => setIsHovered(false)}
+//     >
+//       {/* Black overlay (visible when not hovered) */}
+//       <div className={`absolute inset-0 z-10 transition-opacity duration-300 ${
+//         isHovered ? 'opacity-0' : 'opacity-20 bg-black'
+//       }`} />
+      
+//       <img 
+//         src={imageSrc} 
+//         alt={altText} 
+//         className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-500 hover:scale-110"
+//         style={{ 
+//           objectPosition: position,
+//           transform: `scale(${zoom})`,
+//           borderTopLeftRadius: '50px',
+//           borderBottomRightRadius: '50px'
+//         }}
+//       />
+
+//       {/* Name overlay - appears on hover */}
+//       <div className={`absolute bottom-0 left-0 right-0 z-20 p-2 text-center text-white bg-black bg-opacity-60 transition-opacity duration-300 ${
+//         isHovered ? 'opacity-100' : 'opacity-0'
+//       }`}>
+//         <span className="text-sm font-medium">{name}</span>
+//       </div>
+//     </div>
+//   );
+// }
+
+// function ImageGallery() {
+//   const images = [
+//     { 
+//       src: require("../assets/Anime_Daniela.png"), 
+//       alt: "Daniela",
+//       name: "Daniela",
+//       position: '48% 20%',
+//       zoom: 1.1
+//     },
+//     { 
+//       src: require("../assets/Anime_Loel.png"), 
+//       alt: "Loel",
+//       name: "Loel",
+//       position: '50% 20%',
+//       zoom: 1.0
+//     },
+//     { 
+//       src: require("../assets/Anime_Lance.png"), 
+//       alt: "Lance",
+//       name: "Lance",
+//       position: '5% 15%',
+//       zoom: 1.3
+//     },
+//     { 
+//       src: require("../assets/Anime_Fred.png"), 
+//       alt: "Fred",
+//       name: "Fred",
+//       position: '30% 70%',
+//       zoom: 1.0
+//     },
+//     { 
+//       src: require("../assets/Anime_Rhanel.png"), 
+//       alt: "Rhanel",
+//       name: "Rhanel",
+//       position: '46% 10%',
+//       zoom: 1.0
+//     }
+//   ];
+
+//   return (
+//     <div className="flex justify-center items-center p-4">
+//       {images.map((image, index) => (
+//         <ImageHover 
+//           key={index}
+//           imageSrc={image.src}
+//           altText={image.alt}
+//           name={image.name}
+//           position={image.position}
+//           zoom={image.zoom}
+//         />
+//       ))}
+//     </div>
+//   );
+// }
+
+// export default ImageGallery;
+
+
+// ImageGallery.js
+
+//////////////////////////// BACKGROUND MEMBERS /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// import React, { useEffect, useState } from 'react';
+
+// const GroupsBackground = () => {
+//   const [selectedMember, setSelectedMember] = useState(null);
+
+//   // Use effect hook to monitor changes in sessionStorage
+//   useEffect(() => {
+//     // Define a function to retrieve the selected member from sessionStorage
+//     const updateMemberFromSessionStorage = () => {
+//       const storedMember = sessionStorage.getItem('selectedMember');
+//       if (storedMember) {
+//         const member = JSON.parse(storedMember);
+//         setSelectedMember(member);
+//       } else {
+//         console.log("No member selected");
+//       }
+//     };
+
+//     // Initial update when the component mounts
+//     updateMemberFromSessionStorage();
+
+//     // Listen to the 'storage' event to update when sessionStorage changes
+//     window.addEventListener('storage', updateMemberFromSessionStorage);
+
+//     // Cleanup the event listener on unmount
+//     return () => {
+//       window.removeEventListener('storage', updateMemberFromSessionStorage);
+//     };
+//   }, []);
+
+//   // If no selected member, return a default background
+//   if (!selectedMember) {
+//     return (
+//       <div className="fixed inset-0 -z-10">
+//         {/* Default Background Image when no member is selected */}
+//         <div className="absolute inset-0 bg-cover bg-center animate-slide-up"
+//              style={{ backgroundImage: `url(${require("../assets/Anime_Loel.png")})` }}>
+//         </div>
+//         <div className="absolute inset-0 backdrop-blur-lg"></div>
+//       </div>
+//     );
+//   }
+
+//   // Define background images for each member
+//   const backgroundImages = {
+//     1: require("../assets/Anime_Daniela.png"),
+//     2: require("../assets/Anime_Loel.png"),
+//     3: require("../assets/Anime_Lance.png"),
+//     4: require("../assets/Anime_Fred.png"),
+//     5: require("../assets/Anime_Rhanel.png")
+//   };
+
+//   // Check if selectedMember.id exists and use it to get the appropriate background image
+//   const memberKey = selectedMember.id || 2; // Fallback to "LOEL" if no id is found
+//   const backgroundImage = backgroundImages[memberKey] || backgroundImages[2]; // Default to "LOEL"
+
+//   return (
+//     <div className="fixed inset-0 -z-10">
+//       {/* Background Image - dynamically changes based on selected member */}
+//       <div
+//         className="absolute inset-0 bg-cover bg-center animate-slide-up"
+//         style={{ backgroundImage: `url(${backgroundImage})` }}
+//       >
+//       </div>
+
+//       {/* Blur Layer */}
+//       <div className="absolute inset-0 backdrop-blur-lg"></div>
+//     </div>
+//   );
+// };
+
+// export default GroupsBackground;
+
+
+
+/////////////////////////////// CUSTOM CURSOR //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// import React, { useState, useEffect } from "react";
+
+// const CustomCursor = () => {
+//   const [tiles, setTiles] = useState([]);
+
+//   useEffect(() => {
+//     const moveCursor = (e) => {
+//       const newTiles = Array.from({ length: 6 }).map(() => ({
+//         id: Math.random(),
+//         x: e.clientX + (Math.random() * 50 - 25), // Random offset within 50px
+//         y: e.clientY + (Math.random() * 50 - 25), // Random offset within 50px
+//       }));
+
+//       setTiles((prevTiles) => [...prevTiles, ...newTiles]);
+
+//       // Remove tiles after 0.5s
+//       setTimeout(() => {
+//         setTiles((prevTiles) =>
+//           prevTiles.filter((tile) => !newTiles.some((newTile) => newTile.id === tile.id))
+//         );
+//       }, 500);
+//     };
+
+//     window.addEventListener("mousemove", moveCursor);
+//     return () => window.removeEventListener("mousemove", moveCursor);
+//   }, []);
+
+//   return (
+//     <div className="fixed top-0 left-0 pointer-events-none z-50">
+//       {tiles.map((tile) => (
+//         <div
+//           key={tile.id}
+//           className="absolute w-4 h-4 bg-white border border-gray-800 opacity-80 animate-tile-fade"
+//           style={{
+//             left: `${tile.x}px`,
+//             top: `${tile.y}px`,
+//           }}
+//         />
+//       ))}
+//     </div>
+//   );
+// };
+
+// export default CustomCursor;
+
+//////////////////////// NAVIGATION BAR /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+// import { useState, useEffect } from "react";
+// import { Moon } from "lucide-react";
+// import { useNavigate } from "react-router-dom"; // Import useNavigate
+// import logo from "../assets/logo.svg";
+// import clsx from "clsx";
+
+// const Navbar = () => {
+//   const [darkMode, setDarkMode] = useState(false);
+//   const [activeTab, setActiveTab] = useState("HOME");
+
+//   useEffect(() => {
+//     document.body.style.transition = "background-color 0.3s ease-in-out, color 0.3s ease-in-out";
+//     if (darkMode) {
+//       document.body.style.backgroundColor = "#646464";
+//       document.body.classList.add("dark");
+//     } else {
+//       document.body.style.backgroundColor = "#FFFFFF";
+//       document.body.classList.remove("dark");
+//     }
+//   }, [darkMode]);
+
+//   return (
+//     <nav
+//       className={clsx(
+//         "fixed top-0 left-0 right-0 z-50 mx-8 mt-6 flex items-center justify-between px-8 py-4 rounded-b-[3rem] text-white"
+//       )}
+//       style={{
+//         borderTopLeftRadius: "2rem",
+//         borderTopRightRadius: "2rem",
+//         borderBottomLeftRadius: "0",
+//         borderBottomRightRadius: "0",
+//         backgroundColor: "rgba(252, 126, 19, 0.6)",
+//       }}
+//     > 
+//       <div className="flex items-center gap-8">
+//         <img src={logo} alt="Logo" className="w-12 h-12" />
+//       </div>
+//       <div className="relative flex gap-16">
+//       {["HOME", "ABOUT US", "TEAM MEMBERS", "PROJECTS", "CONTACT"].map((tab) => (
+//   <div key={tab} className="relative flex items-center transition-all duration-300  ease-in-out">
+    
+//     {/* FULL WIDTH WHITE BACKGROUND TO COVER CURVES */}
+//     {activeTab === tab && (
+//       <div
+//         className="absolute -top-4 left-[-1.5rem] w-[calc(100%+3rem)] h-6 z-0 transition-all duration-300  ease-in-out"
+//         style={{
+//           backgroundColor: darkMode ? "#646464" : "#FFFFFF",
+//         }}
+//       ></div>
+//     )}
+
+//     {/* LEFT CURVED DIV */}
+//     {activeTab === tab && (
+//       <div
+//         className="absolute -top-4 -left-6 w-6 h-6 z-10 rounded-tr-[5rem] "
+//         style={{
+//             backgroundColor: "rgba(252, 126, 19, 0.6)",
+//         }}
+//       ></div>
+//     )}
+
+//     {/* MAIN BUTTON (ON TOP OF CURVES) */}
+//     <button
+//       onClick={() => setActiveTab(tab)}
+//       className={clsx(
+//         "relative z-15 font-semibold px-6 py-3 transition-all duration-200  ease-in-out",
+//         activeTab === tab
+//           ? darkMode
+//             ? "text-white bg-[#646464] rounded-b-3xl"
+//             : "text-orange-500 bg-white rounded-b-3xl"
+//           : darkMode
+//           ? "text-white hover:text-orange-300"
+//           : "text-orange hover:text-orange-500"
+//       )}
+//     >
+//       {tab}
+//     </button>
+
+//     {/* RIGHT CURVED DIV */}
+//     {activeTab === tab && (
+//       <div
+//         className="absolute -top-4 -right-6 w-6 h-6 z-10 rounded-tl-[5rem] "
+//         style={{
+//             backgroundColor: "rgba(252, 126, 19, 0.6)",
+//         }}
+//       ></div>
+//     )}
+//   </div>
+// ))}
+
+
+
+
+//       </div>
+//       <button onClick={() => setDarkMode(!darkMode)}>
+//         {darkMode ? (
+//           <svg
+//             className="w-6 h-6"
+//             viewBox="0 0 24 24"
+//             fill="none"
+//             stroke="currentColor"
+//             strokeWidth="2"
+//             strokeLinecap="round"
+//             strokeLinejoin="round"
+//           >
+//             <circle cx="12" cy="12" r="5" />
+//             <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+//           </svg>
+//         ) : (
+//           <Moon className="w-6 h-6" />
+//         )}
+//       </button>
+//     </nav>
+//   );
+// };
+
+// export default Navbar;

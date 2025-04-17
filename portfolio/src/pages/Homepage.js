@@ -79,36 +79,6 @@ const Homepage = ({ darkMode }) => {
             <img src={github} alt="GitHub" className="absolute top-[-40px] right-[530px] w-10 h-10 animate-float" />
 
 
-            {/* dark icons 
-            <img
-              src={gmail}
-              alt="Gmail"
-              className={`absolute top-[145px] left-[-200px] w-15 h-15 animate-float ${darkMode ? '' : 'filter invert'} transition-all duration-300 ease-in-out`}
-            />
-            <img
-              src={linkedin}
-              alt="LinkedIn"
-              className={`absolute bottom-[40px] right-[-200px] w-15 h-15 animate-float ${darkMode ? '' : 'filter invert'} transition-all duration-300 ease-in-out`}
-            />
-            <img
-              src={facebook}
-              alt="Facebook"
-              className={`absolute top-[130px] right-[40px] w-15 h-15 animate-float ${darkMode ? '' : 'filter invert'} transition-all duration-300 ease-in-out`}
-            />
-            <img
-              src={twitter}
-              alt="Twitter"
-              className={`absolute bottom-[20px] left-[-100px] bottom-[200px] w-15 h-15 animate-float ${darkMode ? '' : 'filter invert'} transition-all duration-300 ease-in-out`}
-            />
-            <img
-              src={github}
-              alt="GitHub"
-              className={`absolute top-[-40px] right-[530px] w-10 h-10 animate-float ${darkMode ? '' : 'filter invert'} transition-all duration-300 ease-in-out`}
-            />
-            */}
-
-
-
             {/* Daniela */}
             <div
               onClick={() => {
@@ -359,16 +329,16 @@ const Homepage = ({ darkMode }) => {
 
 
         {/* Team name and logo Brief introduction of the team */}
-        <div className="flex flex-col lg:flex-row justify-between items-center space-y-6 md:space-y-0 mt-10 px-6">
+        <div className="h-full flex flex-col lg:flex-row justify-between items-center space-y-6 md:space-y-0 mt-10 px-6">
 
-          {/* Team name and logo Section 
+          {/* Team name and logo Section */}
           <div className="w-full max-w-[680px] lg:order-1 mb-8 md:mb-10 mx-6 md:mx-12 mt-6 md:mt-0 flex-1">
             <img
               src={darkMode ? require("../assets/Whomelogo.png") : require("../assets/bhomelogo.png")}
               alt="InnoVate Logo"
               className="w-full h-auto object-contain mx-auto"
             />
-          </div> */}
+          </div> 
 
           <div className="w-full lg:w-[800px] bg-white bg-opacity-20 border border-[#ffffff]/30 p-10 rounded-[15px] text-left tracking-wide backdrop-blur-lg mx-4 sm:mx-6 md:mx-12 mb-4 sm:mb-6 md:mb-0 mt-4 sm:mt-6 md:mt-0 flex-1">
             <p className="text-base sm:text-lg md:text-xl lg:text-2xl">
@@ -379,110 +349,16 @@ const Homepage = ({ darkMode }) => {
             </p>
           </div>
 
-
         </div>
 
         <br />
         <br />
-        <br />
-
-        {/* Mission Section */}
-        <div className="flex flex-col lg:flex-row items-center justify-center w-full px-6">
-          {/* Mission Statement Title and Text Section */}
-          <div className="flex flex-col items-center justify-center w-full lg:w-[85%] p-6">
-            {/* Mission Statement Title */}
-            <div className="sm:text-2xl md:text-3xl lg:text-4xl text-left w-full max-w-[800px] mx-auto">
-              <b>
-                MISSION <br />
-                STATEMENT
-              </b>
-              <div className={`h-[2px] sm:w-[170px] md:w-[200px] lg:w-[270px] ${darkMode ? "bg-[#ffffff]" : "bg-[#59453F]"}`}></div>
-            </div>
-            <br />
-
-            {/* Text Section of Mission */}
-            <div className="w-full flex justify-center">
-              <div className="w-full md:w-[800px] bg-white bg-opacity-30 border border-[#ffffff]/20 p-10 rounded-[15px] tracking-wide backdrop-blur-lg mx-auto mb-8 md:mb-0 mt-6 md:mt-0">
-                <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-center">
-                  We develop innovative and promising projects that solve real-world problems by constructing efficient programs with enhanced user experiences.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Mission Image Section */}
-          <div
-            ref={ref}
-            className={`hidden lg:flex flex-col justify-center items-center lg:order-1 mb-8 md:mb-10 mx-6 md:mx-12 mt-6 md:mt-0 animate-rslide-in`}
-            style={{ transition: 'transform 1s ease-out' }}
-          >
-            <img
-              src={darkMode ? require("../assets/arrowwhite.png") : require("../assets/arrow 1.png")}
-              alt="Mission Arrow"
-              className="w-40% h-40%"
-            />
-            <img
-              src={darkMode ? require("../assets/missionwhite.png") : require("../assets/mission.png")}
-              alt="Mission Image"
-              className="w-60% h-60%"
-            />
-          </div>
-
-        </div>
-        <br />
-
-        {/* Vision Section */}
-        <div className="flex flex-col lg:flex-row items-center justify-center w-full px-6">
-          {/* Vision Image Section (Now on the left) */}
-          <div
-            ref={ref}
-            className={`hidden lg:flex flex-col justify-center items-center mb-8 md:mb-10 mx-6 md:mx-12 mt-6 md:mt-0 animate-lslide-in`}
-            style={{ transition: 'transform 1s ease-out' }}
-          >
-            <img
-              src={darkMode ? require("../assets/arrowwhite.png") : require("../assets/arrow 1.png")}
-              alt="Vision Arrow"
-              className="w-40% h-40%"
-            />
-            <img
-              src={darkMode ? require("../assets/missionwhite.png") : require("../assets/mission.png")}
-              alt="Vision Image"
-              className="w-60% h-60%"
-            />
-
-          </div>
-
-
-          {/* Vision Statement Title and Text Section (Now on the right) */}
-          <div className="flex flex-col items-center justify-center w-full lg:w-[85%] p-6">
-            {/* Vision Statement Title */}
-            <div className="sm:text-2xl md:text-3xl lg:text-4xl text-right w-full max-w-[800px] mx-auto">
-              <b>
-                VISION <br />
-                STATEMENT
-              </b>
-              <div className={`h-[2px] sm:w-[170px] md:w-[200px] lg:w-[270px] ${darkMode ? "bg-[#ffffff]" : "bg-[#59453F]"} ml-auto`}></div>
-
-            </div>
-            <br />
-
-            {/* Text Section of Vision */}
-            <div className="w-full flex justify-center">
-              <div className="w-full md:w-[800px] bg-white bg-opacity-30 border border-[#ffffff]/20 p-10 rounded-[15px] tracking-wide backdrop-blur-lg mx-auto mb-8 md:mb-0 mt-6 md:mt-0">
-                <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-center">
-                  To alter our technology by developing progressive solutions that simplify real-world challenges and set new standards for user experience.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
         <br />
 
         {/* Gridd Contennt */}
         <div className="grid grid-cols-1 md:grid-cols-3 md:grid-rows-3 sm:grid-cols-2 sm:grid-rows-2 gap-4 px-4 md:px-16 lg:px-32 py-4">
           {/* Mission Statement */}
-          <div className={`md:col-span-2 md:row-span-1 ${ContainerBg} p-6 rounded-xl`}>
+          <div className={`md:col-span-2 md:row-span-1 ${ContainerBg} p-4 rounded-xl`}>
             <div className="text-left">
               <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold">
                 MISSION <br /> STATEMENT
@@ -496,7 +372,7 @@ const Homepage = ({ darkMode }) => {
 
           {/* Sun Image */}
           <div className={`md:row-span-1 ${ContainerBg} flex justify-center items-center p-4 px-6 rounded-xl`}>
-            <img className="w-16 md:w-32 lg:w-48" src={require("../assets/sunsspng.png")} alt="Sun" />
+            <img className="w-32" src={ darkMode ? require("../assets/half-moon.png") :require("../assets/sunny.png" )} alt="Sun" />
           </div>
 
 
@@ -532,7 +408,7 @@ const Homepage = ({ darkMode }) => {
 
           {/* GitHub Logo */}
           <div className={`md:col-span-1 md:row-span-1 ${ContainerBg} flex flex-col justify-center items-center p-4 rounded-xl`}>
-            <img className="w-16 md:w-32 lg:w-48 mb-2" src={require("../assets/gitpng.png")} alt="GitHub" />
+            <img className="w-32 mb-2" src={require("../assets/gitpng.png")} alt="GitHub" />
             <div className="mt-6 flex items-center justify-between">
               <p className="text-md font-medium mx-auto px-8">Repository</p>
               <a href="https://github.com/Naksu14/Interactive-Web-Portfolio" target="_blank" rel="noopener noreferrer">
@@ -548,7 +424,7 @@ const Homepage = ({ darkMode }) => {
           </div>
 
           {/* Vision Statement */}
-          <div className={`md:col-span-2 md:row-span-1 ${ContainerBg} p-6 rounded-xl`}>
+          <div className={`md:col-span-2 md:row-span-1 ${ContainerBg} p-4 rounded-xl`}>
             <div className="text-right">
               <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold">
                 VISION <br /> STATEMENT

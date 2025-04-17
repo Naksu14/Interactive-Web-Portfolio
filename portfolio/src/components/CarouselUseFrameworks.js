@@ -41,7 +41,7 @@ const CarouselCardFrameworkds = () => {
     <div className="md:row-span-1 bg-white bg-opacity-30 border border-[#ffffff]/20 p-10 rounded-[15px] tracking-wide backdrop-blur-lg flex flex-col justify-center items-center p-4 rounded-xl relative">
       {/* Image */}
       <img
-        className="w-[120px] h-[120px] object-contain mb-4"
+        className="w-[100px] h-[100px] object-contain mb-4"
         src={current.image}
         alt={current.name}
         />
