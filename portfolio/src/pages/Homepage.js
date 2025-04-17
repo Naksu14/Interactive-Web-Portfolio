@@ -7,6 +7,7 @@ import CarouselCard from "../components/CarouselMembers";
 import CarouselCardFrameworkds from "../components/CarouselUseFrameworks";
 import Projectsimage from "../components/projectsAlbumbutton";
 import ViewContactButton from "../components/viewContact";
+import { useNavigate } from 'react-router-dom';
 
 // Reduced Space
 import AnimeDaniela from "../assets/Anime_Members/Anime_Daniela1.png";
@@ -22,7 +23,11 @@ import gmail from "../assets/gmail.png";
 import twitter from "../assets//twitter.png";
 import github from "../assets//github.png";
 
+
+
 const Homepage = ({ darkMode }) => {
+  const navigate = useNavigate();
+
 
   // Hover state
   const [hovered, setHovered] = useState(null);
@@ -35,7 +40,7 @@ const Homepage = ({ darkMode }) => {
 
   const ContainerBg =
     'bg-white bg-opacity-30 border border-[#ffffff]/30 p-10 rounded-[15px] tracking-wide backdrop-blur-lg'
-  ;
+    ;
 
   return (
     <div className={`z-5 relative mx-8 mt-[104px] h-[calc(100vh-130px)] overflow-hidden rounded-b-[2rem] ${darkMode ? 'bg-[#D74925]/60' : 'bg-[#f0b6a2]/60'}`}>
@@ -59,6 +64,7 @@ const Homepage = ({ darkMode }) => {
               className="w-[300px] sm:w-[500px] md:w-[700px] lg:w-[900px] xl:w-[1100px] h-auto opacity-80"
             />
           </div>
+
 
           {/* Team Characters Group */}
           <div className="relative z-10 flex items-end justify-center scale-[0.8] sm:scale-95 md:scale-105 transition-all duration-300 ease-in-out">
@@ -104,79 +110,265 @@ const Homepage = ({ darkMode }) => {
 
 
             {/* Daniela */}
-            <div className="relative z-10 flex justify-center">
+            <div
+              onClick={() => {
+                sessionStorage.setItem('selectedMember', JSON.stringify({
+                  id: 1,
+                  name: 'DANIELA ROMANA CASTAÑEDA',
+                  title: "UI/UX Designer",
+                  src: require('../assets/Anime_Members/Anime_Daniela.png'),
+                  skills: [
+                    "LANGUAGE: JS, Python, C++, PHP",
+                    "FRONTEND: CSS, HTML",
+                    "FRAMEWORK: React, BOOTSTRAP",
+                    "DATABASE: MYSQL",
+                    "DEVOPS: GIT",
+                    "WIREFRAME: FIGMA"
+                  ],
+                  cv: "cv/CV_Castañeda-Daniela.pdf",
+                  github: "https://github.com/dnlrmn09",
+                  facebook: "https://www.facebook.com/kumarii14",
+                  email: "mailto:ic.danielaromana.castaneda@cvsu.edu.ph"
+                }));
+                navigate('/team');
+              }}
+              onMouseEnter={() => setHovered('Daniela')}
+              onMouseLeave={() => setHovered(null)}
+              className="relative z-20"
+            >
+              {hovered === 'Daniela' && (
+                <div className="absolute top-[-50px] left-[-200px] z-50">
+                  <div className={`relative bg-white ${darkMode ? "bg-white/10" : "bg-white/20"} px-8 py-6 rounded-lg backdrop-blur-md border ${darkMode ? "border-white" : "border-white/70"} shadow-md text-left animate-bounce`}>
+                    <div className={`text-md font-bold leading-tight ${darkMode ? "text-white" : "text-[#59453F]"}`}>
+                      DANIELA ROMANA CASTAÑEDA
+                    </div>
+                    <div className={`text-sm font-medium ${darkMode ? "text-white" : "text-[#59453F]"}`}>
+                      UI/UX Designer
+                    </div>
+                    <div className={`absolute right-[10px] bottom-[-10px] w-0 h-0 border-l-[8px] border-r-[8px] border-t-[10px] border-l-transparent border-r-transparent ${darkMode ? "border-t-white" : "border-t-white/80"}`} />
+                  </div>
+                </div>
+              )}
               <img
                 src={AnimeDaniela}
                 alt="Daniela"
                 className={`w-[350px] xs:w-[350px] sm:w-[300px] md:w-[320px] lg:w-[350px] xl:w-[380px] h-auto object-contain transition-all duration-300 ease-in-out hover:brightness-150 ${hovered && hovered !== 'Daniela' ? 'blur-[1.8px]' : ''}`}
-                onMouseEnter={() => setHovered('Daniela')}
-                onMouseLeave={() => setHovered(null)}
               />
               <div className="absolute bottom-0 left-0 w-full h-12 bg-gradient-to-t from-[#f8f8f8] via-transparent to-transparent pointer-events-none" />
             </div>
 
-            {/* Fred */}
-            <div className="relative z-0 -ml-[150px] mb-[120px] xs:-ml-[150px] sm:-ml-[180px] md:-ml-[170px] -mt-[100px] lg:-ml-[220px] xl:-ml-[250px]">
+
+
+            <div
+              onClick={() => {
+                sessionStorage.setItem('selectedMember', JSON.stringify({
+                  id: 5,
+                  name: "FREDDRICK TROPICO",
+                  title: "Frontend Developer, Designer",
+                  src: require('../assets/Anime_Members/Anime_Fred.png'),
+                  skills: [
+                    "LANGUAGE: C, C++, Java, PHP, JS",
+                    "FRONTEND: CSS, HTML",
+                    "FRAMEWORK: BOOTSTRAP, Bulma",
+                    "DATABASE: MYSQL",
+                    "DEVOPS: GIT",
+                    "WIREFRAME: FIGMA"
+                  ],
+                  cv: "cv/CV_Tropico-Freddrick.pdf",
+                  github: "https://github.com/iRengo",
+                  facebook: "https://www.facebook.com/freddricktropico14",
+                  email: "mailto: ic.freddrick.tropico@cvsu.edu.ph",
+                }));
+                navigate('/team');
+              }}
+              onMouseEnter={() => setHovered('Fred')}
+              onMouseLeave={() => setHovered(null)}
+              className="relative z-0 -ml-[150px] mb-[120px] xs:-ml-[150px] sm:-ml-[180px] md:-ml-[170px] -mt-[100px] lg:-ml-[220px] xl:-ml-[250px]"
+            >
+              {/* Floating name box */}
+              {hovered === 'Fred' && (
+                <div className="absolute top-[-50px] left-[-200px] z-50">
+                  <div className={`relative bg-white ${darkMode ? "bg-white/10" : "bg-white/20"} px-8 py-6 rounded-lg backdrop-blur-md border ${darkMode ? "border-white" : "border-white/70"} shadow-md text-left animate-bounce`}>
+                    <div className={`text-md font-bold leading-tight ${darkMode ? "text-white" : "text-[#59453F]"}`}>
+                      FREDDRICK TROPICO
+                    </div>
+                    <div className={`text-sm font-medium ${darkMode ? "text-white" : "text-[#59453F]"}`}>
+                      Frontend Developer, Designer
+                    </div>
+                    <div className={`absolute right-[10px] bottom-[-10px] w-0 h-0 border-l-[8px] border-r-[8px] border-t-[10px] border-l-transparent border-r-transparent ${darkMode ? "border-t-white" : "border-t-white/80"}`} />
+                  </div>
+                </div>
+              )}
+
               <img
                 src={AnimeFred}
                 alt="Fred"
                 className={`w-[200px] xs:w-[200px] sm:w-[240px] md:w-[280px] lg:w-[300px] xl:w-[320px] h-auto transition-all duration-300 ease-in-out hover:brightness-150 ${hovered && hovered !== 'Fred' ? 'blur-[1.8px]' : ''}`}
-                onMouseEnter={() => setHovered('Fred')}
-                onMouseLeave={() => setHovered(null)}
               />
             </div>
 
+
             {/* Loel */}
-            <div className="relative z-40 -ml-[140px] xs:-ml-[140px] sm:-ml-[130px] md:-ml-[160px] lg:-ml-[170px] xl:-ml-[180px]">
+            <div
+              onClick={() => {
+                sessionStorage.setItem('selectedMember', JSON.stringify({
+                  id: 2,
+                  name: "LOEL CAMPAÑA",
+                  title: "Full-Stack Developer",
+                  src: require('../assets/Anime_Members/Anime_Loel.png'),
+                  skills: [
+                    "LANGUAGE: JS, Java, Python, C++, PHP",
+                    "FRONTEND: CSS, HTML",
+                    "FRAMEWORK: React, BOOTSTRAP",
+                    "DATABASE: MYSQL",
+                    "DEVOPS: GIT",
+                    "WIREFRAME: FIGMA"
+                  ],
+                  cv: "cv/CV_Campaña-Loel.pdf",
+                  github: "https://github.com/Naksu14",
+                  facebook: "https://www.facebook.com/loelcamp14",
+                  email: "mailto:ic.loel.campana@cvsu.edu.ph",
+                }));
+                navigate('/team');
+              }}
+              onMouseEnter={() => setHovered('Loel')}
+              onMouseLeave={() => setHovered(null)}
+              className="relative z-40 -ml-[140px] xs:-ml-[140px] sm:-ml-[130px] md:-ml-[160px] lg:-ml-[170px] xl:-ml-[180px]"
+            >
+              {hovered === 'Loel' && (
+                <div className="absolute top-[-100px] left-[-80px] z-50">
+                  <div className={`relative bg-white ${darkMode ? "bg-white/10" : "bg-white/20"} px-8 py-6 rounded-lg backdrop-blur-md border ${darkMode ? "border-white" : "border-white/70"} shadow-md text-left animate-bounce`}>
+                    <div className={`text-md font-bold leading-tight ${darkMode ? "text-white" : "text-[#59453F]"}`}>
+                      LOEL CAMPAÑA
+                    </div>
+                    <div className={`text-sm font-medium ${darkMode ? "text-white" : "text-[#59453F]"}`}>
+                      Full-Stack Developer
+                    </div>
+                    <div className={`absolute right-[10px] bottom-[-10px] w-0 h-0 border-l-[8px] border-r-[8px] border-t-[10px] border-l-transparent border-r-transparent ${darkMode ? "border-t-white" : "border-t-white/80"}`} />
+                  </div>
+                </div>
+              )}
               <img
                 src={AnimeLoel}
                 alt="Loel"
                 className={`w-[200px] xs:w-[200px] sm:w-[250px] md:w-[300px] lg:w-[320px] xl:w-[350px] h-auto transition-all duration-300 ease-in-out hover:brightness-150 ${hovered && hovered !== 'Loel' ? 'blur-[1.8px]' : ''}`}
-                onMouseEnter={() => setHovered('Loel')}
-                onMouseLeave={() => setHovered(null)}
               />
               <div className="absolute bottom-0 left-0 w-full h-12 bg-gradient-to-t from-[#f8f8f8] via-transparent to-transparent pointer-events-none" />
             </div>
 
             {/* Lance */}
-            <div className="relative z-10 mb-[190px] -ml-[100px] xs:-ml-[100px] sm:-ml-[100px] mt-[-30px] md:-ml-[125px] lg:-ml-[140px] xl:-ml-[140px]">
+            <div
+              onClick={() => {
+                sessionStorage.setItem('selectedMember', JSON.stringify({
+                  id: 3,
+                  name: "LANCE LISTANA",
+                  title: "QA Tester",
+                  src: require('../assets/Anime_Members/Anime_Lance.png'),
+                  skills: [
+                    "LANGUAGE: C, C++, Java, PHP, JS",
+                    "FRONTEND: CSS, HTML",
+                    "FRAMEWORK: BOOTSTRAP, Bulma, React, Tailwind",
+                    "DATABASE: MYSQL",
+                    "DEVOPS: GIT",
+                    "WIREFRAME: FIGMA"
+                  ],
+                  cv: "cv/CV_Listana-Lance.pdf",
+                  github: "https://github.com/L-iVANS",
+                  facebook: "https://www.facebook.com/share/1KWs2goyk6/",
+                  email: "mailto: lanceivan.listana@cvsu.edu.ph",
+                }));
+                navigate('/team');
+              }}
+              onMouseEnter={() => setHovered('Lance')}
+              onMouseLeave={() => setHovered(null)}
+              className="relative z-10 mb-[190px] -ml-[100px] xs:-ml-[100px] sm:-ml-[100px] mt-[-30px] md:-ml-[125px] lg:-ml-[140px] xl:-ml-[140px]"
+            >
+              {hovered === 'Lance' && (
+                <div className="absolute top-[-50px] left-[80px] z-50">
+                  <div className={`relative bg-white ${darkMode ? "bg-white/10" : "bg-white/20"} px-8 py-6 rounded-lg backdrop-blur-md border ${darkMode ? "border-white" : "border-white/70"} shadow-md text-left animate-bounce`}>
+                    <div className={`text-md font-bold leading-tight ${darkMode ? "text-white" : "text-[#59453F]"}`}>
+                      LANCE LISTANA
+                    </div>
+                    <div className={`text-sm font-medium ${darkMode ? "text-white" : "text-[#59453F]"}`}>
+                      QA Tester
+                    </div>
+                    <div className={`absolute right-[150px] bottom-[-10px] w-0 h-0 border-l-[8px] border-r-[8px] border-t-[10px] border-l-transparent border-r-transparent ${darkMode ? "border-t-white" : "border-t-white/80"}`} />
+                  </div>
+                </div>
+              )}
               <img
                 src={AnimeLance}
                 alt="Lance"
                 className={`w-[120px] xs:w-[120px] sm:w-[200px] md:w-[230px] lg:w-[250px] xl:w-[270px] h-auto transition-all duration-300 ease-in-out hover:brightness-150 ${hovered && hovered !== 'Lance' ? 'blur-[1.8px]' : ''}`}
-                onMouseEnter={() => setHovered('Lance')}
-                onMouseLeave={() => setHovered(null)}
               />
             </div>
 
             {/* Rhanel */}
-            <div className="relative z-10 -ml-[150px] xs:-ml-[150px] sm:-ml-[150px] md:-ml-[200px] lg:-ml-[220px] xl:-ml-[240px]">
+            <div
+              onClick={() => {
+                sessionStorage.setItem('selectedMember', JSON.stringify({
+                  id: 4,
+                  name: "RHANEL SEIGHMONE BUCLARES",
+                  title: "Frontend Developer, Designer",
+                  src: require('../assets/Anime_Members/Anime_Rhanel.png'),
+                  skills: [
+                    "LANGUAGE: C, C++, Java, PHP, JS",
+                    "FRONTEND: CSS, HTML",
+                    "FRAMEWORK: BOOTSTRAP, Bulma",
+                    "DATABASE: MYSQL",
+                    "DEVOPS: GIT",
+                    "WIREFRAME: FIGMA"
+                  ],
+                  cv: "cv/CV_Buclares-Rhanel.pdf",
+                  github: "https://github.com/sytheprogrammer",
+                  facebook: "https://www.facebook.com/Seighmone",
+                  email: "mailto:rhanelseighmone.buclares@cvsu.edu.ph",
+                }));
+                navigate('/team');
+              }}
+              onMouseEnter={() => setHovered('Rhanel')}
+              onMouseLeave={() => setHovered(null)}
+              className="relative z-10 -ml-[150px] xs:-ml-[150px] sm:-ml-[150px] md:-ml-[200px] lg:-ml-[220px] xl:-ml-[240px]"
+            >
+              {hovered === 'Rhanel' && (
+                <div className="absolute top-[-70px] right-[-200px] z-50">
+                  <div className={`relative bg-white ${darkMode ? "bg-white/10" : "bg-white/20"} px-8 py-6 rounded-lg backdrop-blur-md border ${darkMode ? "border-white" : "border-white/70"} shadow-md text-left animate-bounce`}>
+                    <div className={`text-md font-bold leading-tight ${darkMode ? "text-white" : "text-[#59453F]"}`}>
+                      RHANEL SEIGHMONE BUCLARES
+                    </div>
+                    <div className={`text-sm font-medium ${darkMode ? "text-white" : "text-[#59453F]"}`}>
+                      Frontend Developer, Designer
+                    </div>
+                    <div className={`absolute right-[280px] bottom-[-10px] w-0 h-0 border-l-[8px] border-r-[8px] border-t-[10px] border-l-transparent border-r-transparent ${darkMode ? "border-t-white" : "border-t-white/80"}`} />
+                  </div>
+                </div>
+              )}
               <img
                 src={AnimeRhanel}
                 alt="Rhanel"
                 className={`w-[180px] xs:w-[180px] sm:w-[250px] md:w-[280px] lg:w-[300px] xl:w-[320px] h-auto transition-all duration-300 ease-in-out hover:brightness-150 ${hovered && hovered !== 'Rhanel' ? 'blur-[1.8px]' : ''}`}
-                onMouseEnter={() => setHovered('Rhanel')}
-                onMouseLeave={() => setHovered(null)}
               />
               <div className="absolute bottom-0 left-0 w-full h-12 bg-gradient-to-t from-[#f8f8f8] via-transparent to-transparent pointer-events-none" />
             </div>
           </div>
         </div>
-        
-        <br />
-        <br />
-        <br />
+
+
+
+
+
 
         {/* Team name and logo Brief introduction of the team */}
-        <div className="h-full flex flex-col lg:flex-row justify-between items-center space-y-6 md:space-y-0 mt-10 px-6">
+        <div className="flex flex-col lg:flex-row justify-between items-center space-y-6 md:space-y-0 mt-10 px-6">
 
+          {/* Team name and logo Section 
           <div className="w-full max-w-[680px] lg:order-1 mb-8 md:mb-10 mx-6 md:mx-12 mt-6 md:mt-0 flex-1">
             <img
               src={darkMode ? require("../assets/Whomelogo.png") : require("../assets/bhomelogo.png")}
               alt="InnoVate Logo"
               className="w-full h-auto object-contain mx-auto"
             />
-          </div>
+          </div> */}
 
           <div className="w-full lg:w-[800px] bg-white bg-opacity-20 border border-[#ffffff]/30 p-10 rounded-[15px] text-left tracking-wide backdrop-blur-lg mx-4 sm:mx-6 md:mx-12 mb-4 sm:mb-6 md:mb-0 mt-4 sm:mt-6 md:mt-0 flex-1">
             <p className="text-base sm:text-lg md:text-xl lg:text-2xl">

@@ -152,7 +152,7 @@ function ImageHover({ imageSrc, altText, position = '50% 20%', zoom = 1, name, o
   );
 }
 
-function ImageGallery({ onSelect, darkMode, selectedMember }) {
+function ImageGallery({ onSelect, darkMode, selectedMember}) {
   const teamMembers = [
     { 
       id: 1,
@@ -172,7 +172,7 @@ function ImageGallery({ onSelect, darkMode, selectedMember }) {
         "DEVOPS: GIT",
         "WIREFRAME: FIGMA"
       ],
-      cv: "/cv/",
+      cv: "/cv/CV_Castañeda-Daniela.pdf",
       position: '48% 20%',
       zoom: 1.4
     },
@@ -216,7 +216,7 @@ function ImageGallery({ onSelect, darkMode, selectedMember }) {
         "DEVOPS: GIT",
         "WIREFRAME: FIGMA"
         ],
-        cv: "/cv/",
+        cv: "/cv/CV_Listana-Lance.pdf",
         position: '15% 10%',
         zoom: 1.0
       },
@@ -238,7 +238,7 @@ function ImageGallery({ onSelect, darkMode, selectedMember }) {
             "DEVOPS: GIT",
             "WIREFRAME: FIGMA"
         ],
-        cv: "/cv/CV_Campaña-Loel.pdf",
+        cv: "/cv/CV_Buclares-Rhanel.pdf",
         position: '45% 20%',
         zoom: 1.0
       },
@@ -260,7 +260,7 @@ function ImageGallery({ onSelect, darkMode, selectedMember }) {
             "DEVOPS: GIT",
             "WIREFRAME: FIGMA"
         ],
-        cv: "/cv/",
+        cv: "/cv/CV_Tropico-Freddrick.pdf",
         position: '30% 20%',
         zoom: 1.0
       },

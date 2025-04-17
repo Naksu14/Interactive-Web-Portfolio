@@ -96,14 +96,12 @@ const GroupsBackground = () => {
   
 
   useEffect(() => {
-    // On initial mount, reset sessionStorage to default
-    sessionStorage.setItem('selectedMember', JSON.stringify(defaultMember));
-
-    // Then watch for any changes in sessionStorage (optional)
+    updateMemberFromSessionStorage(); // Only update if session already has something
+  
     const interval = setInterval(updateMemberFromSessionStorage, 100);
-
     return () => clearInterval(interval);
   }, []);
+  
 
   const backgroundImages = {
     1: require("../assets/Anime_Members/Anime_Daniela.png"),

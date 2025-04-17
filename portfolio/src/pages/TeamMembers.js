@@ -1,59 +1,79 @@
-// TeamMembers.js
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import MemberBackground from "../components/BackgroundMembers";
-import { IconButton } from '@mui/material';
+import { IconButton, Tooltip } from '@mui/material';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import EmailIcon from '@mui/icons-material/Email';
 import DescriptionIcon from '@mui/icons-material/Description';
-import Tooltip from '@mui/material/Tooltip';
-import ImageGallery from '../components/ImageHover'; // Updated import
+import ImageGallery from '../components/ImageHover';
 
 const TeamMembers = ({ darkMode }) => {
-  const [selectedMember, setSelectedMember] = useState({
-    image: require("../assets/Anime_Members/Anime_Loel.png"),
-    name: "LOEL CAMPAÑA",
-    title: "Full-Stack Developers",
-    skills: [
-      "LANGUAGE: JS, Java, Python, C++, PHP",
-      "FRONTEND: CSS, HTML",
-      "FRAMEWORK: React",
-      "DATABASE: MYSQL",
-      "DEVOPS: GIT",
-      "WIREFRAME: FIGMA"
-    ],
-    github: "https://github.com/Naksu14",
-    facebook:"https://www.facebook.com/loelcamp14",
-    email:"mailto:ic.loel.campana@cvsu.edu.ph",
-    cv: "/cv/CV_Campaña-Loel.pdf",
-  });
+  const [selectedMember, setSelectedMember] = useState(null);
+
+  useEffect(() => {
+    const stored = sessionStorage.getItem("selectedMember");
+    let member;
+
+    if (stored) {
+      member = JSON.parse(stored);
+    }
+
+    setSelectedMember({
+      image: member?.src || require("../assets/Anime_Members/Anime_Loel.png"),
+      name: member?.name?.toUpperCase() || "LOEL CAMPAÑA",
+      title: member?.title || "Full-Stack Developer",
+      skills: member?.skills || [
+        "LANGUAGE: JS, Java, Python, C++, PHP",
+        "FRONTEND: CSS, HTML",
+        "FRAMEWORK: React",
+        "DATABASE: MYSQL",
+        "DEVOPS: GIT",
+        "WIREFRAME: FIGMA"
+      ],
+      github: member?.github || "https://github.com/",
+      facebook: member?.facebook || "https://facebook.com/",
+      email: member?.email || "example@gmail.com",
+      cv: member?.cv || "/cv/CV_Campaña-Loel.pdf",
+    });
+  }, []);
 
   const handleMemberSelect = (member) => {
-    // Store the selected member in sessionStorage
-    sessionStorage.setItem('selectedMember', JSON.stringify({
-      id: member.id,
-      nn: member.name.toUpperCase(),
-      name: member.name,
-    }));
-    
-  
-    // Update the state locally (optional, depending on whether you want immediate UI updates)
+    sessionStorage.setItem('selectedMember', JSON.stringify(member));
     setSelectedMember({
       image: member.src,
       name: member.name.toUpperCase(),
-      title: member.title || selectedMember.title,
-      skills: member.skills || selectedMember.skills,
+      title: member.title,
+      skills: member.skills,
       github: member.github,
       facebook: member.facebook,
       email: member.email,
       cv: member.cv,
     });
   };
-  
+
+  const getImageClassAndStyle = (name = "") => {
+    const normalized = name.toUpperCase().trim();
+    if (normalized === "DANIELA ROMANA CASTAÑEDA") {
+      return { className: 'w-[1200px] h-[1150px]', style: { transform: 'translate(-8%, -16%)' } };
+    } else if (normalized === "LOEL CAMPAÑA") {
+      return { className: 'max-w-[95%] max-h-[1050px]', style: { transform: 'translate(-10%, -13%)' } };
+    } else if (normalized === "LANCE LISTANA") {
+      return { className: 'max-w-[95%] max-h-[800px]', style: { transform: 'translate(-15%, -1%)' } };
+    } else if (normalized === "RHANEL SEIGHMONE BUCLARES") {
+      return { className: 'max-w-[92%] max-h-[980px]', style: { transform: 'translate(-5%, -10%)' } };
+    } else if (normalized === "FREDDRICK TROPICO") {
+      return { className: 'max-w-[92%] max-h-[800px]', style: { transform: 'translate(-17%, -1%)' } };
+    } else {
+      return { className: 'max-w-[100%] max-h-[1050px]', style: { transform: 'translate(-10%, -13%)' } };
+    }
+  };
 
   const buttonStyles = {
     backgroundColor: darkMode ? 'rgba(255, 255, 255, 0.1)' : 'rgba(109, 109, 109, 0.1)',
-    '&:hover': { backgroundColor: darkMode ? 'rgba(255, 255, 255, 0.3)' : 'rgba(255, 255, 255, 0.3)', transform: 'scale(1.1)' },
+    '&:hover': {
+      backgroundColor: darkMode ? 'rgba(255, 255, 255, 0.3)' : 'rgba(255, 255, 255, 0.3)',
+      transform: 'scale(1.1)'
+    },
     borderRadius: '50%',
     width: 56,
     height: 56,
@@ -61,64 +81,48 @@ const TeamMembers = ({ darkMode }) => {
   };
 
   const icondarkmode = {
-       color: darkMode ? '#ffffff' : '#59453F', fontSize: '2rem'
-  }
-  
+    color: darkMode ? '#ffffff' : '#59453F',
+    fontSize: '2rem'
+  };
+
+  if (!selectedMember) return null;
+
+  const { className: imgClass, style: imgStyle } = getImageClassAndStyle(selectedMember.name);
 
   return (
     <div className={`z-5 relative mx-8 mt-[104px] h-[calc(100vh-130px)] overflow-hidden rounded-b-[2rem] ${darkMode ? 'bg-[#D74925]/60' : 'bg-[#f0b6a2]/60'}`}>
-      {/* Background Image Component */}
       <MemberBackground />
 
-      {/* Content Wrapper */}
       <div className={`relative p-6 overflow-auto h-full custom-scrollbar ${darkMode ? "text-[#ffffff]" : "text-[#59453F]"}`}>
 
-      {/* Centered Image - now perfectly centered */}
-        <div className="absolute inset-0 flex items-center justify-center pointer-events-none ">
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
           <img 
-              src={require("../assets/Innovatebg.png")} 
-              alt="Innovate bg" 
-              className="w-[1300px] h-[100%] object-contain -z-9 opacity-50"
-            />
+            src={require("../assets/Innovatebg.png")} 
+            alt="Innovate bg" 
+            className="w-[1300px] h-[100%] object-contain -z-9 opacity-50"
+          />
         </div>
-        
-        {/* Main Image */}
+
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
           <img 
             src={selectedMember.image} 
             alt={selectedMember.name} 
-            className={`-z-9 object-contain ${
-              selectedMember.name === "DANIELA ROMANA CASTAÑEDA" ? 'w-[1200px] h-[1150px]' : 
-              selectedMember.name === "LOEL CAMPAÑA" ? 'max-w-[95%] max-h-[1050px]' : 
-              selectedMember.name === "LANCE LISTANA" ? 'max-w-[95%] max-h-[800px]' : 
-              selectedMember.name === "RHANEL SEIGHMONE BUCLARES" ? 'max-w-[92%] max-h-[980px]' : 
-              selectedMember.name === "FREDDRICK TROPICO" ? 'max-w-[92%] max-h-[800px]' : 
-              'max-w-[100%] max-h-[1050px]' 
-            }`}
-            style={{ 
-              transform: selectedMember.name === "DANIELA ROMANA CASTAÑEDA" ? 'translate(-8%, -16%)' : 
-                        selectedMember.name === "LOEL CAMPAÑA" ? 'translate(-10%, -13%)' : 
-                        selectedMember.name === "LANCE LISTANA" ? 'translate(-15%, -1%)' : 
-                        selectedMember.name === "RHANEL SEIGHMONE BUCLARES" ? 'translate(-5%, -10%)' : 
-                        selectedMember.name === "FREDDRICK TROPICO" ? 'translate(-17%, -1%)' : 
-                        'translate(-10%, -13%)' 
-            }}
+            className={`-z-9 object-contain ${imgClass}`}
+            style={imgStyle}
           />
         </div>
 
-        {/* Image Gallery - pass the handler */}
-        <div className="absolute right-20 top-20 ">
+        <div className="absolute right-20 top-20">
           <ImageGallery onSelect={handleMemberSelect} darkMode={darkMode} />
 
-          <div className="absolute right-20 mt-10 flex flex-row ">
-            <b className="text-xl">MEMBERS </b>
+          <div className="absolute right-20 mt-10 flex flex-row">
+            <b className="text-xl">MEMBERS</b>
             <div className={`h-[2px] w-[270px] ml-5 mt-4 ${darkMode ? "bg-[#ffffff]" : "bg-[#59453F]"}`}></div>
           </div>
-
         </div>
-    
+
         {/* Member Info */}
-        <div className="relative z-10 w-full max-w-[500px] bg-white bg-opacity-10 border border-white/30 p-6 rounded-xl text-left tracking-wide backdrop-blur-lg ml-4 lg:ml-12 mb-10">          
+        <div className="relative z-10 w-full max-w-[500px] bg-white bg-opacity-10 border border-white/30 p-6 rounded-xl text-left tracking-wide backdrop-blur-lg ml-4 lg:ml-12 mb-10">
           <p className="text-base sm:text-lg md:text-xl lg:text-2xl">
             <b className="text-base sm:text-xl md:text-2xl lg:text-3xl">{selectedMember.name}</b> 
             <br />
@@ -129,7 +133,7 @@ const TeamMembers = ({ darkMode }) => {
         {/* Skills */}
         <div className="relative z-10 w-full max-w-[400px] bg-white bg-opacity-10 border border-white/30 p-6 rounded-xl text-left tracking-wide backdrop-blur-lg mt-12 ml-4 lg:ml-12 mb-12">
           <p className="sm:text-base md:text-lg lg:text-xl">
-            <b>Skills </b>
+            <b>Skills</b>
             <ul>
               {selectedMember.skills.map((skill, index) => (
                 <li key={index}>{skill}</li>
@@ -138,55 +142,32 @@ const TeamMembers = ({ darkMode }) => {
           </p>
         </div>
 
-        {/* Fixed Social Icons Container */}
+        {/* Social Icons */}
         <div className="fixed z-10 left-20 bottom-10 w-auto max-w-[400px] px-4">
           <div className="flex justify-center gap-4">
-          <Tooltip title="View Github">
-            {/* GitHub Icon */}
-            <IconButton 
-              href={selectedMember?.github || "https://github.com/"} // Default GitHub
-              target="_blank"
-              rel="noopener noreferrer"
-              sx={buttonStyles}
-            >
-              <GitHubIcon sx={icondarkmode} />
-            </IconButton>
-          </Tooltip>
-
-          <Tooltip title="View Facebook">
-            <IconButton 
-              href={selectedMember?.facebook || "https://facebook.com/"} // Default GitHub
-              target="_blank"
-              rel="noopener noreferrer"
-              sx={buttonStyles}
-            >
-              <FacebookIcon sx={icondarkmode} />
-            </IconButton>
-          </Tooltip>
-          <Tooltip title="Contact on Email">  
-            <IconButton 
-              href={`mailto:${selectedMember?.email || "example@gmail.com"}`}// Default GitHub
-              target="_blank"
-              rel="noopener noreferrer"
-              sx={buttonStyles}
-            >
-              <EmailIcon sx={icondarkmode} />
-            </IconButton>
-          </Tooltip>
-          
-            {/* Resume/CV Icon */}
-            <Tooltip title="View Resume">
-              <IconButton 
-                href={selectedMember?.cv}
-                target="_blank"
-                rel="noopener noreferrer"
-                sx={buttonStyles}
-              >
-                <DescriptionIcon sx={icondarkmode} />
+            <Tooltip title="View Github">
+              <IconButton href={selectedMember.github} target="_blank" rel="noopener noreferrer" sx={buttonStyles}>
+                <GitHubIcon sx={icondarkmode} />
               </IconButton>
             </Tooltip>
 
-            
+            <Tooltip title="View Facebook">
+              <IconButton href={selectedMember.facebook} target="_blank" rel="noopener noreferrer" sx={buttonStyles}>
+                <FacebookIcon sx={icondarkmode} />
+              </IconButton>
+            </Tooltip>
+
+            <Tooltip title="Contact on Email">
+              <IconButton href={`mailto:${selectedMember.email}`} target="_blank" rel="noopener noreferrer" sx={buttonStyles}>
+                <EmailIcon sx={icondarkmode} />
+              </IconButton>
+            </Tooltip>
+
+            <Tooltip title="View Resume">
+              <IconButton href={selectedMember.cv} target="_blank" rel="noopener noreferrer" sx={buttonStyles}>
+                <DescriptionIcon sx={icondarkmode} />
+              </IconButton>
+            </Tooltip>
           </div>
         </div>
 
