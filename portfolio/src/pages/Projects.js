@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import { useInView } from 'react-intersection-observer';  // Intersection Observer hook
+import React from "react";
 import GroupsBackground from "../components/common/GroupsBackground";
 import ProjectCard from "../components/project/ProjectCard";
 

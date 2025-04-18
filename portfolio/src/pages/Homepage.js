@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useInView } from 'react-intersection-observer';  // Intersection Observer hook
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import teamlogo from "../assets/commonIcons/bhomelogo2.png";
 import GroupsBackground from "../components/common/GroupsBackground";
 import CarouselCard from "../components/home/CarouselMembers";
 import CarouselCardFrameworkds from "../components/home/CarouselUseFrameworks";

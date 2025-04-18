@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import { useInView } from 'react-intersection-observer';  // Intersection Observer hook
+import React from "react";
 import AboutsBackground from "../components/about/AboutsBackground";
 
 const AboutUs = ({ darkMode }) => {
@@ -31,10 +30,6 @@ const AboutUs = ({ darkMode }) => {
               alt="Innovate Logo"
               className="w-[50px] hidden xl:block"
             />
-            {/* <div className="absolute right-10 mt-10 flex flex-row ">
-              <b className="text-xl w-[120px]">ABOUT US</b>
-              <div className={`h-[2px] w-[200px] ml-5 mt-4 ${darkMode ? "bg-[#ffffff]" : "bg-[#59453F]"}`}></div>
-            </div>*/}
           </div>
 
           

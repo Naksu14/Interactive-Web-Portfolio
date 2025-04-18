@@ -32,9 +32,8 @@ const images = [loel, fred, daniela, rhanel, lance];
 
 const Contact = ({ darkMode }) => {
 
-  const [hovered, setHovered] = useState(null);
   const [showMap, setShowMap] = useState(false);
-  const [isMapVisible, setIsMapVisible] = useState(true); // State to track map visibility
+  const [isMapVisible] = useState(true); // State to track map visibility
   const buttonStyles = {
     backgroundColor: darkMode ? 'rgba(255, 255, 255, 0.1)' : 'rgba(109, 109, 109, 0.1)',
     '&:hover': { backgroundColor: darkMode ? 'rgba(255, 255, 255, 0.3)' : 'rgba(255, 255, 255, 0.3)', transform: 'scale(1.1)' },
@@ -46,10 +45,6 @@ const Contact = ({ darkMode }) => {
 
   const icondarkmode = {
     color: darkMode ? '#ffffff' : '#59453F', fontSize: '2rem'
-  };
-
-  const toggleMapVisibility = () => {
-    setIsMapVisible(!isMapVisible); // Toggle map visibility
   };
 
   return (
