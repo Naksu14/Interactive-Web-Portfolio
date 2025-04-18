@@ -31,7 +31,7 @@ const ProjectBlock = ({
               <span className="block">{agenda}</span>
             </div>
             <img
-              src={require(`../assets/projectsImages/${image}`)}
+              src={require(`../../assets/projectsImages/${image}`)}
               alt={title}
               className={`absolute bottom-0 left-1/2 -translate-x-1/2 w-auto max-w-[90%] h-auto object-contain ${dropShadow}`}
             />
@@ -69,7 +69,7 @@ const ProjectBlock = ({
               className="bg-[#FEA3A3] rounded-xl px-3 py-2 flex flex-row items-center justify-center gap-2 text-xs sm:text-sm"
             >
               <img
-                src={require(`../assets/iconProject/${tech.icon}`)}
+                src={require(`../../assets/iconProject/${tech.icon}`)}
                 alt={`${tech.name} Logo`}
                 className="w-4 h-4 sm:w-5 sm:h-5"
               />

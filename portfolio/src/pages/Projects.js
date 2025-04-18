@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useInView } from 'react-intersection-observer';  // Intersection Observer hook
-import GroupsBackground from "../components/GroupsBackground";
-import ProjectCard from "../components/ProjectCard";
+import GroupsBackground from "../components/common/GroupsBackground";
+import ProjectCard from "../components/project/ProjectCard";
 
 
 const Projects = ({ darkMode }) => {

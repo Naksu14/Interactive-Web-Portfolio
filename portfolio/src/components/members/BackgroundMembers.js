@@ -32,11 +32,11 @@ const GroupsBackground = () => {
   
 
   const backgroundImages = {
-    1: require("../assets/Anime_Members/Anime_Daniela.png"),
-    2: require("../assets/Anime_Members/Anime_Loel.png"),
-    3: require("../assets/Anime_Members/Anime_Lance.png"),
-    4: require("../assets/Anime_Members/Anime_Rhanel.png"),
-    5: require("../assets/Anime_Members/Anime_Fred.png")
+    1: require("../../assets/Anime_Members/Anime_Daniela.png"),
+    2: require("../../assets/Anime_Members/Anime_Loel.png"),
+    3: require("../../assets/Anime_Members/Anime_Lance.png"),
+    4: require("../../assets/Anime_Members/Anime_Rhanel.png"),
+    5: require("../../assets/Anime_Members/Anime_Fred.png")
   };
 
   const memberKey = selectedMember?.id || 2;

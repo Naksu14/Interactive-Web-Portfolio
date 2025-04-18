@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import GroupsBackground from "../components/GroupsBackground";
+import GroupsBackground from "../components/common/GroupsBackground";
 
-import bmail from "../assets/black-mail.png";
-import location from "../assets/location.png";
-import twitter1 from "../assets/twitter1.png";
-import telephone from "../assets/telephone.png";
-import send from "../assets/sendm.png";
-import logo from "../assets/logo_black.png";
+import bmail from "../assets/commonIcons/black-mail.png";
+import location from "../assets/commonIcons/location.png";
+import twitter1 from "../assets/commonIcons/twitter1.png";
+import telephone from "../assets/commonIcons/telephone.png";
+import send from "../assets/commonIcons/sendm.png";
+import logo from "../assets/commonIcons/logo_black.png";
 
 
 import Tooltip from '@mui/material/Tooltip';

@@ -5,27 +5,27 @@ import { useNavigate } from "react-router-dom";
 const members = [
   {
     name: "LOEL CAMPAÑA",
-    image: require("../assets/Anime_Members/Anime_Loel.png"),
+    image: require("../../assets/Anime_Members/Anime_Loel.png"),
     link: "/team"
   },
   {
     name: "DANIELA ROMANA CASTAÑEDA",
-    image: require("../assets/Anime_Members/Anime_Daniela.png"),
+    image: require("../../assets/Anime_Members/Anime_Daniela.png"),
     link: "/team"
   },
   {
     name: "LANCE LISTANA",
-    image: require("../assets/Anime_Members/Anime_Lance.png"),
+    image: require("../../assets/Anime_Members/Anime_Lance.png"),
     link: "/team"
   },
   {
     name: "RHANEL BUCLARES",
-    image: require("../assets/Anime_Members/Anime_Rhanel.png"),
+    image: require("../../assets/Anime_Members/Anime_Rhanel.png"),
     link: "/team"
   },
   {
     name: "FREDDRICK TROPICO",
-    image: require("../assets/Anime_Members/Anime_Fred.png"),
+    image: require("../../assets/Anime_Members/Anime_Fred.png"),
     link: "/team"
   },
 ];

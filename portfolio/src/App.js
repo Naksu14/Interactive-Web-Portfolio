@@ -6,8 +6,8 @@ import AboutUs from './pages/AboutUs';
 import TeamMembers from './pages/TeamMembers';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
-import Navbar from './components/Navbar';
-import CustomCursor from "./components/CustomCursor";
+import Navbar from './components/common/Navbar';
+import CustomCursor from "./components/common/CustomCursor";
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);

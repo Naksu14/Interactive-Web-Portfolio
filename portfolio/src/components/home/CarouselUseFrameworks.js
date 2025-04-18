@@ -1,13 +1,13 @@
 import { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
-import reactLogo from "../assets/frameworks/react.png";
-import htmlLogo from "../assets/frameworks/html.png";
-import cssLogo from "../assets/frameworks/css.png";
-import tailwindLogo from "../assets/frameworks/tailwind.png";
-import materialLogo from "../assets/frameworks/material.png";
-import jsLogo from "../assets/frameworks/javascript.png";
-import domLogo from "../assets/frameworks/react-dom.png";
+import reactLogo from "../../assets/frameworks/react.png";
+import htmlLogo from "../../assets/frameworks/html.png";
+import cssLogo from "../../assets/frameworks/css.png";
+import tailwindLogo from "../../assets/frameworks/tailwind.png";
+import materialLogo from "../../assets/frameworks/material.png";
+import jsLogo from "../../assets/frameworks/javascript.png";
+import domLogo from "../../assets/frameworks/react-dom.png";
 
 const frameworks = [
   { name: "React.js", image: reactLogo },

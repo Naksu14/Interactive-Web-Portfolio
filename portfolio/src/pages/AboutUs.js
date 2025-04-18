@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useInView } from 'react-intersection-observer';  // Intersection Observer hook
-import AboutsBackground from "../components/AboutsBackground";
+import AboutsBackground from "../components/about/AboutsBackground";
 
 const AboutUs = ({ darkMode }) => {
 
@@ -27,7 +27,7 @@ const AboutUs = ({ darkMode }) => {
           {/* Fixed Vertical Logo on Right */}
           <div className="fixed top-[150px] right-20 z-0">
             <img
-              src={darkMode ? require("../assets/verticallighlogo.png") : require("../assets/verticaldarklogo.png")} 
+              src={darkMode ? require("../assets/commonIcons/verticallighlogo.png") : require("../assets/commonIcons/verticaldarklogo.png")} 
               alt="Innovate Logo"
               className="w-[50px] hidden xl:block"
             />
@@ -84,7 +84,7 @@ const AboutUs = ({ darkMode }) => {
                 {/* Play Button Icon */}
                 <div className="absolute bottom-2 left-2 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow">
                   <img
-                    src={require("../assets/play.png")}
+                    src={require("../assets/commonIcons/play.png")}
                     alt="Play Icon"
                     className="w-[20px]"
                   />

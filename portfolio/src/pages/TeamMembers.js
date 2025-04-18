@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
-import MemberBackground from "../components/BackgroundMembers";
+import MemberBackground from "../components/members/BackgroundMembers";
 import { IconButton, Tooltip } from '@mui/material';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import EmailIcon from '@mui/icons-material/Email';
 import DescriptionIcon from '@mui/icons-material/Description';
-import ImageGallery from '../components/ImageHover';
+import ImageGallery from '../components/members/ImageHover';
 
 const TeamMembers = ({ darkMode }) => {
   const [selectedMember, setSelectedMember] = useState(null);
@@ -97,7 +97,7 @@ const TeamMembers = ({ darkMode }) => {
 
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
           <img 
-            src={require("../assets/Innovatebg.png")} 
+            src={require("../assets/commonIcons/Innovatebg.png")} 
             alt="Innovate bg" 
             className="w-[1300px] h-[100%] object-contain -z-9 opacity-50"
           />

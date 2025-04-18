@@ -1,6 +1,6 @@
 import React from "react";
-import logoDark from "../assets/logo_white.png";
-import logoLight from "../assets/brown-logo.png";
+import logoDark from "../../assets/commonIcons/logo_white.png";
+import logoLight from "../../assets/commonIcons/brown-logo.png";
 
 const AboutsBackground = ({ darkMode }) => {
   console.log("darkMode in AboutsBackground:", darkMode); // ✅ move here

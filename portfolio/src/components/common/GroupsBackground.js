@@ -1,5 +1,5 @@
 import React from "react";
-import backgroundImage from "../assets/Anime_Members/Anime_Groups.png"; // Import the image
+import backgroundImage from "../../assets/Anime_Members/Anime_Groups.png"; // Import the image
 
 const GroupsBackground = () => {
   return (

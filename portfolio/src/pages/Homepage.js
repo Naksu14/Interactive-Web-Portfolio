@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { useInView } from 'react-intersection-observer';  // Intersection Observer hook
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import teamlogo from "../assets/bhomelogo2.png";
-import GroupsBackground from "../components/GroupsBackground";
-import CarouselCard from "../components/CarouselMembers";
-import CarouselCardFrameworkds from "../components/CarouselUseFrameworks";
-import Projectsimage from "../components/projectsAlbumbutton";
-import ViewContactButton from "../components/viewContact";
+import teamlogo from "../assets/commonIcons/bhomelogo2.png";
+import GroupsBackground from "../components/common/GroupsBackground";
+import CarouselCard from "../components/home/CarouselMembers";
+import CarouselCardFrameworkds from "../components/home/CarouselUseFrameworks";
+import Projectsimage from "../components/home/projectsAlbumbutton";
+import ViewContactButton from "../components/home/viewContact";
 import { useNavigate } from 'react-router-dom';
 
 // Reduced Space
@@ -17,11 +17,19 @@ import AnimeLoel from "../assets/Anime_Members/Anime_Loel1.png";
 import AnimeLance from "../assets/Anime_Members/Anime_Lance1.png";
 
 // Outlined Social Icons
-import facebook from "../assets/facebook.png";
-import linkedin from "../assets/linkedin.png";
-import gmail from "../assets/gmail.png";
-import twitter from "../assets//twitter.png";
-import github from "../assets//github.png";
+import facebook from "../assets/commonIcons/facebook.png";
+import linkedin from "../assets/commonIcons/linkedin.png";
+import gmail from "../assets/commonIcons/gmail.png";
+import twitter from "../assets/commonIcons/twitter.png";
+import github from "../assets/commonIcons/github.png";
+
+
+import Tooltip from '@mui/material/Tooltip';
+import { IconButton } from '@mui/material';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import EmailIcon from '@mui/icons-material/Email';
+
 
 
 
@@ -42,6 +50,19 @@ const Homepage = ({ darkMode }) => {
     'bg-white bg-opacity-30 border border-[#ffffff]/30 p-10 rounded-[15px] tracking-wide backdrop-blur-lg'
     ;
 
+    const buttonStyles = {
+      backgroundColor: darkMode ? 'rgba(255, 255, 255, 0.1)' : 'rgba(109, 109, 109, 0.1)',
+      '&:hover': { backgroundColor: darkMode ? 'rgba(255, 255, 255, 0.3)' : 'rgba(255, 255, 255, 0.3)', transform: 'scale(1.1)' },
+      borderRadius: '50%',
+      width: 56,
+      height: 56,
+      transition: 'all 0.3s ease'
+    };
+  
+    const icondarkmode = {
+      color: darkMode ? '#ffffff' : '#59453F', fontSize: '2rem'
+    };
+
   return (
     <div className={`z-5 relative mx-8 mt-[104px] h-[calc(100vh-130px)] overflow-hidden rounded-b-[2rem] ${darkMode ? 'bg-[#D74925]/60' : 'bg-[#f0b6a2]/60'}`}>
       {/* Background Image Component */}
@@ -59,7 +80,7 @@ const Homepage = ({ darkMode }) => {
           {/* Team Logo - Centered and behind */}
           <div className="absolute inset-0 flex items-center justify-center z-0 blur-sm">
             <img
-              src={darkMode ? require("../assets/homelogonew.png") : require("../assets/homelogodark.png")}
+              src={darkMode ? require("../assets/commonIcons/homelogonew.png") : require("../assets/commonIcons/homelogodark.png")}
               alt="InnoVate Logo"
               className="w-[300px] sm:w-[500px] md:w-[700px] lg:w-[900px] xl:w-[1100px] h-auto opacity-80"
             />
@@ -334,7 +355,7 @@ const Homepage = ({ darkMode }) => {
           {/* Team name and logo Section */}
           <div className="w-full max-w-[680px] lg:order-1 mb-8 md:mb-10 mx-6 md:mx-12 mt-6 md:mt-0 flex-1">
             <img
-              src={darkMode ? require("../assets/Whomelogo.png") : require("../assets/bhomelogo.png")}
+              src={darkMode ? require("../assets/commonIcons/Whomelogo.png") : require("../assets/commonIcons/bhomelogo.png")}
               alt="InnoVate Logo"
               className="w-full h-auto object-contain mx-auto"
             />
@@ -372,7 +393,7 @@ const Homepage = ({ darkMode }) => {
 
           {/* Sun Image */}
           <div className={`md:row-span-1 ${ContainerBg} flex justify-center items-center p-4 px-6 rounded-xl`}>
-            <img className="w-32" src={ darkMode ? require("../assets/half-moon.png") :require("../assets/sunny.png" )} alt="Sun" />
+            <img className="w-32" src={ darkMode ? require("../assets/commonIcons/half-moon.png") :require("../assets/commonIcons/sunny.png" )} alt="Sun" />
           </div>
 
 
@@ -408,7 +429,7 @@ const Homepage = ({ darkMode }) => {
 
           {/* GitHub Logo */}
           <div className={`md:col-span-1 md:row-span-1 ${ContainerBg} flex flex-col justify-center items-center p-4 rounded-xl`}>
-            <img className="w-32 mb-2" src={require("../assets/gitpng.png")} alt="GitHub" />
+            <img className="w-32 mb-2" src={require("../assets/commonIcons/gitpng.png")} alt="GitHub" />
             <div className="mt-6 flex items-center justify-between">
               <p className="text-md font-medium mx-auto px-8">Repository</p>
               <a href="https://github.com/Naksu14/Interactive-Web-Portfolio" target="_blank" rel="noopener noreferrer">
@@ -462,37 +483,58 @@ const Homepage = ({ darkMode }) => {
 
 
 
-
-
-
         <footer className={`mt-10 py-6 text-left ${darkMode ? "text-white" : "text-[#59453F]"}`}>
-          <div className="w-[80%] mx-auto flex md:justify-between items-center  justify-center mb-6">
-            <div className="flex flex-col items-start gap-2">
-              {/* logo in bottom */}
-              <div className="w-full flex justify-center">
-                <img
-                  src={darkMode ? require("../assets/Whomelogo2.png") : require("../assets/bhomelogo2.png")}
-                  alt="logo2 Image"
-                  className="w-[120px] h-[80]"
-                />
-              </div>
+          <div className="w-[80%] mx-auto flex justify-between items-center mb-6">
 
-              <p className="text-sm ">Innovating Digital Experience.</p>
-            </div>
           </div>
+
 
           {/* Border and social icons */}
           <div
             className={`w-[80%] mx-auto border-t-[2px] ${darkMode ? "border-white" : "border-[#59453F]"} mt-20`} />
 
-          <div className="w-[80%] mx-auto flex md:justify-between items-center justify-center mt-4">
+
+          <div className="w-[80%] mx-auto flex justify-between items-center mt-4">
             <p className="text-sm">&copy; {new Date().getFullYear()} INNOVATE, All rights reserved.</p>
             <div className="flex gap-7">
+            <Tooltip title="View Github">
+              <IconButton
+                  href="https://github.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  sx={buttonStyles}
+                >
+                  <GitHubIcon sx={icondarkmode} />
+              </IconButton>  
+            </Tooltip> 
+            <Tooltip title="View Facebook">
+              <IconButton
+                  href="https://facebook.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  sx={buttonStyles}
+                >
+                <FacebookIcon sx={icondarkmode} />
+              </IconButton>
+            </Tooltip> 
 
-
+            <Tooltip title="Contact on Email">
+              <IconButton
+                  href="mailto:example@gmail.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  sx={buttonStyles}
+                >
+                <EmailIcon sx={icondarkmode} />
+              </IconButton>
+            </Tooltip>
+              
             </div>
           </div>
         </footer>
+
+
+        
 
       </div>
     </div>

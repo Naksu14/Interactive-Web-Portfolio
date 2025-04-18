@@ -45,7 +45,7 @@ const Navbar = ({ setDarkMode, darkMode }) => {
       {/* Logo */}
       <div className="flex items-center gap-8">
         <img 
-          src={darkMode ? require("../assets/logo_white.png") : require("../assets/brown-logo.png")} 
+          src={darkMode ? require("../../assets/commonIcons/logo_white.png") : require("../../assets/commonIcons/brown-logo.png")} 
           alt="Logo" 
           className="w-12 h-12" 
         />
