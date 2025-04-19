@@ -162,16 +162,16 @@ function ImageGallery({ onSelect, darkMode, selectedMember }) {
     <div className="flex flex-wrap gap-4 p-4">
       {teamMembers.map((member) => (
         <ImageHover
-          key={member.id}
-          imageSrc={member.src}
-          altText={member.alt}
-          name={member.nn}
-          position={member.position}
-          zoom={member.zoom}
-          onClick={() => onSelect(member)}
-          darkMode={darkMode}
-          isSelected={selectedMember?.id === member.id} // ✅ Ensure this check is correct
-        />
+        key={member.id}
+        imageSrc={member.src}
+        altText={member.alt}
+        position={member.position}
+        zoom={member.zoom}
+        name={member.nn}
+        onClick={() => onSelect(member)}
+        darkMode={darkMode}
+        isSelected={selectedMember?.name === member.name} 
+      />
       ))}
     </div>
   );
