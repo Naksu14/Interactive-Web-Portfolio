@@ -42,7 +42,7 @@ const TeamMembers = ({ darkMode }) => {
     sessionStorage.setItem('selectedMember', JSON.stringify(member));
     setSelectedMember({
       id: member.id, // Ensure ID is stored
-      image: member.src,
+      image: member.image,
       name: member.name.toUpperCase(),
       title: member.title,
       skills: member.skills,
