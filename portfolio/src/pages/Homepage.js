@@ -155,7 +155,7 @@ const Homepage = ({ darkMode }) => {
                   id: 5,
                   name: "FREDDRICK TROPICO",
                   title: "Frontend Developer, Designer",
-                  image: require('../assets/Anime_Members/Anime_Fred.png'),
+                  src: require('../assets/Anime_Members/Anime_Fred.png'),
                   skills: [
                     "LANGUAGE: C, C++, Java, PHP, JS",
                     "FRONTEND: CSS, HTML",
@@ -205,7 +205,7 @@ const Homepage = ({ darkMode }) => {
                   id: 2,
                   name: "LOEL CAMPAÑA",
                   title: "Full-Stack Developer",
-                  image: require('../assets/Anime_Members/Anime_Loel.png'),
+                  src: require('../assets/Anime_Members/Anime_Loel.png'),
                   skills: [
                     "LANGUAGE: JS, Java, Python, C++, PHP",
                     "FRONTEND: CSS, HTML",
@@ -253,7 +253,7 @@ const Homepage = ({ darkMode }) => {
                   id: 3,
                   name: "LANCE LISTANA",
                   title: "QA Tester",
-                  image: require('../assets/Anime_Members/Anime_Lance.png'),
+                  src: require('../assets/Anime_Members/Anime_Lance.png'),
                   skills: [
                     "LANGUAGE: C, C++, Java, PHP, JS",
                     "FRONTEND: CSS, HTML",
@@ -300,7 +300,7 @@ const Homepage = ({ darkMode }) => {
                   id: 4,
                   name: "RHANEL SEIGHMONE BUCLARES",
                   title: "Frontend Developer, Designer",
-                  image: require('../assets/Anime_Members/Anime_Rhanel.png'),
+                  src: require('../assets/Anime_Members/Anime_Rhanel.png'),
                   skills: [
                     "LANGUAGE: C, C++, Java, PHP, JS",
                     "FRONTEND: CSS, HTML",

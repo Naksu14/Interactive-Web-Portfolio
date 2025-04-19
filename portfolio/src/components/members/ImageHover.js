@@ -48,7 +48,7 @@ function ImageGallery({ onSelect, darkMode, selectedMember }) {
   const teamMembers = [
     {
       id: 1,
-      image: require("../../assets/Anime_Members/Anime_Daniela.png"),
+      src: require("../../assets/Anime_Members/Anime_Daniela.png"),
       alt: "Daniela",
       name: "DANIELA ROMANA CASTAÑEDA",
       nn: "DANIELA",
@@ -70,7 +70,7 @@ function ImageGallery({ onSelect, darkMode, selectedMember }) {
     },
     {
       id: 2,
-      image: require("../../assets/Anime_Members/Anime_Loel.png"),
+      src: require("../../assets/Anime_Members/Anime_Loel.png"),
       alt: "Loel",
       name: "LOEL CAMPAÑA",
       nn: "LOEL",
@@ -92,7 +92,7 @@ function ImageGallery({ onSelect, darkMode, selectedMember }) {
     },
     {
       id: 3,
-      image: require("../../assets/Anime_Members/Anime_Lance.png"),
+      src: require("../../assets/Anime_Members/Anime_Lance.png"),
       alt: "lance",
       name: "LANCE LISTANA",
       nn: "LANCE",
@@ -114,7 +114,7 @@ function ImageGallery({ onSelect, darkMode, selectedMember }) {
     },
     {
       id: 4,
-      image: require("../../assets/Anime_Members/Anime_Rhanel.png"),
+      src: require("../../assets/Anime_Members/Anime_Rhanel.png"),
       alt: "Rhanel",
       nn: "RHANEL",
       github: "https://github.com/sytheprogrammer",
@@ -136,7 +136,7 @@ function ImageGallery({ onSelect, darkMode, selectedMember }) {
     },
     {
       id: 5,
-      image: require("../../assets/Anime_Members/Anime_Fred.png"),
+      src: require("../../assets/Anime_Members/Anime_Fred.png"),
       alt: "Fred",
       nn: "FREDDRICK",
       name: "FREDDRICK TROPICO",
@@ -163,7 +163,7 @@ function ImageGallery({ onSelect, darkMode, selectedMember }) {
       {teamMembers.map((member) => (
         <ImageHover
         key={member.id}
-        imageSrc={member.image}
+        imageSrc={member.src}
         altText={member.alt}
         position={member.position}
         zoom={member.zoom}

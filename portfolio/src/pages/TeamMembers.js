@@ -20,7 +20,7 @@ const TeamMembers = ({ darkMode }) => {
 
     } else {
       setSelectedMember({
-        image: require("../assets/Anime_Members/Anime_Loel.png"),
+        src: require("../assets/Anime_Members/Anime_Loel.png"),
         name: "LOEL CAMPAÑA",
         title: "Full-Stack Developer",
         skills: [
@@ -42,7 +42,7 @@ const TeamMembers = ({ darkMode }) => {
     sessionStorage.setItem('selectedMember', JSON.stringify(member));
     setSelectedMember({
       id: member.id, // Ensure ID is stored
-      image: member.image,
+      src: member.src,
       name: member.name.toUpperCase(),
       title: member.title,
       skills: member.skills,
@@ -107,7 +107,7 @@ const TeamMembers = ({ darkMode }) => {
 
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
           <img
-            src={selectedMember.image}
+            src={selectedMember.src}
             alt={selectedMember.name}
             className={`-z-9 object-contain ${imgClass}`}
             style={imgStyle}
