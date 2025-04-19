@@ -12,34 +12,36 @@ const TeamMembers = ({ darkMode }) => {
 
   useEffect(() => {
     const stored = sessionStorage.getItem("selectedMember");
-    let member;
+
 
     if (stored) {
-      member = JSON.parse(stored);
+      setSelectedMember(JSON.parse(stored)); // Directly set the retrieved member
+
+
+    } else {
+      setSelectedMember({
+        image: require("../assets/Anime_Members/Anime_Loel.png"),
+        name: "LOEL CAMPAÑA",
+        title: "Full-Stack Developer",
+        skills: [
+          "LANGUAGE: JS, Java, Python, C++, PHP",
+          "FRONTEND: CSS, HTML",
+          "FRAMEWORK: React",
+          "DATABASE: MYSQL",
+          "DEVOPS: GIT",
+          "WIREFRAME: FIGMA"
+        ],
+        github: "https://github.com/",
+        facebook: "https://facebook.com/",
+        email: "example@gmail.com",
+        cv: "/cv/CV_Campaña-Loel.pdf",
+      });
     }
-
-    setSelectedMember({
-      image: member?.src || require("../assets/Anime_Members/Anime_Loel.png"),
-      name: member?.name?.toUpperCase() || "LOEL CAMPAÑA",
-      title: member?.title || "Full-Stack Developer",
-      skills: member?.skills || [
-        "LANGUAGE: JS, Java, Python, C++, PHP",
-        "FRONTEND: CSS, HTML",
-        "FRAMEWORK: React",
-        "DATABASE: MYSQL",
-        "DEVOPS: GIT",
-        "WIREFRAME: FIGMA"
-      ],
-      github: member?.github || "https://github.com/",
-      facebook: member?.facebook || "https://facebook.com/",
-      email: member?.email || "example@gmail.com",
-      cv: member?.cv || "/cv/CV_Campaña-Loel.pdf",
-    });
   }, []);
-
   const handleMemberSelect = (member) => {
     sessionStorage.setItem('selectedMember', JSON.stringify(member));
     setSelectedMember({
+      id: member.id, // Ensure ID is stored
       image: member.src,
       name: member.name.toUpperCase(),
       title: member.title,
@@ -96,24 +98,29 @@ const TeamMembers = ({ darkMode }) => {
       <div className={`relative p-6 overflow-auto h-full custom-scrollbar ${darkMode ? "text-[#ffffff]" : "text-[#59453F]"}`}>
 
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-          <img 
-            src={require("../assets/commonIcons/Innovatebg.png")} 
-            alt="Innovate bg" 
+          <img
+            src={require("../assets/commonIcons/Innovatebg.png")}
+            alt="Innovate bg"
             className="w-[1300px] h-[100%] object-contain -z-9 opacity-50"
           />
         </div>
 
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-          <img 
-            src={selectedMember.image} 
-            alt={selectedMember.name} 
+          <img
+            src={selectedMember.image}
+            alt={selectedMember.name}
             className={`-z-9 object-contain ${imgClass}`}
             style={imgStyle}
           />
         </div>
 
         <div className="absolute right-20 top-20">
-          <ImageGallery onSelect={handleMemberSelect} darkMode={darkMode} />
+          <ImageGallery
+            onSelect={handleMemberSelect}
+            darkMode={darkMode}
+            selectedMember={selectedMember}
+          />
+
 
           <div className="absolute right-20 mt-10 flex flex-row">
             <b className="text-xl">Meet the team</b>
@@ -124,7 +131,7 @@ const TeamMembers = ({ darkMode }) => {
         {/* Member Info */}
         <div className="relative z-10 w-full max-w-[500px] bg-white bg-opacity-10 border border-white/30 p-6 rounded-xl text-left tracking-wide backdrop-blur-lg ml-4 lg:ml-12 mb-10">
           <p className="text-base sm:text-lg md:text-xl lg:text-2xl">
-            <b className="text-base sm:text-xl md:text-2xl lg:text-3xl">{selectedMember.name}</b> 
+            <b className="text-base sm:text-xl md:text-2xl lg:text-3xl">{selectedMember.name}</b>
             <br />
             {selectedMember.title}
           </p>
