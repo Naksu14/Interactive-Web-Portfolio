@@ -390,10 +390,21 @@ const Homepage = ({ darkMode }) => {
             </p>
           </div>
 
-          {/* Sun Image */}
           <div className={`md:row-span-1 ${ContainerBg} flex justify-center items-center p-4 px-6 rounded-xl`}>
-            <img className="w-32" src={ darkMode ? require("../assets/commonIcons/half-moon.png") :require("../assets/commonIcons/sunny.png" )} alt="Sun" />
-          </div>
+  <div className="w-32 h-32 rounded-full flex justify-center items-center animate-gradient-slow bg-[conic-gradient(at_top_left,_#ec4899,_#8b5cf6,_#3b82f6,_#ec4899)] transition-all duration-300">
+    <img
+      className="w-20"
+      src={
+        darkMode
+          ? require("../assets/commonIcons/half-moon.png")
+          : require("../assets/commonIcons/sunny.png")
+      }
+      alt="Sun or Moon"
+    />
+  </div>
+</div>
+
+
 
 
           <div className={`md:row-span-2 ${ContainerBg} flex flex-col items-center justify-center p-4 rounded-xl text-center`}>

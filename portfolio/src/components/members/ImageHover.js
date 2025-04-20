@@ -7,7 +7,7 @@ function ImageHover({ imageSrc, altText, position = '50% 20%', zoom = 1, name, o
     <div
       className={`relative h-[500px] bg-white ${darkMode ? 'bg-opacity-10' : 'bg-opacity-20'
         } border border-[#ffffff]/30 overflow-hidden mx-1 transition-all duration-300 ${isHovered || isSelected ? 'w-[120px]' : 'w-[100px]'
-        } ${isSelected ? 'ring-2 ring-white' : ''}`}
+        } ${isSelected ? 'ring-2 ring-white ' : ''}`}
       style={{
         borderTopLeftRadius: '50px',
         borderBottomRightRadius: '50px'
@@ -16,6 +16,11 @@ function ImageHover({ imageSrc, altText, position = '50% 20%', zoom = 1, name, o
       onMouseLeave={() => setIsHovered(false)}
       onClick={onClick}
     >
+      {/* Black overlay when selected */}
+      {isSelected && (
+        <div className={`absolute inset-0 ${darkMode ? 'bg-[#f0b6a2]/30' : 'bg-[#D74925]/30'} bg-opacity-50 pointer-events-none z-10`}></div>
+      )}
+
       {/* Black overlay (visible when not hovered/selected) */}
       <div className={`absolute inset-0 z-10 transition-opacity duration-300 ${isHovered || isSelected ? 'opacity-0' : darkMode ? 'opacity-30 bg-black' : 'opacity-20 bg-black'
         }`} />

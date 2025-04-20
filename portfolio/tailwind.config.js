@@ -20,6 +20,7 @@ module.exports = {
         'spin-slow': 'spin 3s linear infinite',
         'float': 'float 3s ease-in-out infinite',
         'scroll': 'scrollWheel 1.5s infinite',
+        'gradient-slow': 'spin 10s linear infinite',
       },
       keyframes: {
         // Slide in from right to left (for rslide-in)

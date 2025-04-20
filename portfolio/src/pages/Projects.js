@@ -64,7 +64,7 @@ const Projects = ({ darkMode }) => {
       {/* Content Wrapper (Scrollable) */}
       <div className={`relative p-6 overflow-auto h-full custom-scrollbar ${darkMode ? "text-[#ffffff]" : "text-[#59453F]"}`}>
 
-      <h1 className={`text-5xl sm:text-6xl md:text-6xl lg:text-7xl xl:text-8xl font-extrabold tracking-widest  bg-clip-text text-transparent ${darkMode ? "bg-gradient-to-b from-[#ffffff]/60 to-[#ffffff]/0" : "bg-gradient-to-b from-[#59453F]/60 to-[#DAB9AF]/0"}`}>
+      <h1 className={`text-5xl sm:text-6xl md:text-6xl lg:text-7xl xl:text-8xl font-extrabold tracking-widest  bg-clip-text text-transparent ${darkMode ? "bg-gradient-to-b from-[#ffffff]/80 to-[#ffffff]/0" : "bg-gradient-to-b from-[#59453F]/80 to-[#DAB9AF]/0"}`}>
         OUR WORK
       </h1>
 
