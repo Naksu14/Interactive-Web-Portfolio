@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Footer from "../components/common/Footer";
 import { useInView } from 'react-intersection-observer';  // Intersection Observer hook
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import GroupsBackground from "../components/common/GroupsBackground";
@@ -21,13 +22,6 @@ import linkedin from "../assets/commonIcons/linkedin.png";
 import gmail from "../assets/commonIcons/gmail.png";
 import twitter from "../assets/commonIcons/twitter.png";
 import github from "../assets/commonIcons/github.png";
-
-
-import Tooltip from '@mui/material/Tooltip';
-import { IconButton } from '@mui/material';
-import GitHubIcon from '@mui/icons-material/GitHub';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import EmailIcon from '@mui/icons-material/Email';
 
 
 
@@ -378,7 +372,7 @@ const Homepage = ({ darkMode }) => {
         {/* Gridd Contennt */}
         <div className="grid grid-cols-1 md:grid-cols-3 md:grid-rows-3 sm:grid-cols-2 sm:grid-rows-2 gap-4 px-4 md:px-16 lg:px-32 py-4">
           {/* Mission Statement */}
-          <div className={`md:col-span-2 md:row-span-1 ${ContainerBg} p-4 rounded-xl`}>
+          <div className={`md:col-span-2 md:row-span-1 ${ContainerBg} p-5 rounded-xl`}>
             <div className="text-left">
               <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold">
                 MISSION <br /> STATEMENT
@@ -455,7 +449,7 @@ const Homepage = ({ darkMode }) => {
           </div>
 
           {/* Vision Statement */}
-          <div className={`md:col-span-2 md:row-span-1 ${ContainerBg} p-4 rounded-xl`}>
+          <div className={`md:col-span-2 md:row-span-1 ${ContainerBg} p-5 rounded-xl`}>
             <div className="text-right">
               <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold">
                 VISION <br /> STATEMENT
@@ -493,57 +487,8 @@ const Homepage = ({ darkMode }) => {
 
 
 
-        <footer className={`mt-10 py-6 text-left ${darkMode ? "text-white" : "text-[#59453F]"}`}>
-          <div className="w-[80%] mx-auto flex justify-between items-center mb-6">
-
-          </div>
-
-
-          {/* Border and social icons */}
-          <div
-            className={`w-[80%] mx-auto border-t-[2px] ${darkMode ? "border-white" : "border-[#59453F]"} mt-20`} />
-
-
-          <div className="w-[80%] mx-auto flex justify-between items-center mt-4">
-            <p className="text-sm">&copy; {new Date().getFullYear()} INNOVATE, All rights reserved.</p>
-            <div className="flex gap-7">
-            <Tooltip title="View Github">
-              <IconButton
-                  href="https://github.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  sx={buttonStyles}
-                >
-                  <GitHubIcon sx={icondarkmode} />
-              </IconButton>  
-            </Tooltip> 
-            <Tooltip title="View Facebook">
-              <IconButton
-                  href="https://facebook.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  sx={buttonStyles}
-                >
-                <FacebookIcon sx={icondarkmode} />
-              </IconButton>
-            </Tooltip> 
-
-            <Tooltip title="Contact on Email">
-              <IconButton
-                  href="mailto:example@gmail.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  sx={buttonStyles}
-                >
-                <EmailIcon sx={icondarkmode} />
-              </IconButton>
-            </Tooltip>
-              
-            </div>
-          </div>
-        </footer>
-
-
+        {/* FOOTER IMPORT*/}    
+        <Footer  darkMode={darkMode}/>
         
 
       </div>

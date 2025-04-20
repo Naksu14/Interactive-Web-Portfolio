@@ -66,7 +66,7 @@ const ProjectBlock = ({
           {techStack.map((tech, index) => (
             <div
               key={index}
-              className="bg-[#FEA3A3] rounded-xl px-3 py-2 flex flex-row items-center justify-center gap-2 text-xs sm:text-sm"
+              className="bg-[#59453F] rounded-xl px-3 py-2 flex flex-row items-center justify-center gap-2 text-xs sm:text-sm"
             >
               <img
                 src={require(`../../assets/iconProject/${tech.icon}`)}

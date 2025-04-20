@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import GroupsBackground from "../components/common/GroupsBackground";
+import Footer from "../components/common/Footer";
 
 import bmail from "../assets/commonIcons/black-mail.png";
 import location from "../assets/commonIcons/location.png";
@@ -7,15 +8,6 @@ import twitter1 from "../assets/commonIcons/twitter1.png";
 import telephone from "../assets/commonIcons/telephone.png";
 import send from "../assets/commonIcons/sendm.png";
 import logo from "../assets/commonIcons/logo_black.png";
-
-
-import Tooltip from '@mui/material/Tooltip';
-import { IconButton } from '@mui/material';
-import GitHubIcon from '@mui/icons-material/GitHub';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import EmailIcon from '@mui/icons-material/Email';
-
-
 
 import loel from "../assets/Anime_Members/loel.png";
 import fred from "../assets/Anime_Members/eyef.png";
@@ -34,18 +26,8 @@ const Contact = ({ darkMode }) => {
 
   const [showMap, setShowMap] = useState(false);
   const [isMapVisible] = useState(true); // State to track map visibility
-  const buttonStyles = {
-    backgroundColor: darkMode ? 'rgba(255, 255, 255, 0.1)' : 'rgba(109, 109, 109, 0.1)',
-    '&:hover': { backgroundColor: darkMode ? 'rgba(255, 255, 255, 0.3)' : 'rgba(255, 255, 255, 0.3)', transform: 'scale(1.1)' },
-    borderRadius: '50%',
-    width: 56,
-    height: 56,
-    transition: 'all 0.3s ease'
-  };
 
-  const icondarkmode = {
-    color: darkMode ? '#ffffff' : '#59453F', fontSize: '2rem'
-  };
+  
 
   return (
     <div className={`z-5 relative mx-8 mt-[104px] h-[calc(100vh-130px)] overflow-hidden rounded-b-[2rem] ${darkMode ? 'bg-[#D74925]/60' : 'bg-[#f0b6a2]/60'}`}>
@@ -306,57 +288,9 @@ const Contact = ({ darkMode }) => {
           {showMap ? "Hide" : "Show Map"}
         </button>
 
-
-
-        <footer className={`mt-10 py-6 text-left ${darkMode ? "text-white" : "text-[#59453F]"}`}>
-          <div className="w-[80%] mx-auto flex justify-between items-center mb-6">
-
-          </div>
-
-
-          {/* Border and social icons */}
-          <div
-            className={`w-[80%] mx-auto border-t-[2px] ${darkMode ? "border-white" : "border-[#59453F]"} mt-20`} />
-
-
-          <div className="w-[80%] mx-auto flex justify-between items-center mt-4">
-            <p className="text-sm">&copy; {new Date().getFullYear()} INNOVATE, All rights reserved.</p>
-            <div className="flex gap-7">
-            <Tooltip title="View Github">
-              <IconButton
-                  href="https://github.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  sx={buttonStyles}
-                >
-                  <GitHubIcon sx={icondarkmode} />
-              </IconButton>  
-            </Tooltip> 
-            <Tooltip title="View Facebook">
-              <IconButton
-                  href="https://facebook.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  sx={buttonStyles}
-                >
-                <FacebookIcon sx={icondarkmode} />
-              </IconButton>
-            </Tooltip> 
-
-            <Tooltip title="Contact on Email">
-              <IconButton
-                  href="mailto:example@gmail.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  sx={buttonStyles}
-                >
-                <EmailIcon sx={icondarkmode} />
-              </IconButton>
-            </Tooltip>
-              
-            </div>
-          </div>
-        </footer>
+        {/* FOOTER IMPORT*/}    
+        <Footer  darkMode={darkMode}/>
+        
       </div>
     </div>
   );
