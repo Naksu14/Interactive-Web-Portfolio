@@ -7,7 +7,7 @@ function ImageHover({ imageSrc, altText, position = '50% 20%', zoom = 1, name, o
     <div
       className={`relative h-[100px] sm:h-[200px] md:h-[200px] lg:h-[500px] bg-white ${darkMode ? 'bg-opacity-10' : 'bg-opacity-20'
         } border border-[#ffffff]/30 overflow-hidden mx-1 transition-all duration-300 ${isHovered || isSelected ? 'w-[120px]' : 'w-[100px]'
-        } ${isSelected ? 'ring-2 ring-white ' : ''}`}
+        } ${isSelected ? 'ring-2 ring-white/50 ' : ''}`}
       style={{
         borderTopLeftRadius: '50px',
         borderBottomRightRadius: '50px'

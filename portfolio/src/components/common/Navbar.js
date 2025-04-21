@@ -88,7 +88,7 @@ const Navbar = ({ setDarkMode, darkMode }) => {
           menuOpen
             ? clsx(
                 "flex flex-col absolute top-20 left-0 right-0 p-6",
-                darkMode ? "bg-[#D74925]/80" : "bg-[#f0b6a2]/80"
+                darkMode ? "bg-[#763B2B]/100" : "bg-[#AC938B]/100"
               )
             : "hidden lg:flex"
         )}
@@ -140,12 +140,16 @@ const Navbar = ({ setDarkMode, darkMode }) => {
 
             {/* RIGHT CURVED DIV */}
             {activeTab === tab && (
-              <div className="absolute -top-4 -right-6 w-6 h-6 z-10 rounded-tl-[5rem]"
-              style={{
-                backgroundColor: darkMode
-                ? "rgba(215, 73, 37, 0.6)"
-                : "rgba(240, 182, 162, 0.6)",
-              }} />
+              <div
+                className="absolute -top-4 -right-6 w-6 h-6 z-10 rounded-tl-[5rem]"
+                style={{
+                  backgroundColor: menuOpen
+                    ? "transparent"
+                    : darkMode
+                    ? "rgba(215, 73, 37, 0.6)"
+                    : "rgba(240, 182, 162, 0.6)",
+                }}
+              />
             )}
           </div>
         ))}
