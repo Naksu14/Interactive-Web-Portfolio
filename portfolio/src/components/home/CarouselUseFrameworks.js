@@ -39,42 +39,42 @@ const CarouselCardFrameworkds = () => {
   const current = frameworks[index];
 
   return (
-    <div className="relative group md:row-span-1 bg-white bg-opacity-30 border border-[#ffffff]/20 p-10 rounded-[15px] tracking-wide backdrop-blur-lg flex flex-col justify-center items-center transition duration-300 ease-in-out hover:shadow-xl">
+    <div className="relative group md:row-span-1 bg-white bg-opacity-30 border border-[#ffffff]/20 p-10 rounded-[15px] tracking-wide backdrop-blur-lg flex flex-col justify-center items-center">
       
       {/* Hover Description Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent text-white flex items-center justify-center text-center px-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-[15px] z-10 pointer-events-none">
-  <p className="text-sm">{current.description}</p>
-</div>
-
-
-      {/* Image */}
-      <img
-        className="w-[100px] h-[100px] object-contain mb-4 z-0"
-        src={current.image}
-        alt={current.name}
-      />
-
-      {/* Content */}
-      <div className="mt-4 flex items-center justify-between w-full px-4 z-0">
-        <button
-          className="w-10 h-10 rounded-full bg-white/40 shadow-md flex items-center justify-center hover:bg-gray-200 transition"
-          onClick={prev}
-          aria-label="Previous"
-        >
-          <ChevronLeft />
-        </button>
-
-        <p className="text-md font-semibold text-center">{current.name}</p>
-
-        <button
-          className="w-10 h-10 rounded-full bg-white/40 shadow-md flex items-center justify-center hover:bg-gray-200 transition"
-          onClick={next}
-          aria-label="Next"
-        >
-          <ChevronRight />
-        </button>
+      <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-transparent text-white flex items-center justify-center text-center px-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-[15px] z-10 pointer-events-none">
+        <p className="text-sm absolute top-10 px-12">{current.description}</p>
       </div>
-    </div>
+
+
+        {/* Image */}
+        <img
+          className="w-[100px] h-[100px] object-contain mb-4 z-0"
+          src={current.image}
+          alt={current.name}
+        />
+
+        {/* Content */}
+        <div className="mt-4 flex items-center justify-between w-full px-4 z-0">
+          <button
+            className="w-10 h-10 rounded-full bg-white/40 shadow-md flex items-center justify-center hover:bg-gray-200 transition"
+            onClick={prev}
+            aria-label="Previous"
+          >
+            <ChevronLeft />
+          </button>
+
+          <p className="text-md font-semibold text-center">{current.name}</p>
+
+          <button
+            className="w-10 h-10 rounded-full bg-white/40 shadow-md flex items-center justify-center hover:bg-gray-200 transition"
+            onClick={next}
+            aria-label="Next"
+          >
+            <ChevronRight />
+          </button>
+        </div>
+      </div>
   );
 };
 

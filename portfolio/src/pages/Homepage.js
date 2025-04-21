@@ -425,6 +425,7 @@ const Homepage = ({ darkMode }) => {
             </div>
 
             <Projectsimage />
+            
           </div>
 
 

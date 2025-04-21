@@ -129,25 +129,26 @@ const TeamMembers = ({ darkMode }) => {
         </div>
 
         {/* Member Info */}
-        <div className="relative z-10 w-full max-w-[500px] bg-white bg-opacity-10 border border-white/30 p-6 rounded-xl text-left tracking-wide backdrop-blur-lg ml-4 lg:ml-12 mb-10">
-          <p className="text-base sm:text-lg md:text-xl lg:text-2xl">
-            <b className="text-base sm:text-xl md:text-2xl lg:text-3xl">{selectedMember.name}</b>
+        <div className="relative z-10 w-full max-w-[500px] bg-white bg-opacity-10 border border-white/30 p-4 sm:p-6 rounded-xl text-left tracking-wide backdrop-blur-lg ml-2 sm:ml-4 lg:ml-12 mb-6 sm:mb-10">
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl">
+            <b className="text-base sm:text-lg md:text-xl lg:text-2xl">{selectedMember.name}</b>
             <br />
             {selectedMember.title}
           </p>
         </div>
 
         {/* Skills */}
-        <div className="relative z-10 w-full max-w-[400px] bg-white bg-opacity-10 border border-white/30 p-6 rounded-xl text-left tracking-wide backdrop-blur-lg mt-12 ml-4 lg:ml-12 mb-12">
-          <p className="sm:text-base md:text-lg lg:text-xl">
-            <b>Skills</b>
-            <ul>
+        <div className="relative z-10 w-full max-w-[400px] bg-white bg-opacity-10 border border-white/30 p-4 sm:p-6 rounded-xl text-left tracking-wide backdrop-blur-lg mt-6 sm:mt-12 ml-2 sm:ml-4 lg:ml-12 mb-6 sm:mb-12">
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl">
+            <b className="block mb-2">Skills</b>
+            <ul className="list-inside space-y-1">
               {selectedMember.skills.map((skill, index) => (
                 <li key={index}>{skill}</li>
               ))}
             </ul>
           </p>
         </div>
+
 
         {/* Social Icons */}
         <div className="fixed z-10 left-20 bottom-10 w-auto max-w-[400px] px-4">

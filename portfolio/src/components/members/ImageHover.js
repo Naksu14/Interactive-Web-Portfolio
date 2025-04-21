@@ -39,12 +39,22 @@ function ImageHover({ imageSrc, altText, position = '50% 20%', zoom = 1, name, o
       />
 
 
-      {/* Name overlay - appears on hover/selection */}
-      <div className={`absolute bottom-0 left-0 right-0 z-20 p-2 text-left text-white  ${darkMode ? 'bg-black/50' : 'bg-black/40'
-        } transition-opacity duration-300 ${isHovered || isSelected ? 'opacity-100' : 'opacity-0'
-        }`}>
-        <span className="text-sm font-medium">{name}</span>
-      </div>
+      {/* Hover Name Overlay */}
+      {isHovered && !isSelected && (
+        <div className={`absolute bottom-0 left-0 right-0 z-20 p-2 text-left text-white transition-opacity duration-300
+          ${darkMode ? 'bg-black/50' : 'bg-black/40'} opacity-100`}>
+          <span className="text-sm font-medium">{name}</span>
+        </div>
+      )}
+
+      {/* Selected Name Overlay */}
+      {isSelected && (
+        <div className={`absolute bottom-0 left-0 right-0 z-20 p-2 text-left text-white transition-opacity duration-300
+          ${darkMode ? 'bg-[#f0b6a2]/60' : 'bg-[#D74925]/60'} opacity-100`}>
+          <span className="text-sm font-semibold tracking-wide">{name}</span>
+        </div>
+      )}
+
     </div>
   );
 }
