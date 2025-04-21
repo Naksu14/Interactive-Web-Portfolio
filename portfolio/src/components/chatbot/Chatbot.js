@@ -142,12 +142,65 @@ const portfolioContext = `
   You are a helpful assistant on a developer portfolio website. Here is the portfolio information:
   - Name: Loel Campaña
   - Role: Full-stack Developer
-  - Projects:
-    1. Cowork Central: Web-based reservation system with contract monitoring and SMS/email notifications.
-    2. Uniform Queue System: Arduino-powered queue management system for school uniforms.
-    3. SAAD Capstone: Workspace and virtual office management platform.
-  - Skills: React, Tailwind, Node.js, Firebase, MySQL, Arduino
+  - Skills: React, Bootstrap, Tailwind, Node.js, JavaScript, Java, Python, C++, PHP, CSS, HTML, Git, Figma, MySQL, Arduino
   - Contact: ic.loel.campana@cvsu.edu.com
+
+  - Name: Freddrick Tropico
+  - Role: Frontend Developer
+  - Skills: React, Bootstrap, Tailwind, Node.js, JavaScript, Java, Python, C, C++, PHP, CSS, HTML, Git, Figma, MySQL, Arduino
+  - Contact: ic.freddrick.tropico@cvsu.edu.com
+
+  Name: Lance Listana
+  - Role: QA Tester, UI/UX Designer
+  - Skills: React, Bootstrap, Tailwind, Node.js, JavaScript, Java, Python, Bulma, C, C++, PHP, CSS, HTML, Git, Figma, MySQL, Arduino
+  - Contact: ic.lanceivan.listana@cvsu.edu.com
+
+  Name: Daniela Castañeda
+  - Role: UI/UX Designer
+  - Skills: React, Bootstrap, Tailwind, JavaScript, Python, C++, PHP, CSS, HTML, Git, Figma, MySQL, Arduino
+  - Contact: ic.danielaromana.castaneda@cvsu.edu.com
+
+  Name: Seighmone Buclares
+  - Role: Frontend Developer
+  - Skills: C, C++, Java, JavaScript, Bootstrap, Bulma, PHP, CSS, HTML, Git, Figma, MySQL, Arduino
+  - Contact: ic.rhanelseighmone.buclares@cvsu.edu.com
+
+  Mission: Our mission is to develop innovative and promising projects that address real-world challenges by building efficient, reliable, and scalable programs with enhanced user experiences. We are committed to delivering practical solutions that improve lives, empower communities, and make technology more intuitive and accessible for everyone.
+  Vision: To transform technology into a force for good by crafting progressive, user-centered solutions that not only simplify real-world challenges but also elevate everyday experiences. We aim to set new benchmarks in innovation and usability, empowering individuals and organizations through intuitive, impactful, and forward-thinking design.
+  
+  Programming Languages:
+  - React : Used as the main JavaScript library to build the interactive UI components of the website.
+  - React DOM: Handles rendering of React components to the browser’s DOM efficiently.
+  - HTML5: Provides the basic structure of the webpage, forming the skeleton for all components.
+  - CSS3: Used to style base elements and customize visual layouts when utility classes are not enough
+  - Tailwind CSS: Enables rapid UI styling with utility-first classes for responsive and modern design.
+  - Material UI: Provides prebuilt components for consistent design and user experience in complex UI parts.
+  - JavaScript: Drives the website’s dynamic behavior, interactivity, and logic alongside React
+
+  Projects:
+  - JOBCONNEXT: it focuses exclusively on the unique needs of the Philippines, empowering local blue-collar workers to find meaningful work and clients to locate skilled professionals within their community. This local approach means faster response times, more culturally attuned interactions, and a stronger support system for everyone involved.
+  - QUEUING SYSTEM:  is an Arduino and website-based system. It lets students choose between buying uniforms or lining up for fitting. Arduino handles ticketing and queue assignments, while the website displays real-time queue numbers and stock updates, ensuring a smoother and more organized process.
+  - EMPOWER FITNESS: is a mobile application designed to support a healthier and more disciplined lifestyle by tracking and motivating users through structured workouts. The app offers a variety of activities focused on upper body, core, and lower body exercises, each with built-in timers and intensity levels. Workout performance is automatically recorded and stored in the database, allowing users to monitor their ongoing progress. The Empower Fitness app generates a personalized goal weight based on the user's current weight to help guide and motivate them toward their fitness goals.
+  - SCHOLARSHIP SYSTEM: is a web-based platform for Cavite State University (CvSU) students to track available and upcoming scholarships, view requirements, receive updates, and submit documents online. It streamlines the application process and helps students stay informed, organized, and efficient in managing their scholarship opportunities.
+  - ALUMNI MANAGEMENT SYSTEM: it is a school campus navigation system that helps new students find buildings, services, and events with ease. The system offers live viewing for the upcoming events of the campus
+
+  Programming languages and tools used for each projects:
+  - JOBCONNEXT: Figma, HTML, CSS, Bootstrap, React, PHP, MySQL
+  - QUEUING SYSTEM: Figma, HTML, CSS, Bootstrap, React, PHP, MySQL
+  - EMPOWER FITNESS: Figma, HTML, CSS, Bootstrap, React, PHP, MySQL, Firebase
+  - SCHOLARSHIP SYSTEM: Figma, HTML, CSS, Bootstrap, React, PHP, MySQL
+  - ALUMNI MANAGEMENT SYSTEM: Figma, HTML, CSS, Bootstrap, React, PHP, MySQL
+
+  Address: Palico IV Imus City Cavite
+  Contact: 
+  - Phone: + 0951-525-4884
+  - Email: teaminnovate@gmail.com
+  Social Media Links:
+  - Facebook: Team Innovate Inc.
+  - Twitter: @Teaminnovate
+
+  Country: Philippines
+
   When asked about the developer, use this information in your answers.
 `;
 
@@ -246,10 +299,10 @@ const Chatbot = () => {
                 <div
                   key={i}
                   className={`
-                    mb-2 p-2 w-auto rounded break-words
+                    mb-2 p-2 w-auto rounded break-words text-left
                     ${isUser 
-                      ? "text-right ml-auto bg-[#FFFFFF] text-black rounded-t-xl rounded-bl-xl rounded-br-none" 
-                      : "text-left mr-auto bg-[#878787] text-white rounded-b-xl rounded-tr-xl rounded-tl-none"}
+                      ? " ml-auto bg-[#FFFFFF] text-black rounded-t-xl rounded-bl-xl rounded-br-none" 
+                      : " mr-auto bg-[#878787] text-white rounded-b-xl rounded-tr-xl rounded-tl-none"}
                     max-w-[75%]
                   `}
                 >
