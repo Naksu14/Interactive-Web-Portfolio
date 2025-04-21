@@ -316,6 +316,11 @@ const Chatbot = () => {
             <input
               value={input}
               onChange={(e) => setInput(e.target.value)}
+              onKeyDown={(e) => {
+                if (e.key === "Enter") {
+                  handleSend();
+                }
+              }}
               className="flex-1 p-2 mr-2 border rounded-xl "
               placeholder="Type a message..."
             />
