@@ -13,11 +13,8 @@ const TeamMembers = ({ darkMode }) => {
   useEffect(() => {
     const stored = sessionStorage.getItem("selectedMember");
 
-
     if (stored) {
       setSelectedMember(JSON.parse(stored)); // Directly set the retrieved member
-
-
     } else {
       setSelectedMember({
         src: require("../assets/Anime_Members/Anime_Loel.png"),
@@ -38,10 +35,11 @@ const TeamMembers = ({ darkMode }) => {
       });
     }
   }, []);
+
   const handleMemberSelect = (member) => {
     sessionStorage.setItem('selectedMember', JSON.stringify(member));
     setSelectedMember({
-      id: member.id, // Ensure ID is stored
+      id: member.id,
       src: member.src,
       name: member.name.toUpperCase(),
       title: member.title,
@@ -96,7 +94,6 @@ const TeamMembers = ({ darkMode }) => {
       <MemberBackground />
 
       <div className={`relative p-6 overflow-auto h-full custom-scrollbar ${darkMode ? "text-[#ffffff]" : "text-[#59453F]"}`}>
-
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
           <img
             src={require("../assets/commonIcons/Innovatebg.png")}
@@ -105,7 +102,7 @@ const TeamMembers = ({ darkMode }) => {
           />
         </div>
 
-        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none md:bottom-0 md:right-0">
           <img
             src={selectedMember.src}
             alt={selectedMember.name}
@@ -114,15 +111,14 @@ const TeamMembers = ({ darkMode }) => {
           />
         </div>
 
-        <div className="absolute right-20 top-20">
+        <div className="relative sm:static md:static lg:absolute right-4 top-4 md:right-20 md:top-20 mb-6 lg:mb-20">
           <ImageGallery
             onSelect={handleMemberSelect}
             darkMode={darkMode}
             selectedMember={selectedMember}
           />
 
-
-          <div className="absolute right-20 mt-10 flex flex-row">
+          <div className="absolute right-5 md:right-20 mt-4 flex flex-row opacity-100 sm:opacity-0 md:opacity-0 lg:opacity-100 transition-opacity duration-300">
             <b className="text-xl">Meet the team</b>
             <div className={`h-[2px] w-[270px] ml-5 mt-4 ${darkMode ? "bg-[#ffffff]" : "bg-[#59453F]"}`}></div>
           </div>
@@ -149,9 +145,8 @@ const TeamMembers = ({ darkMode }) => {
           </p>
         </div>
 
-
         {/* Social Icons */}
-        <div className="fixed z-10 left-20 bottom-10 w-auto max-w-[400px] px-4">
+        <div className="fixed z-10 left-6 bottom-6 sm:left-12 sm:bottom-12 w-auto max-w-[400px] px-4">
           <div className="flex justify-center gap-4">
             <Tooltip title="View Github">
               <IconButton href={selectedMember.github} target="_blank" rel="noopener noreferrer" sx={buttonStyles}>
@@ -178,7 +173,6 @@ const TeamMembers = ({ darkMode }) => {
             </Tooltip>
           </div>
         </div>
-
       </div>
     </div>
   );

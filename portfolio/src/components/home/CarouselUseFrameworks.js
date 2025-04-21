@@ -42,8 +42,10 @@ const CarouselCardFrameworkds = () => {
     <div className="relative group md:row-span-1 bg-white bg-opacity-30 border border-[#ffffff]/20 p-10 rounded-[15px] tracking-wide backdrop-blur-lg flex flex-col justify-center items-center">
       
       {/* Hover Description Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-transparent text-white flex items-center justify-center text-center px-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-[15px] z-10 pointer-events-none">
-        <p className="text-sm absolute top-10 px-12">{current.description}</p>
+      <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-transparent text-white flex items-center justify-center text-center px-6 overflow-hidden opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-[15px] z-10 pointer-events-none">
+        <p className="text-sm px-12 absolute top-0 translate-y-[-100%] group-hover:translate-y-10 transition-transform duration-500 ease-out">
+          {current.description}
+        </p>
       </div>
 
 

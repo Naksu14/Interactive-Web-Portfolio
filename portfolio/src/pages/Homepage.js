@@ -370,7 +370,7 @@ const Homepage = ({ darkMode }) => {
         <br />
 
         {/* Gridd Contennt */}
-        <div className="grid grid-cols-1 md:grid-cols-3 md:grid-rows-3 sm:grid-cols-2 sm:grid-rows-2 gap-4 px-4 md:px-16 lg:px-32 py-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 md:grid-rows-3 sm:grid-cols-2 sm:grid-rows-2 gap-4 px-4 md:px-16 lg:px-16 xl:px-32 2xl:px-64 py-4">
           {/* Mission Statement */}
           <div className={`md:col-span-2 md:row-span-1 ${ContainerBg} p-5 rounded-xl`}>
             <div className="text-left">
@@ -385,18 +385,18 @@ const Homepage = ({ darkMode }) => {
           </div>
 
           <div className={`md:row-span-1 ${ContainerBg} flex justify-center items-center p-4 px-6 rounded-xl`}>
-  <div className="w-32 h-32 rounded-full flex justify-center items-center animate-gradient-slow bg-[conic-gradient(at_top_left,_#ec4899,_#8b5cf6,_#3b82f6,_#ec4899)] transition-all duration-300">
-    <img
-      className="w-20"
-      src={
-        darkMode
-          ? require("../assets/commonIcons/half-moon.png")
-          : require("../assets/commonIcons/sunny.png")
-      }
-      alt="Sun or Moon"
-    />
-  </div>
-</div>
+            <div className="w-32 h-32 rounded-full flex justify-center items-center animate-gradient-slow bg-[conic-gradient(at_top_left,_#ec4899,_#8b5cf6,_#3b82f6,_#ec4899)] transition-all duration-300">
+              <img
+                className="w-20"
+                src={
+                  darkMode
+                    ? require("../assets/commonIcons/half-moon.png")
+                    : require("../assets/commonIcons/sunny.png")
+                }
+                alt="Sun or Moon"
+              />
+            </div>
+          </div>
 
 
 

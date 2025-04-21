@@ -5,7 +5,7 @@ function ImageHover({ imageSrc, altText, position = '50% 20%', zoom = 1, name, o
 
   return (
     <div
-      className={`relative h-[500px] bg-white ${darkMode ? 'bg-opacity-10' : 'bg-opacity-20'
+      className={`relative h-[100px] sm:h-[200px] md:h-[200px] lg:h-[500px] bg-white ${darkMode ? 'bg-opacity-10' : 'bg-opacity-20'
         } border border-[#ffffff]/30 overflow-hidden mx-1 transition-all duration-300 ${isHovered || isSelected ? 'w-[120px]' : 'w-[100px]'
         } ${isSelected ? 'ring-2 ring-white ' : ''}`}
       style={{
@@ -174,21 +174,23 @@ function ImageGallery({ onSelect, darkMode, selectedMember }) {
   ];
 
   return (
-    <div className="flex flex-wrap gap-4 p-4">
+    <div className="flex flex-wrap gap-4 p-4 overflow-hidden w-full">
       {teamMembers.map((member) => (
         <ImageHover
-        key={member.id}
-        imageSrc={member.src}
-        altText={member.alt}
-        position={member.position}
-        zoom={member.zoom}
-        name={member.nn}
-        onClick={() => onSelect(member)}
-        darkMode={darkMode}
-        isSelected={selectedMember?.name === member.name} 
-      />
+          key={member.id}
+          imageSrc={member.src}
+          altText={member.alt}
+          position={member.position}
+          zoom={member.zoom}
+          name={member.nn}
+          onClick={() => onSelect(member)}
+          darkMode={darkMode}
+          isSelected={selectedMember?.name === member.name} 
+        />
+        
       ))}
     </div>
+
   );
 }
 
