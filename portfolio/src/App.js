@@ -31,6 +31,7 @@ function App() {
         </Routes>
 
         {/* <Chatbot />  remove mo ung ocmment tag*/} 
+        <Chatbot /> 
       </div>
     </Router>
   );
