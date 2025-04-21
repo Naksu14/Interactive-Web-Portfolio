@@ -8,6 +8,7 @@ import Projects from './pages/Projects';
 import Contact from './pages/Contact';
 import Navbar from './components/common/Navbar';
 import CustomCursor from "./components/common/CustomCursor";
+import Chatbot from "./components/chatbot/Chatbot"; 
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -28,6 +29,8 @@ function App() {
           <Route path="/projects" element={<Projects darkMode={darkMode} />} />
           <Route path="/contact" element={<Contact darkMode={darkMode} />} />
         </Routes>
+
+        {/* <Chatbot />  remove mo ung ocmment tag*/} 
       </div>
     </Router>
   );
