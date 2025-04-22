@@ -11,10 +11,10 @@ import { useNavigate } from 'react-router-dom';
 
 // Reduced Space
 import AnimeDaniela from "../assets/Anime_Members/Anime_Daniela1.png";
-import AnimeFred from "../assets/Anime_Members/Anime_Fred1.png";
+import AnimeFred from "../assets/Anime_Members/Anime_Fred.png";
 import AnimeRhanel from "../assets/Anime_Members/Anime_Rhanel1.png";
 import AnimeLoel from "../assets/Anime_Members/Anime_Loel1.png";
-import AnimeLance from "../assets/Anime_Members/Anime_Lance1.png";
+import AnimeLance from "../assets/Anime_Members/Anime_Lance.png";
 
 // Outlined Social Icons
 import facebook from "../assets/commonIcons/facebook.png";
@@ -187,7 +187,7 @@ const Homepage = ({ darkMode }) => {
               <img
                 src={AnimeFred}
                 alt="Fred"
-                className={`w-[200px] xs:w-[200px] sm:w-[240px] md:w-[280px] lg:w-[300px] xl:w-[320px] h-auto transition-all duration-300 ease-in-out hover:brightness-150 ${hovered && hovered !== 'Fred' ? 'blur-[1.8px]' : ''}`}
+                className={`w-[200px] xs:w-[200px] sm:w-[240px] md:w-[280px] lg:w-[300px] xl:w-[330px] h-auto transition-all duration-300 ease-in-out hover:brightness-150 ${hovered && hovered !== 'Fred' ? 'blur-[1.8px]' : ''}`}
               />
             </div>
 
@@ -283,7 +283,7 @@ const Homepage = ({ darkMode }) => {
               <img
                 src={AnimeLance}
                 alt="Lance"
-                className={`w-[120px] xs:w-[120px] sm:w-[200px] md:w-[230px] lg:w-[250px] xl:w-[270px] h-auto transition-all duration-300 ease-in-out hover:brightness-150 ${hovered && hovered !== 'Lance' ? 'blur-[1.8px]' : ''}`}
+                className={`w-[120px] xs:w-[120px] sm:w-[200px] md:w-[230px] lg:w-[250px] xl:w-[290px] h-auto transition-all duration-300 ease-in-out hover:brightness-150 ${hovered && hovered !== 'Lance' ? 'blur-[1.8px]' : ''}`}
               />
             </div>
 
@@ -370,7 +370,7 @@ const Homepage = ({ darkMode }) => {
         <br />
 
         {/* Gridd Contennt */}
-        <div className="grid grid-cols-1 md:grid-cols-3 md:grid-rows-3 sm:grid-cols-2 sm:grid-rows-2 gap-4 px-4 md:px-16 lg:px-16 xl:px-32 2xl:px-64 py-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 md:grid-rows-3 sm:grid-cols-2 sm:grid-rows-2 gap-4 px-4 md:px-16 lg:px-32 py-4">
           {/* Mission Statement */}
           <div className={`md:col-span-2 md:row-span-1 ${ContainerBg} p-5 rounded-xl`}>
             <div className="text-left">
@@ -385,18 +385,18 @@ const Homepage = ({ darkMode }) => {
           </div>
 
           <div className={`md:row-span-1 ${ContainerBg} flex justify-center items-center p-4 px-6 rounded-xl`}>
-            <div className="w-32 h-32 rounded-full flex justify-center items-center animate-gradient-slow bg-[conic-gradient(at_top_left,_#ec4899,_#8b5cf6,_#3b82f6,_#ec4899)] transition-all duration-300">
-              <img
-                className="w-20"
-                src={
-                  darkMode
-                    ? require("../assets/commonIcons/half-moon.png")
-                    : require("../assets/commonIcons/sunny.png")
-                }
-                alt="Sun or Moon"
-              />
-            </div>
-          </div>
+  <div className="w-32 h-32 rounded-full flex justify-center items-center animate-gradient-slow bg-[conic-gradient(at_top_left,_#ec4899,_#8b5cf6,_#3b82f6,_#ec4899)] transition-all duration-300">
+    <img
+      className="w-20"
+      src={
+        darkMode
+          ? require("../assets/commonIcons/half-moon.png")
+          : require("../assets/commonIcons/sunny.png")
+      }
+      alt="Sun or Moon"
+    />
+  </div>
+</div>
 
 
 
