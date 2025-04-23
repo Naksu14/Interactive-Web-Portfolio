@@ -85,12 +85,7 @@ const Homepage = ({ darkMode }) => {
 
             {/* Floating icons */}
 
-            {/* white icons */}
-            <img src={gmail} alt="Gmail" className="absolute top-[145px] left-[-200px] w-15 h-15 animate-float" />
-            <img src={linkedin} alt="LinkedIn" className="absolute bottom-[40px] right-[-200px] w-15 h-15 animate-float" />
-            <img src={facebook} alt="Facebook" className="absolute top-[130px] right-[40px] w-15 h-15 animate-float" />
-            <img src={twitter} alt="Twitter" className="absolute bottom-[20px] left-[-100px] bottom-[200px] w-15 h-15 animate-float" />
-            <img src={github} alt="GitHub" className="absolute top-[-40px] right-[530px] w-10 h-10 animate-float" />
+          
 
 
             {/* Daniela */}
