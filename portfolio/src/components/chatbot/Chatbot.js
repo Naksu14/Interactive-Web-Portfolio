@@ -141,11 +141,11 @@ import send from "../../assets/commonIcons/sendm.png";
 const portfolioContext = `
   You are a helpful assistant on a developer portfolio website. Here is the portfolio information:
   - Name: Loel Campaña
-  - Role: Full-stack Developer
+  - Role: Full-stack Developer, designer
   - Skills: React, Bootstrap, Tailwind, Node.js, JavaScript, Java, Python, C++, PHP, CSS, HTML, Git, Figma, MySQL, Arduino
   - Contact: ic.loel.campana@cvsu.edu.com
 
-  - Name: Freddrick Tropico
+  - Name: Freddrick Tropico, designer
   - Role: Frontend Developer
   - Skills: React, Bootstrap, Tailwind, Node.js, JavaScript, Java, Python, C, C++, PHP, CSS, HTML, Git, Figma, MySQL, Arduino
   - Contact: ic.freddrick.tropico@cvsu.edu.com
@@ -207,7 +207,7 @@ const portfolioContext = `
 const SESSION_KEY = "chatbot_messages";
 const SESSION_EXPIRY_KEY = "chatbot_messages_expiry";
 
-const Chatbot = () => {
+const Chatbot = ({darkMode}) => {
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState("");
   const [isOpen, setIsOpen] = useState(false);
@@ -256,7 +256,7 @@ const Chatbot = () => {
       {!isOpen && (
         <button
           onClick={() => setIsOpen(true)}
-          className="bg-[#646464] text-white px-6 py-3 rounded-t-3xl rounded-bl-3xl rounded-br-none shadow-md flex items-center gap-2 opacity-50 hover:opacity-90 transition-opacity duration-300"
+          className={` px-6 py-3 rounded-t-3xl rounded-bl-3xl rounded-br-none shadow-md flex items-center gap-2 ${darkMode ? 'bg-[#FFFFFF] text-[#59453F]' : 'bg-[#646464] text-[#FFFFFF]'} opacity-50 hover:opacity-90 transition-opacity duration-300`}
         >
           <MessageCircle className="w-8 h-8" />
           Let’s Talk

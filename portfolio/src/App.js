@@ -31,7 +31,7 @@ function App() {
         </Routes>
 
         {/* <Chatbot />  remove mo ung ocmment tag*/} 
-        <Chatbot /> 
+        <Chatbot darkMode={darkMode}/> 
       </div>
     </Router>
   );
