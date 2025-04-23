@@ -9,17 +9,18 @@ import telephone from "../assets/commonIcons/telephone.png";
 import send from "../assets/commonIcons/sendm.png";
 import logo from "../assets/commonIcons/logo_black.png";
 
-import loel from "../assets/Anime_Members/loel.png";
 import fred from "../assets/Anime_Members/eyef.png";
 import daniela from "../assets/Anime_Members/eyed.png";
 import rhanel from "../assets/Anime_Members/eyer.png";
 import lance from "../assets/Anime_Members/eyel.png";
+import loel from "../assets/Anime_Members/loel.png";
 
 
 
 
 
-const images = [loel, fred, daniela, rhanel, lance];
+
+const images = [daniela, fred, loel, lance, rhanel];
 
 
 const Contact = ({ darkMode }) => {
