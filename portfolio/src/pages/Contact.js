@@ -44,7 +44,7 @@ const Contact = ({ darkMode }) => {
         <div className="h-full flex items-center justify-center">
           {/* Header */}
           <div className="flex flex-col items-center justify-center text-center mt-[10px]">
-            <h1 className="text-6xl font-bold">CONTACT US</h1>
+            <h1 className="text-2xl sm:text3xl md:text-4xl lg:text-5xl text-6xl font-bold">CONTACT US</h1>
 
             <p className="text-2xl mt-[10px]">Let's &nbsp;connect&nbsp; and &nbsp;make &nbsp;things &nbsp;happen!</p>
 
