@@ -11,10 +11,10 @@ import { useNavigate } from 'react-router-dom';
 
 // Reduced Space
 import AnimeDaniela from "../assets/Anime_Members/Anime_Daniela1.png";
-import AnimeFred from "../assets/Anime_Members/Anime_Fred.png";
+import AnimeFred from "../assets/Anime_Members/Anime_Fred1.png";
 import AnimeRhanel from "../assets/Anime_Members/Anime_Rhanel1.png";
 import AnimeLoel from "../assets/Anime_Members/Anime_Loel1.png";
-import AnimeLance from "../assets/Anime_Members/Anime_Lance.png";
+import AnimeLance from "../assets/Anime_Members/Anime_Lance1.png";
 
 // Outlined Social Icons
 import facebook from "../assets/commonIcons/facebook.png";
@@ -100,7 +100,7 @@ const Homepage = ({ darkMode }) => {
                   id: 1,
                   name: 'DANIELA ROMANA CASTAÑEDA',
                   title: "UI/UX Designer",
-                  image: require('../assets/Anime_Members/Anime_Daniela.png'),
+                  src: require('../assets/Anime_Members/Anime_Daniela.png'),
                   skills: [
                     "LANGUAGE: JS, Python, C++, PHP",
                     "FRONTEND: CSS, HTML",

@@ -54,15 +54,15 @@ const TeamMembers = ({ darkMode }) => {
   const getImageClassAndStyle = (name = "") => {
     const normalized = name.toUpperCase().trim();
     if (normalized === "DANIELA ROMANA CASTAÑEDA") {
-      return { className: 'w-[1200px] h-[1150px]', style: { transform: 'translate(-8%, -16%)' } };
+      return { className: 'w-[1200px] h-[1000px]', style: { transform: 'translate(-8%, -12%)' } };
     } else if (normalized === "LOEL CAMPAÑA") {
-      return { className: 'max-w-[95%] max-h-[1050px]', style: { transform: 'translate(-10%, -13%)' } };
+      return { className: 'max-w-[95%] max-h-[1050px]', style: { transform: 'translate(-10%, -11%)' } };
     } else if (normalized === "LANCE LISTANA") {
-      return { className: 'max-w-[95%] max-h-[800px]', style: { transform: 'translate(-15%, -1%)' } };
+      return { className: 'max-w-[95%] max-h-[870px]', style: { transform: 'translate(-10%, -4%)' } };
     } else if (normalized === "RHANEL SEIGHMONE BUCLARES") {
-      return { className: 'max-w-[92%] max-h-[980px]', style: { transform: 'translate(-5%, -10%)' } };
+      return { className: 'max-w-[92%] max-h-[820px]', style: { transform: 'translate(-5%, -5%)' } };
     } else if (normalized === "FREDDRICK TROPICO") {
-      return { className: 'max-w-[92%] max-h-[800px]', style: { transform: 'translate(-17%, -1%)' } };
+      return { className: 'max-w-[95%] max-h-[860px]', style: { transform: 'translate(-5%, -5%)' } };
     } else {
       return { className: 'max-w-[100%] max-h-[1050px]', style: { transform: 'translate(-10%, -13%)' } };
     }
