@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Footer from "../components/common/Footer";
 import { useInView } from 'react-intersection-observer';  // Intersection Observer hook
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, Link } from "lucide-react";
 import GroupsBackground from "../components/common/GroupsBackground";
 import CarouselCard from "../components/home/CarouselMembers";
 import CarouselCardFrameworkds from "../components/home/CarouselUseFrameworks";
@@ -355,7 +355,7 @@ const Homepage = ({ darkMode }) => {
           </div> 
 
           <div className="w-full lg:w-[800px] bg-white bg-opacity-20 border border-[#ffffff]/30 p-10 rounded-[15px] text-left tracking-wide backdrop-blur-lg mx-4 sm:mx-6 md:mx-12 mb-4 sm:mb-6 md:mb-0 mt-4 sm:mt-6 md:mt-0 flex-1">
-            <p className="text-xl sm:text-2xl md:text3xl lg:text-4xl">
+            <p className="text-lg sm:text-xl md:text2xl lg:text-3xl">
               <span>What We think - <b className={`${darkMode ? "hover:text-[#f0b6a2]" : "hover:text-[#D74925]"}`}>is What You click</b></span>
               <br />
               <br />
@@ -434,17 +434,18 @@ const Homepage = ({ darkMode }) => {
 
           {/* GitHub Logo */}
           <div className={`md:col-span-1 md:row-span-1 ${ContainerBg} flex flex-col justify-center items-center p-4 rounded-xl`}>
+            <a href="https://github.com/Naksu14/Interactive-Web-Portfolio" target="_blank" rel="noopener noreferrer">
+                <button
+                  className="w-10 h-10 absolute right-5 top-5 rounded-full bg-white/40 shadow-md flex items-center justify-center hover:bg-gray-200 transition"
+                  aria-label="Next"
+                >
+                  <Link />
+                </button>
+              </a>
             <img className="w-32 mb-2" src={require("../assets/commonIcons/gitpng.png")} alt="GitHub" />
             <div className="mt-6 flex items-center justify-between">
               <p className="text-md font-medium mx-auto px-8">Repository</p>
-              <a href="https://github.com/Naksu14/Interactive-Web-Portfolio" target="_blank" rel="noopener noreferrer">
-                <button
-                  className="w-10 h-10 rounded-full bg-white/40 shadow-md flex items-center justify-center hover:bg-gray-200 transition"
-                  aria-label="Next"
-                >
-                  <ChevronRight />
-                </button>
-              </a>
+              
             </div>
 
           </div>

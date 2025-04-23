@@ -102,7 +102,7 @@ const TeamMembers = ({ darkMode }) => {
           />
         </div>
 
-        <div className="absolute inset-0 flex items-center justify-center pointer-events-none md:bottom-0 md:right-0">
+        <div className="absolute inset-0 flex items-center justify-center">
           <img
             src={selectedMember.src}
             alt={selectedMember.name}

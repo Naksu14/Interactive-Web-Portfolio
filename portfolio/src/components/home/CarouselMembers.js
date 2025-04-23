@@ -76,7 +76,7 @@ const CarouselCard = () => {
         className="mt-4 text-sm hover:text-blue-800 transition"
         onClick={() => navigate(current.link)}
       >
-        <p className="text-md font-bold mx-auto px-8 hover:text-[#ececec]">Check Us Out</p>
+        <p className="text-sm font-bold mx-auto px-8 hover:text-[#ececec]">Check Us Out</p>
       </button>
     </div>
   );

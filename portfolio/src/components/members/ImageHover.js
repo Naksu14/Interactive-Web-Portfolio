@@ -123,7 +123,7 @@ function ImageGallery({ onSelect, darkMode, selectedMember }) {
         "WIREFRAME: FIGMA"
       ],
       cv: "/cv/CV_Listana-Lance.pdf",
-      position: '15% 10%',
+      position: '30% 10%',
       zoom: 1.0
     },
     {
@@ -167,7 +167,7 @@ function ImageGallery({ onSelect, darkMode, selectedMember }) {
         "WIREFRAME: FIGMA"
       ],
       cv: "/cv/CV_Tropico-Freddrick.pdf",
-      position: '30% 20%',
+      position: '40% 20%',
       zoom: 1.0
     },
   ];
