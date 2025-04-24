@@ -4,6 +4,14 @@ import { MessageCircle } from "lucide-react";
 import chatbotLogo from '../../assets/commonIcons/brown-logo.png';
 import send from "../../assets/commonIcons/sendm.png";
 
+const faqs = [
+  "What services do you offer?",
+  "Can I see your latest projects?",
+  "How can I contact you?",
+  "What technologies do you specialize in?",
+];
+
+
 const portfolioContext = `
   You are a helpful assistant on a developer portfolio website. Here is the portfolio information:
   - Name: Loel Campaña
@@ -15,6 +23,8 @@ const portfolioContext = `
   - Role: Frontend Developer
   - Skills: React, Bootstrap, Tailwind, Node.js, JavaScript, Java, Python, C, C++, PHP, CSS, HTML, Git, Figma, MySQL, Arduino
   - Contact: ic.freddrick.tropico@cvsu.edu.com
+
+  - Freddricks wife is Angelica Malapitan
 
   Name: Lance Listana
   - Role: QA Tester, UI/UX Designer
@@ -73,7 +83,7 @@ const portfolioContext = `
 const SESSION_KEY = "chatbot_messages";
 const SESSION_EXPIRY_KEY = "chatbot_messages_expiry";
 
-const Chatbot = ({darkMode}) => {
+const Chatbot = ({ darkMode }) => {
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState("");
   const [isOpen, setIsOpen] = useState(false);
@@ -100,15 +110,17 @@ const Chatbot = ({darkMode}) => {
     }
   }, [messages]);
 
-  const handleSend = async () => {
-    if (!input.trim()) return;
+  const handleSend = async (customInput = null) => {
+    const messageToSend = customInput || input;
 
-    const userMessage = { role: "user", content: input };
+    if (!messageToSend.trim()) return;
+
+    const userMessage = { role: "user", content: messageToSend };
     setMessages((prev) => [...prev, userMessage]);
-    setInput("");
+    setInput(""); // clear input field
 
     try {
-      const fullPrompt = `${portfolioContext}\n\nUser: ${input}`;
+      const fullPrompt = `${portfolioContext}\n\nUser: ${messageToSend}`;
       const reply = await sendToGemini(fullPrompt);
       const botMessage = { role: "assistant", content: reply };
       setMessages((prev) => [...prev, botMessage]);
@@ -121,13 +133,13 @@ const Chatbot = ({darkMode}) => {
     <div className="fixed bottom-[50px] right-[4%] z-50 ">
       {!isOpen && (
         <button
-        onClick={() => setIsOpen(true)}
-        className={`px-6 py-3 rounded-t-3xl rounded-bl-3xl rounded-br-none shadow-md flex items-center gap-2 ${darkMode ? 'bg-[#FFFFFF] text-[#59453F]' : 'bg-[#646464] text-[#FFFFFF]'} opacity-50 hover:opacity-90 transition-opacity duration-300`}
-      >
-        <MessageCircle className="w-8 h-8" />
-        <span className="hidden lg:inline">Let’s Talk</span>
-      </button>
-      
+          onClick={() => setIsOpen(true)}
+          className={`px-6 py-3 rounded-t-3xl rounded-bl-3xl rounded-br-none shadow-md flex items-center gap-2 ${darkMode ? 'bg-[#FFFFFF] text-[#59453F]' : 'bg-[#646464] text-[#FFFFFF]'} opacity-50 hover:opacity-90 transition-opacity duration-300`}
+        >
+          <MessageCircle className="w-8 h-8" />
+          <span className="hidden lg:inline">Let’s Talk</span>
+        </button>
+
       )}
 
       {isOpen && (
@@ -174,18 +186,35 @@ const Chatbot = ({darkMode}) => {
           >
             {messages.map((msg, i) => {
               const isUser = msg.role === "user";
+              const isSystemMessage = msg.role === "system";
+
               return (
-                <div
-                  key={i}
-                  className={`
-                    mb-2 p-2 w-auto rounded break-words text-left
-                    ${isUser 
-                      ? "ml-auto bg-[#FFFFFF] text-black rounded-t-xl rounded-bl-xl rounded-br-none" 
-                      : "mr-auto bg-[#AAAAAA] text-white rounded-b-xl rounded-tr-xl rounded-tl-none"}
-                    max-w-[75%]
-                  `}
-                >
-                  {msg.content}
+                <div key={i}>
+                  <div
+                    className={`
+                      mb-2 p-2 w-auto rounded break-words text-left
+                      ${isUser
+                        ? "ml-auto bg-[#FFFFFF] text-black rounded-t-xl rounded-bl-xl rounded-br-none"
+                        : "mr-auto bg-[#AAAAAA] text-white rounded-b-xl rounded-tr-xl rounded-tl-none"}
+                      max-w-[75%]
+                    `}
+                  >
+                    {msg.content}
+                  </div>
+
+                  {isSystemMessage && i === 0 && (
+                    <div className="flex flex-wrap gap-2 mt-4 mb-4">
+                      {faqs.map((faq, index) => (
+                        <button
+                          key={index}
+                          onClick={() => handleSend(faq)}
+                          className="bg-transparent text-white text-xs px-3 py-1 rounded-xl border border-white hover:bg-gray-100 hover:text-black transition-all"
+                        >
+                          {faq}
+                        </button>
+                      ))}
+                    </div>
+                  )}
                 </div>
               );
             })}

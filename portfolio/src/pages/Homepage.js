@@ -43,18 +43,18 @@ const Homepage = ({ darkMode }) => {
     'bg-white bg-opacity-30 border border-[#ffffff]/30 p-10 rounded-[15px] tracking-wide backdrop-blur-lg'
     ;
 
-    const buttonStyles = {
-      backgroundColor: darkMode ? 'rgba(255, 255, 255, 0.1)' : 'rgba(109, 109, 109, 0.1)',
-      '&:hover': { backgroundColor: darkMode ? 'rgba(255, 255, 255, 0.3)' : 'rgba(255, 255, 255, 0.3)', transform: 'scale(1.1)' },
-      borderRadius: '50%',
-      width: 56,
-      height: 56,
-      transition: 'all 0.3s ease'
-    };
-  
-    const icondarkmode = {
-      color: darkMode ? '#ffffff' : '#59453F', fontSize: '2rem'
-    };
+  const buttonStyles = {
+    backgroundColor: darkMode ? 'rgba(255, 255, 255, 0.1)' : 'rgba(109, 109, 109, 0.1)',
+    '&:hover': { backgroundColor: darkMode ? 'rgba(255, 255, 255, 0.3)' : 'rgba(255, 255, 255, 0.3)', transform: 'scale(1.1)' },
+    borderRadius: '50%',
+    width: 56,
+    height: 56,
+    transition: 'all 0.3s ease'
+  };
+
+  const icondarkmode = {
+    color: darkMode ? '#ffffff' : '#59453F', fontSize: '2rem'
+  };
 
   return (
     <div className={`z-5 relative mx-1  sm:mx-4 md:mx-6 lg:mx-8 mt-[104px] h-[calc(100vh-130px)] overflow-hidden rounded-b-[2rem] ${darkMode ? 'bg-[#D74925]/60' : 'bg-[#f0b6a2]/60'}`}>
@@ -136,7 +136,7 @@ const Homepage = ({ darkMode }) => {
               <img
                 src={AnimeDaniela}
                 alt="Daniela"
-                className={`w-[350px] xs:w-[350px] sm:w-[300px] md:w-[320px] lg:w-[350px] xl:w-[380px] h-auto object-contain transition-all duration-300 ease-in-out hover:brightness-150 ${hovered && hovered !== 'Daniela' ? 'blur-[1.8px]' : ''}`}
+                className={`w-[200px] xs:w-[350px] sm:w-[300px] md:w-[320px] lg:w-[350px] xl:w-[380px] h-auto object-contain transition-all duration-300 ease-in-out hover:brightness-150 ${hovered && hovered !== 'Daniela' ? 'blur-[1.8px]' : ''}`}
               />
               <div className="absolute bottom-0 left-0 w-full h-12 bg-gradient-to-t from-[#f8f8f8] via-transparent to-transparent pointer-events-none" />
             </div>
@@ -187,7 +187,7 @@ const Homepage = ({ darkMode }) => {
               <img
                 src={AnimeFred}
                 alt="Fred"
-                className={`w-[200px] xs:w-[200px] sm:w-[240px] md:w-[280px] lg:w-[300px] xl:w-[330px] h-auto transition-all duration-300 ease-in-out hover:brightness-150 ${hovered && hovered !== 'Fred' ? 'blur-[1.8px]' : ''}`}
+                className={`w-[150px] xs:w-[200px] sm:w-[240px] md:w-[280px] lg:w-[300px] xl:w-[330px] h-auto transition-all duration-300 ease-in-out hover:brightness-150 ${hovered && hovered !== 'Fred' ? 'blur-[1.8px]' : ''}`}
               />
             </div>
 
@@ -217,7 +217,7 @@ const Homepage = ({ darkMode }) => {
               }}
               onMouseEnter={() => setHovered('Loel')}
               onMouseLeave={() => setHovered(null)}
-              className="relative z-40 -ml-[140px] xs:-ml-[140px] sm:-ml-[130px] md:-ml-[160px] lg:-ml-[170px] xl:-ml-[180px]"
+              className="relative z-40 -ml-[90px] -mt-[100px] xs:-ml-[140px] sm:-ml-[500px] md:-ml-[160px] lg:-ml-[170px] xl:-ml-[180px]"
             >
               {hovered === 'Loel' && (
                 <div className="absolute top-[-100px] left-[-80px] z-50">
@@ -235,7 +235,7 @@ const Homepage = ({ darkMode }) => {
               <img
                 src={AnimeLoel}
                 alt="Loel"
-                className={`w-[200px] xs:w-[200px] sm:w-[250px] md:w-[300px] lg:w-[320px] xl:w-[350px] h-auto transition-all duration-300 ease-in-out hover:brightness-150 ${hovered && hovered !== 'Loel' ? 'blur-[1.8px]' : ''}`}
+                className={`w-[180px] xs:w-[200px] sm:w-[250px] md:w-[300px] lg:w-[320px] xl:w-[350px] h-auto transition-all duration-300 ease-in-out hover:brightness-150 ${hovered && hovered !== 'Loel' ? 'blur-[1.8px]' : ''}`}
               />
               <div className="absolute bottom-0 left-0 w-full h-12 bg-gradient-to-t from-[#f8f8f8] via-transparent to-transparent pointer-events-none" />
             </div>
@@ -265,7 +265,15 @@ const Homepage = ({ darkMode }) => {
               }}
               onMouseEnter={() => setHovered('Lance')}
               onMouseLeave={() => setHovered(null)}
-              className="relative z-10 mb-[190px] -ml-[100px] xs:-ml-[100px] sm:-ml-[100px] mt-[-30px] md:-ml-[125px] lg:-ml-[140px] xl:-ml-[140px]"
+              className="
+  relative z-10 
+  mb-[130px] 
+  -ml-[110px] 
+  sm:mb-55
+  sm:-ml-0 
+  md:-ml-[125px] 
+  lg:-ml-[140px]
+"
             >
               {hovered === 'Lance' && (
                 <div className="absolute top-[-50px] left-[80px] z-50">
@@ -283,7 +291,7 @@ const Homepage = ({ darkMode }) => {
               <img
                 src={AnimeLance}
                 alt="Lance"
-                className={`w-[120px] xs:w-[120px] sm:w-[200px] md:w-[230px] lg:w-[250px] xl:w-[290px] h-auto transition-all duration-300 ease-in-out hover:brightness-150 ${hovered && hovered !== 'Lance' ? 'blur-[1.8px]' : ''}`}
+                className={`w-[150px] xs:w-[120px] sm:w-[200px] md:w-[230px] lg:w-[250px] xl:w-[290px] h-auto transition-all duration-300 ease-in-out hover:brightness-150 ${hovered && hovered !== 'Lance' ? 'blur-[1.8px]' : ''}`}
               />
             </div>
 
@@ -312,7 +320,7 @@ const Homepage = ({ darkMode }) => {
               }}
               onMouseEnter={() => setHovered('Rhanel')}
               onMouseLeave={() => setHovered(null)}
-              className="relative z-10 -ml-[150px] xs:-ml-[150px] sm:-ml-[150px] md:-ml-[200px] lg:-ml-[220px] xl:-ml-[240px]"
+              className="relative z-10 -ml-[140px] xs:-ml-[150px] sm:-ml-[150px] md:-ml-[200px] lg:-ml-[220px] xl:-ml-[240px]"
             >
               {hovered === 'Rhanel' && (
                 <div className="absolute top-[-70px] right-[-200px] z-50">
@@ -330,7 +338,7 @@ const Homepage = ({ darkMode }) => {
               <img
                 src={AnimeRhanel}
                 alt="Rhanel"
-                className={`w-[180px] xs:w-[180px] sm:w-[250px] md:w-[280px] lg:w-[300px] xl:w-[320px] h-auto transition-all duration-300 ease-in-out hover:brightness-150 ${hovered && hovered !== 'Rhanel' ? 'blur-[1.8px]' : ''}`}
+                className={`w-[190px] xs:w-[180px] sm:w-[250px] md:w-[280px] lg:w-[300px] xl:w-[320px] h-auto transition-all duration-300 ease-in-out hover:brightness-150 ${hovered && hovered !== 'Rhanel' ? 'blur-[1.8px]' : ''}`}
               />
               <div className="absolute bottom-0 left-0 w-full h-12 bg-gradient-to-t from-[#f8f8f8] via-transparent to-transparent pointer-events-none" />
             </div>
@@ -352,7 +360,7 @@ const Homepage = ({ darkMode }) => {
               alt="InnoVate Logo"
               className="sm:w-full w-[80%] h-auto object-contain mx-auto"
             />
-          </div> 
+          </div>
 
           <div className="w-full lg:w-[800px] bg-white bg-opacity-20 border border-[#ffffff]/30 sm:p-10 p-5 rounded-[15px] text-left tracking-wide backdrop-blur-lg mx-4 sm:mx-6 md:mx-12 mb-4 sm:mb-6 md:mb-0 mt-4 sm:mt-0 md:mt-0 flex-1">
             <p className="text-lg sm:text-xl md:text2xl lg:text-3xl">
@@ -425,7 +433,7 @@ const Homepage = ({ darkMode }) => {
             </div>
 
             <Projectsimage />
-            
+
           </div>
 
 
@@ -435,17 +443,17 @@ const Homepage = ({ darkMode }) => {
           {/* GitHub Logo */}
           <div className={`md:col-span-1 md:row-span-1 ${ContainerBg} flex flex-col justify-center items-center p-4 rounded-xl`}>
             <a href="https://github.com/Naksu14/Interactive-Web-Portfolio" target="_blank" rel="noopener noreferrer">
-                <button
-                  className="w-10 h-10 absolute right-5 top-5 rounded-full bg-white/40 shadow-md flex items-center justify-center hover:bg-gray-200 transition"
-                  aria-label="Next"
-                >
-                  <Link />
-                </button>
-              </a>
+              <button
+                className="w-10 h-10 absolute right-5 top-5 rounded-full bg-white/40 shadow-md flex items-center justify-center hover:bg-gray-200 transition"
+                aria-label="Next"
+              >
+                <Link />
+              </button>
+            </a>
             <img className="w-32 mb-2" src={require("../assets/commonIcons/gitpng.png")} alt="GitHub" />
             <div className="mt-6 flex items-center justify-between">
               <p className="text-md font-medium mx-auto px-8">Repository</p>
-              
+
             </div>
 
           </div>
@@ -489,9 +497,9 @@ const Homepage = ({ darkMode }) => {
 
 
 
-        {/* FOOTER IMPORT*/}    
-        <Footer  darkMode={darkMode}/>
-        
+        {/* FOOTER IMPORT*/}
+        <Footer darkMode={darkMode} />
+
 
       </div>
     </div>
