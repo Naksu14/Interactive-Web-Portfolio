@@ -75,14 +75,15 @@ const TeamMembers = ({ darkMode }) => {
       transform: 'scale(1.1)'
     },
     borderRadius: '50%',
-    width: 56,
-    height: 56,
+    width: 50,
+    height: 50,
+    bottom: 10,
     transition: 'all 0.3s ease'
   };
 
   const icondarkmode = {
     color: darkMode ? '#ffffff' : '#59453F',
-    fontSize: '2rem'
+    fontSize: '1.8rem'
   };
 
   if (!selectedMember) return null;

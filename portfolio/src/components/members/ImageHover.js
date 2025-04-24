@@ -49,7 +49,7 @@ function ImageHover({ imageSrc, altText, position = '50% 20%', zoom = 1, name, o
       {/* Selected Name Overlay */}
       {isSelected && (
         <div className={`absolute bottom-0 left-0 right-0 z-20 p-2 text-left text-white transition-opacity duration-300
-          ${darkMode ? 'bg-gradient-to-t from-[#f0b6a2] to-[#ffffff]/0' : 'bg-gradient-to-t from-[#D74925] to-[#ffffff]/0'} opacity-100`}>
+          ${darkMode ? 'bg-gradient-to-t from-[#f0b6a2] to-[#ffffff]/0' : 'bg-gradient-to-t from-[#A9543E] to-[#ffffff]/0'} opacity-100`}>
           <span className="text-sm font-semibold tracking-wide">{name}</span>
         </div>
       )}
@@ -173,7 +173,7 @@ function ImageGallery({ onSelect, darkMode, selectedMember }) {
   ];
 
   return (
-    <div className="flex flex-wrap gap-4 p-4 overflow-hidden w-full">
+    <div className="flex flex-wrap gap-0 gap-y-4 p-4 w-full">
       {teamMembers.map((member) => (
         <ImageHover
           key={member.id}
