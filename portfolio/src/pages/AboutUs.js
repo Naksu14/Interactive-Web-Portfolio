@@ -11,10 +11,10 @@ const AboutUs = ({ darkMode }) => {
       <div className={`absolute ${darkMode ? "bg-[#D74925]/60" : "bg-[#f0b6a2]/60"}`}></div>
 
       {/* Content Wrapper (Scrollable) */}
-      <div className={`relative p-6 overflow-auto h-full custom-scrollbar ${darkMode ? "text-[#ffffff]" : "text-[#59453F]"}`}>
+      <div className={`relative p-6 overflow-auto h-full custom-scrollbar px-0 ${darkMode ? "text-[#ffffff]" : "text-[#59453F]"}`}>
 
           {/* Top Section: Text +  Image */}
-        <div className="flex flex-col md:flex-row justify-between items-center gap-8 mt-4  px-6">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-8 mt-4  sm:px-6 px-0">
          
           {/* Intro Text bg-white bg-opacity-30 border border-white/20 rounded-[15px] backdrop-blur-lg*/}
           <div className="w-full lg:w-3/5 w-4/5 p-10 text-left tracking-wide ">
@@ -36,7 +36,7 @@ const AboutUs = ({ darkMode }) => {
 
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mt-10 max-w-[1400px] px-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mt-10 max-w-[1400px] sm:px-16 px-4">
           {[
             {
               title: "Web Development",

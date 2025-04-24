@@ -65,7 +65,7 @@ const Homepage = ({ darkMode }) => {
       <div className={`absolute ${darkMode ? "bg-[#D74925]/60" : "bg-[#f0b6a2]/60"}`}></div>
 
       {/* Content Wrapper (Scrollable) */}
-      <div className={`relative p-6 overflow-auto h-full custom-scrollbar ${darkMode ? "text-[#ffffff]" : "text-[#59453F]"}`}>
+      <div className={`relative p-6 overflow-auto h-full custom-scrollbar px-0 ${darkMode ? "text-[#ffffff]" : "text-[#59453F]"}`}>
 
         {/* Team Section Wrapper */}
         <div className="relative w-full h-[700px] flex items-end justify-center overflow-hidden">
@@ -350,11 +350,11 @@ const Homepage = ({ darkMode }) => {
             <img
               src={darkMode ? require("../assets/commonIcons/Whomelogo.png") : require("../assets/commonIcons/bhomelogo.png")}
               alt="InnoVate Logo"
-              className="w-full h-auto object-contain mx-auto"
+              className="sm:w-full w-[80%] h-auto object-contain mx-auto"
             />
           </div> 
 
-          <div className="w-full lg:w-[800px] bg-white bg-opacity-20 border border-[#ffffff]/30 p-10 rounded-[15px] text-left tracking-wide backdrop-blur-lg mx-4 sm:mx-6 md:mx-12 mb-4 sm:mb-6 md:mb-0 mt-4 sm:mt-6 md:mt-0 flex-1">
+          <div className="w-full lg:w-[800px] bg-white bg-opacity-20 border border-[#ffffff]/30 sm:p-10 p-5 rounded-[15px] text-left tracking-wide backdrop-blur-lg mx-4 sm:mx-6 md:mx-12 mb-4 sm:mb-6 md:mb-0 mt-4 sm:mt-0 md:mt-0 flex-1">
             <p className="text-lg sm:text-xl md:text2xl lg:text-3xl">
               <span>What We think - <b className={`${darkMode ? "hover:text-[#f0b6a2]" : "hover:text-[#D74925]"}`}>is What You click</b></span>
               <br />
@@ -370,7 +370,7 @@ const Homepage = ({ darkMode }) => {
         <br />
 
         {/* Gridd Contennt */}
-        <div className="grid grid-cols-1 md:grid-cols-3 md:grid-rows-3 sm:grid-cols-2 sm:grid-rows-2 gap-4 px-4 md:px-16 lg:px-32 py-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 md:grid-rows-3 sm:grid-cols-2 sm:grid-rows-2 gap-4 px-2 sm:px-4 md:px-16 lg:px-32 py-4">
           {/* Mission Statement */}
           <div className={`md:col-span-2 md:row-span-1 ${ContainerBg} p-5 rounded-xl`}>
             <div className="text-left">
@@ -385,18 +385,18 @@ const Homepage = ({ darkMode }) => {
           </div>
 
           <div className={`md:row-span-1 ${ContainerBg} flex justify-center items-center p-4 px-6 rounded-xl`}>
-  <div className="w-32 h-32 rounded-full flex justify-center items-center animate-gradient-slow bg-[conic-gradient(at_top_left,_#ec4899,_#8b5cf6,_#3b82f6,_#ec4899)] transition-all duration-300">
-    <img
-      className="w-20"
-      src={
-        darkMode
-          ? require("../assets/commonIcons/half-moon.png")
-          : require("../assets/commonIcons/sunny.png")
-      }
-      alt="Sun or Moon"
-    />
-  </div>
-</div>
+            <div className="w-32 h-32 rounded-full flex justify-center items-center animate-gradient-slow bg-[conic-gradient(at_top_left,_#ec4899,_#8b5cf6,_#3b82f6,_#ec4899)] transition-all duration-300">
+              <img
+                className="w-20"
+                src={
+                  darkMode
+                    ? require("../assets/commonIcons/half-moon.png")
+                    : require("../assets/commonIcons/sunny.png")
+                }
+                alt="Sun or Moon"
+              />
+            </div>
+          </div>
 
 
 

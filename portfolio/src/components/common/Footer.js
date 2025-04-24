@@ -28,46 +28,50 @@ function Footer({darkMode}) {
 
           {/* Border and social icons */}
           <div
-            className={`w-[80%] mx-auto border-t-[2px] ${darkMode ? "border-white" : "border-[#59453F]"} mt-20`} />
+            className={`w-[90%] mx-auto border-t-[2px] ${darkMode ? "border-white" : "border-[#59453F]"} mt-20`} />
 
 
-          <div className="w-[80%] mx-auto flex justify-between items-center mt-4">
-            <p className="text-sm">&copy; {new Date().getFullYear()} INNOVATE, All rights reserved.</p>
-            <div className="flex gap-7">
-            <Tooltip title="View Github">
-              <IconButton
+          <div className="w-[80%] mx-auto flex flex-col sm:flex-row sm:justify-between items-center mt-4 gap-4 sm:gap-0 text-center sm:text-left">
+            <p className="text-sm order-2 sm:order-1">
+              &copy; {new Date().getFullYear()} INNOVATE, All rights reserved.
+            </p>
+
+            <div className="flex gap-7 order-1 sm:order-2">
+              <Tooltip title="View Github">
+                <IconButton
                   href="https://github.com/"
                   target="_blank"
                   rel="noopener noreferrer"
                   sx={buttonStyles}
                 >
                   <GitHubIcon sx={icondarkmode} />
-              </IconButton>  
-            </Tooltip> 
-            <Tooltip title="View Facebook">
-              <IconButton
+                </IconButton>
+              </Tooltip>
+
+              <Tooltip title="View Facebook">
+                <IconButton
                   href="https://facebook.com/"
                   target="_blank"
                   rel="noopener noreferrer"
                   sx={buttonStyles}
                 >
-                <FacebookIcon sx={icondarkmode} />
-              </IconButton>
-            </Tooltip> 
+                  <FacebookIcon sx={icondarkmode} />
+                </IconButton>
+              </Tooltip>
 
-            <Tooltip title="Contact on Email">
-              <IconButton
+              <Tooltip title="Contact on Email">
+                <IconButton
                   href="mailto:example@gmail.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   sx={buttonStyles}
                 >
-                <EmailIcon sx={icondarkmode} />
-              </IconButton>
-            </Tooltip>
-              
+                  <EmailIcon sx={icondarkmode} />
+                </IconButton>
+              </Tooltip>
             </div>
           </div>
+
         </footer>
   )
 }
