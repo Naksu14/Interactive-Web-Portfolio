@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
 import { Moon, Sun, Menu, X } from "lucide-react";  // Import Sun icon
 import clsx from "clsx";
-import { Link, useLocation } from 'react-router-dom'; // Import useLocation
+import { Link, useLocation, useNavigate } from 'react-router-dom'; // Import useLocation
+
 
 const Navbar = ({ setDarkMode, darkMode }) => {
+  const navigate = useNavigate();
   const [menuOpen, setMenuOpen] = useState(false);
 
   // Get the current location (URL)
@@ -48,6 +50,7 @@ const Navbar = ({ setDarkMode, darkMode }) => {
           src={darkMode ? require("../../assets/commonIcons/logo_white.png") : require("../../assets/commonIcons/brown-logo.png")} 
           alt="Logo" 
           className="w-12 h-12" 
+          onClick={() => navigate("/")}
         />
         <span className={`block md:hidden text-lg font-semibold ${darkMode ? "text-white" : "text-[#59453F]"}`}>
           Innovate Portfolio

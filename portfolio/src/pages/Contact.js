@@ -1,19 +1,19 @@
 import React, { useState } from "react";
 import GroupsBackground from "../components/common/GroupsBackground";
 import Footer from "../components/common/Footer";
+import SendEmail from "../components/contact/SendEmail";
 
 import bmail from "../assets/commonIcons/black-mail.png";
 import location from "../assets/commonIcons/location.png";
 import twitter1 from "../assets/commonIcons/twitter1.png";
 import telephone from "../assets/commonIcons/telephone.png";
-import send from "../assets/commonIcons/sendm.png";
 import logo from "../assets/commonIcons/logo_black.png";
 
 import fred from "../assets/Anime_Members/eyef.png";
 import daniela from "../assets/Anime_Members/eyed.png";
 import rhanel from "../assets/Anime_Members/eyer.png";
 import lance from "../assets/Anime_Members/eyel.png";
-import loel from "../assets/Anime_Members/loel.png";
+import loel from "../assets/Anime_Members/loel.png"; 
 
 
 
@@ -119,87 +119,20 @@ const Contact = ({ darkMode }) => {
               </div>
 
               {/* Contact Form */}
-              <form className="space-y-4">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  {/* First Name */}
-                  <input
-                    type="text"
-                    placeholder="First Name :"
-                    className={`p-3 rounded-[3px] w-full bg-white bg-opacity-30 text-sm
-              ${darkMode ? 'text-white placeholder-white' : 'text-[#59453F] placeholder-[#59453F]'}`}
-                    style={{
-                      boxShadow: '0 0 0 1px rgba(255, 255, 255, 0.5)'
-                    }}
-                  />
-                  {/* Last Name */}
-                  <input
-                    type="text"
-                    placeholder="Last Name :"
-                    className={`p-3 rounded-[3px] w-full bg-white bg-opacity-30 text-sm
-              ${darkMode ? 'text-white placeholder-white' : 'text-[#59453F] placeholder-[#59453F]'}`}
-                    style={{
-                      boxShadow: '0 0 0 1px rgba(255, 255, 255, 0.5)'
-                    }}
-                  />
-                </div>
-
-                {/* Email */}
-                <input
-                  type="text"
-                  placeholder="Email :"
-                  className={`p-3 rounded-[3px] w-full bg-white bg-opacity-30 text-sm
-            ${darkMode ? 'text-white placeholder-white' : 'text-[#59453F] placeholder-[#59453F]'}`}
-                  style={{
-                    boxShadow: '0 0 0 1px rgba(255, 255, 255, 0.5)'
-                  }}
-                />
-
-                {/* Message */}
-                <textarea
-                  rows="4"
-                  placeholder="Message"
-                  className={`p-3 rounded-[3px] w-full bg-white bg-opacity-30 text-sm h-[300px]
-            ${darkMode ? 'text-white placeholder-white' : 'text-[#59453F] placeholder-[#59453F]'}`}
-                  style={{
-                    boxShadow: darkMode
-                      ? '0 0 0 1px rgba(255, 255, 255, 0.2)'
-                      : '0 0 0 1px rgba(89, 69, 63, 0.2)'
-                  }}
-                ></textarea>
-
-                {/* Submit Button */}
-                <button
-                  type="submit"
-                  className={`group px-6 py-3 rounded-md font-semibold w-full flex items-center justify-center gap-2 transition
-            ${darkMode ? 'text-white bg-white bg-opacity-5 hover:bg-white hover:text-[#59453F]' : 'text-[#59453F] bg-white bg-opacity-30 hover:bg-[#59453F] hover:text-white'}`}
-                  style={{
-                    boxShadow: darkMode
-                      ? '0 0 0 1px rgba(255, 255, 255, 0.2)'
-                      : '0 0 0 1px rgba(89, 69, 63, 0.2)'
-                  }}
-                >
-                  Send Message
-                  <img
-                    src={send}
-                    alt="Send"
-                    className={`w-5 h-5 transition 
-              ${darkMode ? 'filter invert group-hover:invert-0' : 'group-hover:invert'}`}
-                  />
-                </button>
-              </form>
+             <SendEmail />
             </div>
 
             {/* Info Section */}
             <div
               className={`space-y-6 min-h-[400px] p-10 rounded-md mt-5
-    ${darkMode ? 'text-white bg-white bg-opacity-5' : 'text-[#59453F] bg-white bg-opacity-30'}
-    w-full sm:w-full md:w-[90%] lg:w-[75%] xl:w-[545%] text-center lg:text-left flex flex-col items-center lg:items-start`}
-              style={{
-                boxShadow: darkMode
-                  ? '0 0 0 1px rgba(255, 255, 255, 0.5)'
-                  : '0 0 0 1px rgba(255, 255, 255, 0.5)'
-              }}
-            >
+            ${darkMode ? 'text-white bg-white bg-opacity-5' : 'text-[#59453F] bg-white bg-opacity-30'}
+            w-full sm:w-full md:w-[90%] lg:w-[75%] xl:w-[545%] text-center lg:text-left flex flex-col items-center lg:items-start`}
+                      style={{
+                        boxShadow: darkMode
+                          ? '0 0 0 1px rgba(255, 255, 255, 0.5)'
+                          : '0 0 0 1px rgba(255, 255, 255, 0.5)'
+                      }}
+                    >
 
               {/* Address Section */}
               <div>
