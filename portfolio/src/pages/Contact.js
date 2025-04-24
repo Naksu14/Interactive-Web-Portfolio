@@ -31,7 +31,7 @@ const Contact = ({ darkMode }) => {
   
 
   return (
-    <div className={`z-5 relative mx-8 mt-[104px] h-[calc(100vh-130px)] overflow-hidden rounded-b-[2rem] ${darkMode ? 'bg-[#D74925]/60' : 'bg-[#f0b6a2]/60'}`}>
+    <div className={`z-5 relative mx-1 sm:mx-4 md:mx-6 lg:mx-8 mt-[104px] h-[calc(100vh-130px)] overflow-hidden rounded-b-[2rem] ${darkMode ? 'bg-[#D74925]/60' : 'bg-[#f0b6a2]/60'}`}>
       {/* Background Image Component */}
       <GroupsBackground />
 
@@ -44,7 +44,7 @@ const Contact = ({ darkMode }) => {
         <div className="h-full flex items-center justify-center">
           {/* Header */}
           <div className="flex flex-col items-center justify-center text-center mt-[10px]">
-            <h1 className="text-2xl sm:text3xl md:text-4xl lg:text-5xl text-6xl font-bold">CONTACT US</h1>
+            <h1 className="text-2xl sm:text3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold">CONTACT US</h1>
 
             <p className="text-2xl mt-[10px]">Let's &nbsp;connect&nbsp; and &nbsp;make &nbsp;things &nbsp;happen!</p>
 
@@ -101,7 +101,7 @@ const Contact = ({ darkMode }) => {
 
         </div>
         {/* Form and Info Section */}
-        <div id="contact-section" className="space-y-6 mx-auto px-4 sm:px-6 lg:px-40 max-w-none">
+        <div id="contact-section" className="space-y-6 mx-auto px-4 sm:px-6 lg:px-40 max-w-none py-8">
 
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
@@ -203,22 +203,22 @@ const Contact = ({ darkMode }) => {
 
               {/* Address Section */}
               <div>
-                <h3 className="text-2xl font-bold mb-4">Address</h3>
-                <p className="text-xl mb-2">Site: Palico IV Imus City Cavite</p>
+                <h3 className="text-md sm:text-lg md:text-xl lg:text-2xl xl:text-2xl font-bold mb-4">Address</h3>
+                <p className="text-sm sm:text-md md:text-lg lg:text-xl xl:text-xl mb-2">Site: Palico IV Imus City Cavite</p>
               </div>
 
               {/* Contact Section */}
               <div>
-                <h3 className="text-2xl font-bold mb-4">Contact</h3>
-                <p className="text-xl mb-2">Phone: + 0951-525-4884</p>
-                <p className="text-xl mb-2">Email: teaminnovate@gmail.com</p>
+                <h3 className="text-md sm:text-lg md:text-xl lg:text-2xl xl:text-2xl font-bold mb-4">Contact</h3>
+                <p className="text-sm sm:text-md md:text-lg lg:text-xl xl:text-xl mb-2">Phone: + 0951-525-4884</p>
+                <p className="text-sm sm:text-md md:text-lg lg:text-xl xl:text-xl mb-2">Email: teaminnovate@gmail.com</p>
               </div>
 
               {/* Links Section */}
               <div>
-                <h3 className="text-2xl font-bold mb-4">Links</h3>
-                <p className="text-xl mb-2">Facebook: Team Innovate Inc.</p>
-                <p className="text-xl mb-2">Twitter: @Teaminnovate</p>
+                <h3 className="text-md sm:text-lg md:text-xl lg:text-2xl xl:text-2xl font-bold mb-4">Links</h3>
+                <p className="text-sm sm:text-md md:text-lg lg:text-xl xl:text-xl mb-2">Facebook: Team Innovate Inc.</p>
+                <p className="text-sm sm:text-md md:text-lg lg:text-xl xl:text-xl mb-2">Twitter: @Teaminnovate</p>
 
                 {/* Social Icons */}
                 <div className="flex gap-6 mt-10 flex-wrap justify-center lg:justify-start">

@@ -118,19 +118,20 @@ const Chatbot = ({darkMode}) => {
   };
 
   return (
-    <div className="fixed bottom-[50px] right-20 z-50 ">
+    <div className="fixed bottom-[50px] right-[4%] z-50 ">
       {!isOpen && (
         <button
-          onClick={() => setIsOpen(true)}
-          className={` px-6 py-3 rounded-t-3xl rounded-bl-3xl rounded-br-none shadow-md flex items-center gap-2 ${darkMode ? 'bg-[#FFFFFF] text-[#59453F]' : 'bg-[#646464] text-[#FFFFFF]'} opacity-50 hover:opacity-90 transition-opacity duration-300`}
-        >
-          <MessageCircle className="w-8 h-8" />
-          Let’s Talk
-        </button>
+        onClick={() => setIsOpen(true)}
+        className={`px-6 py-3 rounded-t-3xl rounded-bl-3xl rounded-br-none shadow-md flex items-center gap-2 ${darkMode ? 'bg-[#FFFFFF] text-[#59453F]' : 'bg-[#646464] text-[#FFFFFF]'} opacity-50 hover:opacity-90 transition-opacity duration-300`}
+      >
+        <MessageCircle className="w-8 h-8" />
+        <span className="hidden lg:inline">Let’s Talk</span>
+      </button>
+      
       )}
 
       {isOpen && (
-        <div className="w-80 bg-[#000000]/70 p-4 rounded-lg shadow-xl z-100 w-[400px] h-[500px] ">
+        <div className="fixed bottom-[50px] right-[3%] w-[95%] max-w-[400px] h-[60vh] sm:h-[500px] bg-black/70 p-4 rounded-lg shadow-xl z-50 sm:w-96">
           <div className="flex justify-between items-start mb-2">
             <div className="flex items-center gap-2 mb-2">
               <img
@@ -160,7 +161,7 @@ const Chatbot = ({darkMode}) => {
 
           <div
             className="
-              h-[360px] overflow-y-scroll mb-2 border-t border-b border-white/30 p-2
+              h-[calc(100%-120px)] overflow-y-scroll mb-2 border-t border-b border-white/30 p-2
               [&::-webkit-scrollbar]:w-2
               [&::-webkit-scrollbar-track]:bg-transparent
               [&::-webkit-scrollbar-thumb]:bg-white/30
@@ -190,8 +191,7 @@ const Chatbot = ({darkMode}) => {
             })}
           </div>
 
-
-          <div className="flex bottom-0 text-black">
+          <div className="flex bottom-0 text-black mt-2">
             <input
               value={input}
               onChange={(e) => setInput(e.target.value)}
@@ -200,7 +200,7 @@ const Chatbot = ({darkMode}) => {
                   handleSend();
                 }
               }}
-              className="flex-1 p-2 mr-2 border rounded-xl "
+              className="flex-1 p-2 mr-2 border rounded-xl"
               placeholder="Type a message..."
             />
             <button onClick={handleSend} className="bg-[#AAAAAA] text-white px-3 rounded-xl">
@@ -213,6 +213,7 @@ const Chatbot = ({darkMode}) => {
           </div>
         </div>
       )}
+
     </div>
   );
 };

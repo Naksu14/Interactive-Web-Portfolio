@@ -37,7 +37,7 @@ const Navbar = ({ setDarkMode, darkMode }) => {
   return (
     <nav 
       className={clsx(
-        "fixed top-0 left-0 right-0 z-50 mx-8 mt-6 flex items-center justify-between px-8 py-4 rounded-t-[2rem] text-[#59453F]",
+        "fixed top-0 left-0 right-0 z-50 mx-1  sm:mx-4 md:mx-6 lg:mx-8 mt-6 flex items-center justify-between px-8 py-4 rounded-t-[2rem] text-[#59453F]",
         darkMode ? "bg-[#D74925]/60" : "bg-[#f0b6a2]/60"
       )}
     >
