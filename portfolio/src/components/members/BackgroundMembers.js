@@ -50,7 +50,7 @@ const GroupsBackground = () => {
         style={{ backgroundImage: `url(${backgroundImage})` }}
       ></div>
 
-      <div className="absolute inset-0 backdrop-blur-lg"></div>
+      <div className="absolute inset-0 sm:backdrop-blur-lg backdrop-blur-md"></div>
     </div>
   );
 };

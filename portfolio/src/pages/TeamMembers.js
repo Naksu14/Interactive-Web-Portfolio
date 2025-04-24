@@ -77,7 +77,6 @@ const TeamMembers = ({ darkMode }) => {
     borderRadius: '50%',
     width: 50,
     height: 50,
-    bottom: 10,
     transition: 'all 0.3s ease'
   };
 
@@ -95,11 +94,15 @@ const TeamMembers = ({ darkMode }) => {
       <MemberBackground />
 
       <div className={`relative p-6 overflow-auto h-full custom-scrollbar ${darkMode ? "text-[#ffffff]" : "text-[#59453F]"}`}>
-        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+        <div className="top-0 md:absolute lg:absolute inset-0 flex items-center justify-center pointer-events-none">
           <img
             src={require("../assets/commonIcons/Innovatebg.png")}
             alt="Innovate bg"
-            className="w-[1300px] h-[100%] object-contain -z-9 opacity-50"
+            className="w-[1300px] h-[100%] object-contain -z-9 opacity-50 "
+            style={{
+              maskImage: 'linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0))',
+              WebkitMaskImage: 'linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0))',
+            }}
           />
         </div>
 
@@ -107,7 +110,7 @@ const TeamMembers = ({ darkMode }) => {
           <img
             src={selectedMember.src}
             alt={selectedMember.name}
-            className={`-z-9 object-contain ${imgClass}`}
+            className={`hidden lg:block  -z-9 object-contain ${imgClass}`}
             style={imgStyle}
           />
         </div>
@@ -119,9 +122,9 @@ const TeamMembers = ({ darkMode }) => {
             selectedMember={selectedMember}
           />
 
-          <div className="hidden md:block absolute  right-5 md:right-20 mt-4 flex flex-row opacity-100 sm:opacity-0 md:opacity-0 lg:opacity-100 transition-opacity duration-300">
-            <b className="text-xl">Meet the team</b>
-            <div className={`h-[2px] w-[270px] ml-5 mt-4 ${darkMode ? "bg-[#ffffff]" : "bg-[#59453F]"}`}></div>
+          <div className="absolute  right-5 md:right-20 mt-4 flex flex-row opacity-100 sm:opacity-0 md:opacity-0 lg:opacity-100 transition-opacity duration-300">
+            <b className="hidden md:block  text-xl">Meet the team</b>
+            <div className={` hidden md:block h-[2px] w-[200px] ml-5 mt-4 ${darkMode ? "bg-[#ffffff]" : "bg-[#59453F]"}`}></div>
           </div>
         </div>
 
@@ -136,7 +139,7 @@ const TeamMembers = ({ darkMode }) => {
 
         {/* Skills */}
         <div className="relative z-10 w-full max-w-[400px] bg-white bg-opacity-10 border border-white/30 p-4 sm:p-6 rounded-xl text-left tracking-wide backdrop-blur-lg mt-6 sm:mt-12 ml-2 sm:ml-4 lg:ml-12 mb-6 sm:mb-12">
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl">
+          <p className="text-xs sm:text-sm md:text-lg lg:text-xl">
             <b className="block mb-2">Skills</b>
             <ul className="list-inside space-y-1">
               {selectedMember.skills.map((skill, index) => (
@@ -147,7 +150,7 @@ const TeamMembers = ({ darkMode }) => {
         </div>
 
         {/* Social Icons */}
-        <div className="fixed z-10 left-6 bottom-[5%] sm:left-12 sm:bottom-12 w-auto max-w-[400px] px-4">
+        <div className=" sm:absolute relative z-10 lg:left-15 left-0 sm:bottom-[5%] bottom-[0%] sm:left-12 sm:bottom-12 w-auto max-w-[400px] px-4">
           <div className="flex justify-center gap-4">
             <Tooltip title="View Github">
               <IconButton href={selectedMember.github} target="_blank" rel="noopener noreferrer" sx={buttonStyles}>
