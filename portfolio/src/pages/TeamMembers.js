@@ -119,7 +119,7 @@ const TeamMembers = ({ darkMode }) => {
             selectedMember={selectedMember}
           />
 
-          <div className="absolute right-5 md:right-20 mt-4 flex flex-row opacity-100 sm:opacity-0 md:opacity-0 lg:opacity-100 transition-opacity duration-300">
+          <div className="hidden md:block absolute  right-5 md:right-20 mt-4 flex flex-row opacity-100 sm:opacity-0 md:opacity-0 lg:opacity-100 transition-opacity duration-300">
             <b className="text-xl">Meet the team</b>
             <div className={`h-[2px] w-[270px] ml-5 mt-4 ${darkMode ? "bg-[#ffffff]" : "bg-[#59453F]"}`}></div>
           </div>
@@ -147,7 +147,7 @@ const TeamMembers = ({ darkMode }) => {
         </div>
 
         {/* Social Icons */}
-        <div className="fixed z-10 left-6 bottom-6 sm:left-12 sm:bottom-12 w-auto max-w-[400px] px-4">
+        <div className="fixed z-10 left-6 bottom-[5%] sm:left-12 sm:bottom-12 w-auto max-w-[400px] px-4">
           <div className="flex justify-center gap-4">
             <Tooltip title="View Github">
               <IconButton href={selectedMember.github} target="_blank" rel="noopener noreferrer" sx={buttonStyles}>

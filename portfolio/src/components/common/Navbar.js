@@ -49,6 +49,9 @@ const Navbar = ({ setDarkMode, darkMode }) => {
           alt="Logo" 
           className="w-12 h-12" 
         />
+        <span className={`block md:hidden text-lg font-semibold ${darkMode ? "text-white" : "text-[#59453F]"}`}>
+          Innovate Portfolio
+        </span>
       </div>
 
       {/* Mobile Menu Button & Dark Mode Toggle */}
