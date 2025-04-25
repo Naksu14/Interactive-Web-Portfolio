@@ -233,7 +233,7 @@ const Chatbot = ({ darkMode }) => {
               className="flex-1 p-2 mr-2 border rounded-xl"
               placeholder="Type a message..."
             />
-            <button onClick={handleSend} className="bg-[#AAAAAA] text-white px-3 rounded-xl">
+            <button onClick={() => handleSend()} className="bg-[#AAAAAA] text-white px-3 rounded-xl">
               <img
                 src={send}
                 alt="Send"
