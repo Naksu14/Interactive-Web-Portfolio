@@ -149,7 +149,7 @@ const Homepage = ({ darkMode }) => {
                   <div className={`
       relative px-8 py-6 rounded-lg backdrop-blur-md shadow-md border 
       ${darkMode ? "bg-white/10 border-white text-white" : "bg-white/20 border-white/70 text-[#59453F]"} 
-      text-left animate-bounce w-[90vw] max-w-sm sm:w-auto
+      text-left animate-bounce w-[70vw] max-w-sm sm:w-auto
     `}>
                     <div className="text-sm sm:text-md font-bold leading-tight">
                       DANIELA ROMANA CASTAÑEDA
@@ -161,7 +161,6 @@ const Homepage = ({ darkMode }) => {
                   </div>
                 </div>
               )}
-
 
               <img
                 src={AnimeDaniela}
