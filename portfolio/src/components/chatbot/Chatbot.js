@@ -111,7 +111,7 @@ const Chatbot = ({ darkMode }) => {
   }, [messages]);
 
   const handleSend = async (customInput = null) => {
-    const messageToSend = String(customInput || input);
+    const messageToSend = (customInput || input);
 
     if (!messageToSend.trim()) return;
 
