@@ -86,11 +86,35 @@ const Homepage = ({ darkMode }) => {
             {/* Floating icons */}
 
             {/* white icons */}
-            <img src={gmail} alt="Gmail" className="absolute top-[145px] left-[-200px] w-15 h-15 animate-float" />
-            <img src={linkedin} alt="LinkedIn" className="absolute bottom-[40px] right-[-200px] w-15 h-15 animate-float" />
-            <img src={facebook} alt="Facebook" className="absolute top-[130px] right-[40px] w-15 h-15 animate-float" />
-            <img src={twitter} alt="Twitter" className="absolute bottom-[20px] left-[-100px] bottom-[200px] w-15 h-15 animate-float" />
-            <img src={github} alt="GitHub" className="absolute top-[-40px] right-[530px] w-10 h-10 animate-float" />
+            <img
+              src={gmail}
+              alt="Gmail"
+              className="absolute top-[145px] right-[90%] w-7 h-7 sm:w-12 sm:h-12 animate-float sm:left-[5%] md:left-[10%] lg:left-[-200px] z-50"
+            />
+            <img
+              src={linkedin}
+              alt="LinkedIn"
+              className="absolute bottom-[40px] right-[10%]  w-7 h-7 sm:w-12 sm:h-12 animate-float sm:right-[5%] md:right-[10%] lg:right-[-200px] z-50"
+            />
+            <img
+              src={facebook}
+              alt="Facebook"
+              className="absolute top-[130px] left-[100%]  w-7 h-7 sm:w-12 sm:h-12 animate-float sm:right-[10%] md:right-[5%] lg:right-[40px] z-50"
+            />
+            <img
+              src={twitter}
+              alt="Twitter"
+              className="absolute bottom-[20px] left-[5%] bottom-[200px]  w-7 h-7 sm:w-12 sm:h-12 animate-float sm:left-[10%] md:left-[5%] lg:left-[-100px] z-50"
+            />
+            <img
+              src={github}
+              alt="GitHub"
+              className="absolute top-[-40px] right-[10%] w-7 h-7 sm:w-10 sm:h-10 animate-float sm:right-[5%] md:right-[10%] lg:right-[530px] z-50"
+            />
+
+
+
+
 
 
             {/* Daniela */}
