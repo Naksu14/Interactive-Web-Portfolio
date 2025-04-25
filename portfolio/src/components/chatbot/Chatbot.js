@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect} from "react";
 import { sendToGemini } from "./chatbotService";
 import { MessageCircle } from "lucide-react";
 import chatbotLogo from '../../assets/commonIcons/brown-logo.png';
@@ -111,7 +111,7 @@ const Chatbot = ({ darkMode }) => {
   }, [messages]);
 
   const handleSend = async (customInput = null) => {
-    const messageToSend = customInput || input;
+    const messageToSend = String(customInput || input);
 
     if (!messageToSend.trim()) return;
 
@@ -215,10 +215,11 @@ const Chatbot = ({ darkMode }) => {
                       ))}
                     </div>
                   )}
-                </div>
+               </div>
               );
             })}
-          </div>
+            </div>
+            
 
           <div className="flex bottom-0 text-black mt-2">
             <input
