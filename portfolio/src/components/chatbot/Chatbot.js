@@ -1,4 +1,4 @@
-import React, { useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import { sendToGemini } from "./chatbotService";
 import { MessageCircle } from "lucide-react";
 import chatbotLogo from '../../assets/commonIcons/brown-logo.png';
@@ -215,11 +215,11 @@ const Chatbot = ({ darkMode }) => {
                       ))}
                     </div>
                   )}
-               </div>
+                </div>
               );
             })}
-            </div>
-            
+          </div>
+
 
           <div className="flex bottom-0 text-black mt-2">
             <input
@@ -233,13 +233,18 @@ const Chatbot = ({ darkMode }) => {
               className="flex-1 p-2 mr-2 border rounded-xl"
               placeholder="Type a message..."
             />
-            <button onClick={() => handleSend()} className="bg-[#AAAAAA] text-white px-3 rounded-xl">
+            <button
+              onClick={() => handleSend()}
+              className="bg-[#AAAAAA] text-white p-2 sm:p-3 rounded-xl flex items-center justify-center"
+            >
               <img
                 src={send}
                 alt="Send"
-                className="w-5 h-5 transition filter invert group-hover:invert-0"
+                className="w-6 h-6 xs:w-5 xs:h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 transition-all duration-200 filter invert"
               />
             </button>
+
+
           </div>
         </div>
       )}
