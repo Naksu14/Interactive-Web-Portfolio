@@ -17,7 +17,7 @@ const ContactForm = ({ darkMode }) => {
 
     emailjs
       .sendForm(
-        //"service_uryujqr",
+        "service_uryujqr",
         "template_e6alqnj",
         e.target,
         "w7Q_2vzEQTUwbNAnL"
