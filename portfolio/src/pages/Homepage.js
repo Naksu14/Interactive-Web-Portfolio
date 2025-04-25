@@ -145,18 +145,23 @@ const Homepage = ({ darkMode }) => {
               className="relative z-20"
             >
               {hovered === 'Daniela' && (
-                <div className="absolute top-[-50px] left-[-200px] z-50">
-                  <div className={`relative bg-white ${darkMode ? "bg-white/10" : "bg-white/20"} px-8 py-6 rounded-lg backdrop-blur-md border ${darkMode ? "border-white" : "border-white/70"} shadow-md text-left animate-bounce`}>
-                    <div className={`text-md font-bold leading-tight ${darkMode ? "text-white" : "text-[#59453F]"}`}>
+                <div className="absolute top-[-60px] left-1/2 -translate-x-1/2 sm:top-[-50px] sm:left-[-200px] sm:translate-x-0 z-50">
+                  <div className={`
+      relative px-8 py-6 rounded-lg backdrop-blur-md shadow-md border 
+      ${darkMode ? "bg-white/10 border-white text-white" : "bg-white/20 border-white/70 text-[#59453F]"} 
+      text-left animate-bounce w-[90vw] max-w-sm sm:w-auto
+    `}>
+                    <div className="text-sm sm:text-md font-bold leading-tight">
                       DANIELA ROMANA CASTAÑEDA
                     </div>
-                    <div className={`text-sm font-medium ${darkMode ? "text-white" : "text-[#59453F]"}`}>
+                    <div className="text-xs sm:text-sm font-medium">
                       UI/UX Designer
                     </div>
                     <div className={`absolute right-[10px] bottom-[-10px] w-0 h-0 border-l-[8px] border-r-[8px] border-t-[10px] border-l-transparent border-r-transparent ${darkMode ? "border-t-white" : "border-t-white/80"}`} />
                   </div>
                 </div>
               )}
+
               <img
                 src={AnimeDaniela}
                 alt="Daniela"
