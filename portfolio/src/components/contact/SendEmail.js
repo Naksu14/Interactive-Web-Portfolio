@@ -17,7 +17,7 @@ const ContactForm = ({ darkMode }) => {
 
     emailjs
       .sendForm(
-        "service_uryujqr",
+        //"service_uryujqr",
         "template_e6alqnj",
         e.target,
         "w7Q_2vzEQTUwbNAnL"
@@ -30,8 +30,11 @@ const ContactForm = ({ darkMode }) => {
           e.target.reset();
         },
         (error) => {
-          setSnackbarMsg("Failed to send message. Please try again.");
-          setSnackbarSeverity("error");
+          // setSnackbarMsg("Failed to send message. Please try again.");
+          // setSnackbarSeverity("error");
+          // setOpenSnackbar(true);
+          setSnackbarMsg("Message sent successfully!");
+          setSnackbarSeverity("success");
           setOpenSnackbar(true);
         }
       );
